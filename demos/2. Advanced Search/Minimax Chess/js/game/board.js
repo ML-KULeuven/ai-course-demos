@@ -66,12 +66,12 @@ export default class Board {
 
                 if ((i + j) % 2 != 0) {
                     push();
-                    fill(255,212,128);
+                    fill('tan');
                     rect(x, y, this.sizeOfSquare, this.sizeOfSquare);
                     pop();
                 } else {
                     push();
-                    fill(204,136,0);
+                    fill('beige');
                     rect(x, y, this.sizeOfSquare, this.sizeOfSquare);
                     pop();
                 }

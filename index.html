@@ -1,79 +1,332 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Demos voor Artificiële Intelligentie</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-	</head>
-	<body>
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Katholieke Universiteit Leuven - Artificiële Intelligentie en Declaretieve Talen</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" type="text/css" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="assets/css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-light bg-light static-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="/assets/media/logo.png" alt="" width="150">
+                </a>
+                <a class="btn btn-primary" href="https://onderwijsaanbod.kuleuven.be/syllabi/n/H06U1AN.htm" target="_blank" rel="noopener noreferrer">ECTS</a>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container position-relative">
+                <div class="row justify-content-center">
+                    <div class="col-xl-6">
+                        <div class="text-center text-white">
+                            <h1 class="mb-5">Demo's voor Artificiële Intelligentie en Declaretieve Talen</h1>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Demo Showcases-->
 
-				<!-- Header -->
-					<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-						<div class="container-fluid">
-						<a class="navbar-brand" href="#">KUL</a>
-						<button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
-							<span class="navbar-toggler-icon"></span>
-						</button>
-		
-						<div class="navbar-collapse collapse" id="navbarColor03" style="">
-							<ul class="navbar-nav me-auto">
-								<li class="nav-item">
-									<a class="nav-link active" href="#">Home
-									<span class="visually-hidden">(current)</span>
-									</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="#">Features</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="#">Pricing</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="#">About</a>
-								</li>
-							</ul>
-							<form class="d-flex">
-							<input class="form-control me-sm-2" type="text" placeholder="Search">
-							<button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-							</form>
-						</div>
-						</div>
-					</nav>
+        <section class="showcase container">
+            <div class="container-fluid p-0">
 
-				<!-- Banner -->
-					<div class="row">
-						<div class="col-lg-12">
-							<div class="page-header">
-							  	<h1 id="navbars">Demos voor Artificiële Intelligentie</h1>
-							</div>
-						</div>
-					</div>
+                <!-- 1. Search -->
+                <div class="card border-light text-center mt-4">
+                    <div class="card-header"><h2 class="display-5">1. Search</h2></div>
+                    <div class="card-body">
+                        <div class="row" >
+                            <div class="col-lg-4 showcase-text list-group-flush list-group divider-right" role="tablist" aria-orientation="vertical">
+                                <button class="list-group-item list-group-item-action" id="v-pills-1a-tab" data-bs-toggle="pill" data-bs-target="#v-pills-1a" type="button" role="tab" aria-controls="v-pills-1a" aria-selected="true">Introduction to search algorithms</button>
+                                <button class="list-group-item list-group-item-action" id="v-pills-1b-tab" data-bs-toggle="pill" data-bs-target="#v-pills-1b" type="button" role="tab" aria-controls="v-pills-1b" aria-selected="false">Pathfinding functions visualized</button>
+                            </div>
+                            <div class="col-lg-8 showcase-text tab-content" >
+                                <div class="tab-pane fade" id="v-pills-1a" role="tabpanel" aria-labelledby="v-pills-1a-tab">
+                                    <p class="lead">The link will take you to a step-by-step guide to the following search algorithms:</p>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item lead">Breadth First Search</li>
+                                        <li class="list-group-item lead">Dijkstra’s Algorithm</li>
+                                        <li class="list-group-item lead">A*</li>
+                                    </ul>
+                                    <a class="btn btn-danger" href="https://www.redblobgames.com/pathfinding/a-star/introduction.html" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">RedBlobGames</a>
+                                </div>
+                                <div class="tab-pane fade" id="v-pills-1b" role="tabpanel" aria-labelledby="v-pills-1b-tab">
+                                    <p class="lead">The following link will bring you to a visualisation tool on Github for search algorithms.</p>
+                                    <p class="lead">Be sure to find the differences between the algorithms while trying them out!</p>
+                                    <a class="btn btn-danger" href="https://qiao.github.io/PathFinding.js/visual/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Github</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-				<!-- One -->
-					<div class="row">
-						<div class="col-lg-12">
-							<div class="page-header">
-								<h2 id="navbars">Bubblesort</h2>
-								<canvas id="bubbleSortCanvas" style="width: 720px; height: 400px;" width="720" height="400"></canvas>
-							</div>
-						</div>
-					</div>
+                <!-- 2. Minimax -->
+                <div class="card border-light text-center mt-4">
+                    <div class="card-header"><h2 class="display-5">2. Minimax</h2></div>
+                    <div class="card-body">
+                        <div class="row" >
+                            <div class="col-lg-4 showcase-text list-group-flush list-group divider-right" role="tablist" aria-orientation="vertical">
+                                <button class="list-group-item list-group-item-action" id="v-pills-2a-tab" data-bs-toggle="pill" data-bs-target="#v-pills-2a" type="button" role="tab" aria-controls="v-pills-2a" aria-selected="true">Minimax & Alpha-beta pruning demo</button>
+                                <button class="list-group-item list-group-item-action" id="v-pills-2b-tab" data-bs-toggle="pill" data-bs-target="#v-pills-2b" type="button" role="tab" aria-controls="v-pills-2b" aria-selected="false">Minimax Chess demo</button>
+                                <button class="list-group-item list-group-item-action" id="v-pills-2c-tab" data-bs-toggle="pill" data-bs-target="#v-pills-2c" type="button" role="tab" aria-controls="v-pills-2c" aria-selected="false">Minimax Tic-Tac-Toe demo</button>
+                            </div>
+                            <div class="col-lg-8 showcase-text tab-content" >
+                                <div class="tab-pane fade show" id="v-pills-2a" role="tabpanel" aria-labelledby="v-pills-2a-tab">
+                                    <p class="lead">The link will take you to a step-by-step guide to the following search algorithms:</p>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item lead">Breadth First Search</li>
+                                        <li class="list-group-item lead">Dijkstra’s Algorithm</li>
+                                        <li class="list-group-item lead">A*</li>
+                                    </ul>
+                                    <a class="btn btn-danger" href="https://www.redblobgames.com/pathfinding/a-star/introduction.html" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">RedBlobGames</a>
+                                </div>
+                                <div class="tab-pane fade" id="v-pills-2b" role="tabpanel" aria-labelledby="v-pills-2b-tab">
+                                    <p class="lead">You can try out the search algorithms on the following link:</p>
+                                    <a class="btn btn-danger" href="https://qiao.github.io/PathFinding.js/visual/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Github</a>
+                                </div>
+                                <div class="tab-pane fade" id="v-pills-2c" role="tabpanel" aria-labelledby="v-pills-2c-tab">
+                                    <p class="lead">You can try out the search algorithms on the following link:</p>
+                                    <a class="btn btn-danger" href="https://qiao.github.io/PathFinding.js/visual/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Github</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-				<!-- Two -->
-					<section id="two">
-					</section>
+                <!-- 3. CSP -->
+                <div class="card border-light text-center mt-4">
+                    <div class="card-header"><h2 class="display-5">3. CSP</h2></div>
+                    <div class="card-body">
+                        <div class="row" >
+                            <div class="col-lg-4 showcase-text list-group-flush list-group divider-right" role="tablist" aria-orientation="vertical">
+                                <button class="list-group-item list-group-item-action" id="v-pills-3c-tab" data-bs-toggle="pill" data-bs-target="#v-pills-3c" type="button" role="tab" aria-controls="v-pills-3a" aria-selected="true">Pancake Problem</button>
+                                <button class="list-group-item list-group-item-action" id="v-pills-3b-tab" data-bs-toggle="pill" data-bs-target="#v-pills-3b" type="button" role="tab" aria-controls="v-pills-3b" aria-selected="false">Map Coloring</button>
+                                <button class="list-group-item list-group-item-action" id="v-pills-3c-tab" data-bs-toggle="pill" data-bs-target="#v-pills-3c" type="button" role="tab" aria-controls="v-pills-3c" aria-selected="false">N-Queens Problem</button>
+                                <button class="list-group-item list-group-item-action" id="v-pills-3d-tab" data-bs-toggle="pill" data-bs-target="#v-pills-3d" type="button" role="tab" aria-controls="v-pills-3d" aria-selected="false">Sudoku</button>
+                            </div>
+                            <div class="col-lg-8 showcase-text tab-content" >
+                                <div class="tab-pane fade show" id="v-pills-3a" role="tabpanel" aria-labelledby="v-pills-3a-tab">
+                                    <p class="lead">The link will take you to a step-by-step guide to the following search algorithms:</p>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item lead">Breadth First Search</li>
+                                        <li class="list-group-item lead">Dijkstra’s Algorithm</li>
+                                        <li class="list-group-item lead">A*</li>
+                                    </ul>
+                                    <a class="btn btn-danger" href="https://www.redblobgames.com/pathfinding/a-star/introduction.html" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">RedBlobGames</a>
+                                </div>
+                                <div class="tab-pane fade" id="v-pills-3b" role="tabpanel" aria-labelledby="v-pills-3b-tab">
+                                    <p class="lead">The following link will bring you to a visualisation tool on Github for search algorithms.</p>
+                                    <p class="lead">Be sure to find the differences between the algorithms while trying them out!</p>
+                                    <a class="btn btn-danger" href="https://qiao.github.io/PathFinding.js/visual/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Github</a>
+                                </div>
+                                <div class="tab-pane fade" id="v-pills-3c" role="tabpanel" aria-labelledby="v-pills-3c-tab">
+                                    <p class="lead">The following link will bring you to a visualisation tool on Github for search algorithms.</p>
+                                    <p class="lead">Be sure to find the differences between the algorithms while trying them out!</p>
+                                    <a class="btn btn-danger" href="https://qiao.github.io/PathFinding.js/visual/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Github</a>
+                                </div>
+                                <div class="tab-pane fade" id="v-pills-3d" role="tabpanel" aria-labelledby="v-pills-3d-tab">
+                                    <p class="lead">The following link will bring you to a visualisation tool on Github for search algorithms.</p>
+                                    <p class="lead">Be sure to find the differences between the algorithms while trying them out!</p>
+                                    <a class="btn btn-danger" href="https://qiao.github.io/PathFinding.js/visual/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Github</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<ul class="copyright">
-							<li>&copy; Katholieke Universiteit Leuven 2022-2023</li>
-						</ul>
-					</footer>
-			</div>
+                <!-- 4. Automated Reasoning -->
+                <div class="card border-light text-center mt-4">
+                    <div class="card-header"><h2 class="display-5">4. Automated Reasoning</h2></div>
+                    <div class="card-body">
+                        <div class="row" >
+                            <div class="col-lg-4 showcase-text list-group-flush list-group divider-right" role="tablist" aria-orientation="vertical">
+                                <button class="list-group-item list-group-item-action" id="v-pills-4a-tab" data-bs-toggle="pill" data-bs-target="#v-pills-4a" type="button" role="tab" aria-controls="v-pills-4a" aria-selected="true">CPMpy Rewrite rules</button>
+                                <button class="list-group-item list-group-item-action" id="v-pills-4b-tab" data-bs-toggle="pill" data-bs-target="#v-pills-4b" type="button" role="tab" aria-controls="v-pills-4b" aria-selected="false">Prologbased Omzetting</button>
+                            </div>
+                            <div class="col-lg-8 showcase-text tab-content" >
+                                <div class="tab-pane fade show" id="v-pills-4a" role="tabpanel" aria-labelledby="v-pills-4a-tab">
+                                    <p class="lead">The link will take you to a step-by-step guide to the following search algorithms:</p>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item lead">Breadth First Search</li>
+                                        <li class="list-group-item lead">Dijkstra’s Algorithm</li>
+                                        <li class="list-group-item lead">A*</li>
+                                    </ul>
+                                    <a class="btn btn-danger" href="https://www.redblobgames.com/pathfinding/a-star/introduction.html" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">RedBlobGames</a>
+                                </div>
+                                <div class="tab-pane fade" id="v-pills-4b" role="tabpanel" aria-labelledby="v-pills-4b-tab">
+                                    <p class="lead">You can try out the search algorithms on the following link:</p>
+                                    <a class="btn btn-danger" href="https://qiao.github.io/PathFinding.js/visual/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Github</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-		<!-- Scripts -->
-	</body>
+                <!--
+                <div class="card border-light text-center mt-4">
+                    <div class="card-header"><h2 class="display-5">5. Probability Theory</h2></div>
+                    <div class="card-body">
+                        <div class="row" >
+                            <div class="col-lg-4 showcase-text list-group-flush list-group divider-right" role="tablist" aria-orientation="vertical">
+                                <button class="list-group-item list-group-item-action" id="v-pills-5a-tab" data-bs-toggle="pill" data-bs-target="#v-pills-5a" type="button" role="tab" aria-controls="v-pills-5a" aria-selected="true">???</button>
+                                <button class="list-group-item list-group-item-action" id="v-pills-5b-tab" data-bs-toggle="pill" data-bs-target="#v-pills-5b" type="button" role="tab" aria-controls="v-pills-5b" aria-selected="false">???</button>
+                            </div>
+                            <div class="col-lg-8 showcase-text tab-content" >
+                                <div class="tab-pane fade show" id="v-pills-5a" role="tabpanel" aria-labelledby="v-pills-5a-tab">
+                                    <p class="lead">The link will take you to a step-by-step guide to the following search algorithms:</p>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item lead">Breadth First Search</li>
+                                        <li class="list-group-item lead">Dijkstra’s Algorithm</li>
+                                        <li class="list-group-item lead">A*</li>
+                                    </ul>
+                                    <a class="btn btn-danger" href="https://www.redblobgames.com/pathfinding/a-star/introduction.html" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">RedBlobGames</a>
+                                </div>
+                                <div class="tab-pane fade" id="v-pills-5b" role="tabpanel" aria-labelledby="v-pills-5b-tab">
+                                    <p class="lead">The following link will bring you to a visualisation tool on Github for search algorithms.</p>
+                                    <p class="lead">Be sure to find the differences between the algorithms while trying them out!</p>
+                                    <a class="btn btn-danger" href="https://qiao.github.io/PathFinding.js/visual/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Github</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card border-light text-center mt-4">
+                    <div class="card-header"><h2 class="display-5">6. Bayesian Networks</h2></div>
+                    <div class="card-body">
+                        <div class="row" >
+                            <div class="col-lg-4 showcase-text list-group-flush list-group divider-right" role="tablist" aria-orientation="vertical">
+                                <button class="list-group-item list-group-item-action" id="v-pills-6a-tab" data-bs-toggle="pill" data-bs-target="#v-pills-6a" type="button" role="tab" aria-controls="v-pills-6a" aria-selected="true">Van Poole</button>
+                                <button class="list-group-item list-group-item-action" id="v-pills-6b-tab" data-bs-toggle="pill" data-bs-target="#v-pills-6b" type="button" role="tab" aria-controls="v-pills-6b" aria-selected="false">???</button>
+                            </div>
+                            <div class="col-lg-8 showcase-text tab-content" >
+                                <div class="tab-pane fade show" id="v-pills-6a" role="tabpanel" aria-labelledby="v-pills-6a-tab">
+                                    <p class="lead">The link will take you to a step-by-step guide to the following search algorithms:</p>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item lead">Breadth First Search</li>
+                                        <li class="list-group-item lead">Dijkstra’s Algorithm</li>
+                                        <li class="list-group-item lead">A*</li>
+                                    </ul>
+                                    <a class="btn btn-danger" href="https://www.redblobgames.com/pathfinding/a-star/introduction.html" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">RedBlobGames</a>
+                                </div>
+                                <div class="tab-pane fade" id="v-pills-6b" role="tabpanel" aria-labelledby="v-pills-6b-tab">
+                                    <p class="lead">You can try out the search algorithms on the following link:</p>
+                                    <a class="btn btn-danger" href="https://qiao.github.io/PathFinding.js/visual/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Github</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card border-light text-center mt-4">
+                    <div class="card-header"><h2 class="display-5">7. Solvers</h2></div>
+                    <div class="card-body">
+                        <div class="row" >
+                            <div class="col-lg-4 showcase-text list-group-flush list-group divider-right" role="tablist" aria-orientation="vertical">
+                                <button class="list-group-item list-group-item-action" id="v-pills-7a-tab" data-bs-toggle="pill" data-bs-target="#v-pills-7a" type="button" role="tab" aria-controls="v-pills-7a" aria-selected="true">???</button>
+                                <button class="list-group-item list-group-item-action" id="v-pills-7b-tab" data-bs-toggle="pill" data-bs-target="#v-pills-7b" type="button" role="tab" aria-controls="v-pills-7b" aria-selected="false">???</button>
+                            </div>
+                            <div class="col-lg-8 showcase-text tab-content" >
+                                <div class="tab-pane fade show" id="v-pills-7a" role="tabpanel" aria-labelledby="v-pills-7a-tab">
+                                    <p class="lead">The link will take you to a step-by-step guide to the following search algorithms:</p>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item lead">Breadth First Search</li>
+                                        <li class="list-group-item lead">Dijkstra’s Algorithm</li>
+                                        <li class="list-group-item lead">A*</li>
+                                    </ul>
+                                    <a class="btn btn-danger" href="https://www.redblobgames.com/pathfinding/a-star/introduction.html" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">RedBlobGames</a>
+                                </div>
+                                <div class="tab-pane fade" id="v-pills-7b" role="tabpanel" aria-labelledby="v-pills-7b-tab">
+                                    <p class="lead">The following link will bring you to a visualisation tool on Github for search algorithms.</p>
+                                    <p class="lead">Be sure to find the differences between the algorithms while trying them out!</p>
+                                    <a class="btn btn-danger" href="https://qiao.github.io/PathFinding.js/visual/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Github</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card border-light text-center mt-4">
+                    <div class="card-header"><h2 class="display-5">8. Markov Decision Processes</h2></div>
+                    <div class="card-body">
+                        <div class="row" >
+                            <div class="col-lg-4 showcase-text list-group-flush list-group divider-right" role="tablist" aria-orientation="vertical">
+                                <button class="list-group-item list-group-item-action" id="v-pills-8a-tab" data-bs-toggle="pill" data-bs-target="#v-pills-8a" type="button" role="tab" aria-controls="v-pills-8a" aria-selected="true">GridWorld</button>
+                                <button class="list-group-item list-group-item-action" id="v-pills-8b-tab" data-bs-toggle="pill" data-bs-target="#v-pills-8b" type="button" role="tab" aria-controls="v-pills-8b" aria-selected="false">???</button>
+                            </div>
+                            <div class="col-lg-8 showcase-text tab-content" >
+                                <div class="tab-pane fade show" id="v-pills-8a" role="tabpanel" aria-labelledby="v-pills-8a-tab">
+                                    <p class="lead">The link will take you to a step-by-step guide to the following search algorithms:</p>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item lead">Breadth First Search</li>
+                                        <li class="list-group-item lead">Dijkstra’s Algorithm</li>
+                                        <li class="list-group-item lead">A*</li>
+                                    </ul>
+                                    <a class="btn btn-danger" href="https://www.redblobgames.com/pathfinding/a-star/introduction.html" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">RedBlobGames</a>
+                                </div>
+                                <div class="tab-pane fade" id="v-pills-8b" role="tabpanel" aria-labelledby="v-pills-8b-tab">
+                                    <p class="lead">You can try out the search algorithms on the following link:</p>
+                                    <a class="btn btn-danger" href="https://qiao.github.io/PathFinding.js/visual/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Github</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card border-light text-center mt-4">
+                    <div class="card-header"><h2 class="display-5">9. Machine Learning</h2></div>
+                    <div class="card-body">
+                        <div class="row" >
+                            <div class="col-lg-4 showcase-text list-group-flush list-group divider-right" role="tablist" aria-orientation="vertical">
+                                <button class="list-group-item list-group-item-action" id="v-pills-9a-tab" data-bs-toggle="pill" data-bs-target="#v-pills-9a" type="button" role="tab" aria-controls="v-pills-9a" aria-selected="true">Neural Networks</button>
+                                <button class="list-group-item list-group-item-action" id="v-pills-9b-tab" data-bs-toggle="pill" data-bs-target="#v-pills-9b" type="button" role="tab" aria-controls="v-pills-9b" aria-selected="false">KNN Demo</button>
+                            </div>
+                            <div class="col-lg-8 showcase-text tab-content" >
+                                <div class="tab-pane fade show" id="v-pills-9a" role="tabpanel" aria-labelledby="v-pills-9a-tab">
+                                    <p class="lead">The link will take you to a step-by-step guide to the following search algorithms:</p>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item lead">Breadth First Search</li>
+                                        <li class="list-group-item lead">Dijkstra’s Algorithm</li>
+                                        <li class="list-group-item lead">A*</li>
+                                    </ul>
+                                    <a class="btn btn-danger" href="https://www.redblobgames.com/pathfinding/a-star/introduction.html" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">RedBlobGames</a>
+                                </div>
+                                <div class="tab-pane fade" id="v-pills-9b" role="tabpanel" aria-labelledby="v-pills-9b-tab">
+                                    <p class="lead">You can try out the search algorithms on the following link:</p>
+                                    <a class="btn btn-danger" href="https://qiao.github.io/PathFinding.js/visual/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Github</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            -->
+
+            </div>
+        </section>
+
+        <!-- Footer-->
+        <footer class="footer bg-light mt-5">
+            <div class="container">
+                <div class="text-lg-start my-auto">
+                    <p class="text-center text-muted small mb-4 mb-lg-0">&copy; Katholieke Universiteit Leuven 2022-2023</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="assets/js/scripts.js"></script>
+    </body>
 </html>
