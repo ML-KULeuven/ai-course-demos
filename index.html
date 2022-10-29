@@ -46,13 +46,13 @@
                 <div class="card border-light text-center mt-4">
                     <div class="card-header"><h2 class="display-5">1. Search</h2></div>
                     <div class="card-body">
-                        <div class="row" >
-                            <div class="col-lg-4 showcase-text list-group-flush list-group divider-right" role="tablist" aria-orientation="vertical">
-                                <button class="list-group-item list-group-item-action" id="v-pills-1a-tab" data-bs-toggle="pill" data-bs-target="#v-pills-1a" type="button" role="tab" aria-controls="v-pills-1a" aria-selected="true">Introduction to search algorithms</button>
-                                <button class="list-group-item list-group-item-action" id="v-pills-1b-tab" data-bs-toggle="pill" data-bs-target="#v-pills-1b" type="button" role="tab" aria-controls="v-pills-1b" aria-selected="false">Pathfinding functions visualized</button>
+                        <div class="row" id="group-1">
+                            <div class="col-lg-4 showcase-text accordion accordion-flush divider-right">
+                                <button class="accordion-button collapsed" id="v-pills-1a-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-1a" aria-controls="v-pills-1a">Introduction to search algorithms</button>
+                                <button class="accordion-button collapsed" id="v-pills-1b-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-1b" aria-controls="v-pills-1b">Pathfinding functions visualized</button>
                             </div>
                             <div class="col-lg-8 showcase-text tab-content" >
-                                <div class="tab-pane fade" id="v-pills-1a" role="tabpanel" aria-labelledby="v-pills-1a-tab">
+                                <div class="accordion-collapse collapse collapse-fade" id="v-pills-1a" data-bs-parent="#group-1">
                                     <p class="lead">The link will take you to a step-by-step guide to the following search algorithms:</p>
                                     <ul class="list-group list-group-flush">
                                         <li class="list-group-item lead">Breadth First Search</li>
@@ -61,7 +61,7 @@
                                     </ul>
                                     <a class="btn btn-danger" href="https://www.redblobgames.com/pathfinding/a-star/introduction.html" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">RedBlobGames</a>
                                 </div>
-                                <div class="tab-pane fade" id="v-pills-1b" role="tabpanel" aria-labelledby="v-pills-1b-tab">
+                                <div class="accordion-collapse collapse collapse-fade" id="v-pills-1b" data-bs-parent="#group-1">
                                     <p class="lead">The following link will bring you to a visualisation tool on Github for search algorithms.</p>
                                     <p class="lead">Be sure to find the differences between the algorithms while trying them out!</p>
                                     <a class="btn btn-danger" href="https://qiao.github.io/PathFinding.js/visual/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Github</a>
@@ -75,14 +75,14 @@
                 <div class="card border-light text-center mt-4">
                     <div class="card-header"><h2 class="display-5">2. Minimax</h2></div>
                     <div class="card-body">
-                        <div class="row" >
-                            <div class="col-lg-4 showcase-text list-group-flush list-group divider-right" role="tablist" aria-orientation="vertical">
-                                <button class="list-group-item list-group-item-action" id="v-pills-2a-tab" data-bs-toggle="pill" data-bs-target="#v-pills-2a" type="button" role="tab" aria-controls="v-pills-2a" aria-selected="true">Minimax & Alpha-beta pruning demo</button>
-                                <button class="list-group-item list-group-item-action" id="v-pills-2b-tab" data-bs-toggle="pill" data-bs-target="#v-pills-2b" type="button" role="tab" aria-controls="v-pills-2b" aria-selected="false">Minimax Chess demo</button>
-                                <button class="list-group-item list-group-item-action" id="v-pills-2c-tab" data-bs-toggle="pill" data-bs-target="#v-pills-2c" type="button" role="tab" aria-controls="v-pills-2c" aria-selected="false">Minimax Tic-Tac-Toe demo</button>
+                        <div class="row" id="group-2">
+                            <div class="col-lg-4 showcase-text accordion accordion-flush divider-right">
+                                <button class="accordion-button collapsed" id="v-pills-2a-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-2a" aria-controls="v-pills-2a">Minimax & Alpha-beta pruning demo</button>
+                                <button class="accordion-button collapsed" id="v-pills-2b-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-2b" aria-controls="v-pills-2b">Minimax Chess demo (work in progress)</button>
+                                <button class="accordion-button collapsed" id="v-pills-2c-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-2c" aria-controls="v-pills-2c">Minimax Tic-Tac-Toe demo</button>
                             </div>
                             <div class="col-lg-8 showcase-text tab-content" >
-                                <div class="tab-pane fade show" id="v-pills-2a" role="tabpanel" aria-labelledby="v-pills-2a-tab">
+                                <div class="accordion-collapse collapse collapse-fade" id="v-pills-2a" data-bs-parent="#group-2">
                                     <p class="lead">The link will take you to a step-by-step guide to the following search algorithms:</p>
                                     <ul class="list-group list-group-flush">
                                         <li class="list-group-item lead">Breadth First Search</li>
@@ -91,11 +91,11 @@
                                     </ul>
                                     <a class="btn btn-danger" href="https://www.redblobgames.com/pathfinding/a-star/introduction.html" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">RedBlobGames</a>
                                 </div>
-                                <div class="tab-pane fade" id="v-pills-2b" role="tabpanel" aria-labelledby="v-pills-2b-tab">
+                                <div class="accordion-collapse collapse collapse-fade" id="v-pills-2b" data-bs-parent="#group-2">
                                     <p class="lead">You can try out the search algorithms on the following link:</p>
                                     <a class="btn btn-danger" href="https://qiao.github.io/PathFinding.js/visual/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Github</a>
                                 </div>
-                                <div class="tab-pane fade" id="v-pills-2c" role="tabpanel" aria-labelledby="v-pills-2c-tab">
+                                <div class="accordion-collapse collapse collapse-fade" id="v-pills-2c" data-bs-parent="#group-2">
                                     <p class="lead">You can try out the search algorithms on the following link:</p>
                                     <a class="btn btn-danger" href="https://qiao.github.io/PathFinding.js/visual/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Github</a>
                                 </div>
@@ -108,15 +108,15 @@
                 <div class="card border-light text-center mt-4">
                     <div class="card-header"><h2 class="display-5">3. CSP</h2></div>
                     <div class="card-body">
-                        <div class="row" >
-                            <div class="col-lg-4 showcase-text list-group-flush list-group divider-right" role="tablist" aria-orientation="vertical">
-                                <button class="list-group-item list-group-item-action" id="v-pills-3c-tab" data-bs-toggle="pill" data-bs-target="#v-pills-3c" type="button" role="tab" aria-controls="v-pills-3a" aria-selected="true">Pancake Problem</button>
-                                <button class="list-group-item list-group-item-action" id="v-pills-3b-tab" data-bs-toggle="pill" data-bs-target="#v-pills-3b" type="button" role="tab" aria-controls="v-pills-3b" aria-selected="false">Map Coloring</button>
-                                <button class="list-group-item list-group-item-action" id="v-pills-3c-tab" data-bs-toggle="pill" data-bs-target="#v-pills-3c" type="button" role="tab" aria-controls="v-pills-3c" aria-selected="false">N-Queens Problem</button>
-                                <button class="list-group-item list-group-item-action" id="v-pills-3d-tab" data-bs-toggle="pill" data-bs-target="#v-pills-3d" type="button" role="tab" aria-controls="v-pills-3d" aria-selected="false">Sudoku</button>
+                        <div class="row" id="group-3">
+                            <div class="col-lg-4 showcase-text accordion accordion-flush divider-right">
+                                <button class="accordion-button collapsed" id="v-pills-3a-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-3a" aria-controls="v-pills-3a">Sudoku</button>
+                                <button class="accordion-button collapsed" id="v-pills-3b-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-3b" aria-controls="v-pills-3b">Map Coloring</button>
+                                <button class="accordion-button collapsed" id="v-pills-3c-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-3c" aria-controls="v-pills-3c">N-Queens Problem</button>
+                                <!-- Work in Progress: <button class="list-group-item list-group-item-action" id="v-pills-3d-tab" data-bs-toggle="pill" data-bs-target="#v-pills-3d" type="button" role="tab" aria-controls="v-pills-3d" aria-selected="false">Pancake Problem</button> -->
                             </div>
                             <div class="col-lg-8 showcase-text tab-content" >
-                                <div class="tab-pane fade show" id="v-pills-3a" role="tabpanel" aria-labelledby="v-pills-3a-tab">
+                                <div class="accordion-collapse collapse collapse-fade" id="v-pills-3a" data-bs-parent="#group-3">
                                     <p class="lead">The link will take you to a step-by-step guide to the following search algorithms:</p>
                                     <ul class="list-group list-group-flush">
                                         <li class="list-group-item lead">Breadth First Search</li>
@@ -125,17 +125,12 @@
                                     </ul>
                                     <a class="btn btn-danger" href="https://www.redblobgames.com/pathfinding/a-star/introduction.html" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">RedBlobGames</a>
                                 </div>
-                                <div class="tab-pane fade" id="v-pills-3b" role="tabpanel" aria-labelledby="v-pills-3b-tab">
+                                <div class="accordion-collapse collapse collapse-fade" id="v-pills-3b" data-bs-parent="#group-3">
                                     <p class="lead">The following link will bring you to a visualisation tool on Github for search algorithms.</p>
                                     <p class="lead">Be sure to find the differences between the algorithms while trying them out!</p>
                                     <a class="btn btn-danger" href="https://qiao.github.io/PathFinding.js/visual/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Github</a>
                                 </div>
-                                <div class="tab-pane fade" id="v-pills-3c" role="tabpanel" aria-labelledby="v-pills-3c-tab">
-                                    <p class="lead">The following link will bring you to a visualisation tool on Github for search algorithms.</p>
-                                    <p class="lead">Be sure to find the differences between the algorithms while trying them out!</p>
-                                    <a class="btn btn-danger" href="https://qiao.github.io/PathFinding.js/visual/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Github</a>
-                                </div>
-                                <div class="tab-pane fade" id="v-pills-3d" role="tabpanel" aria-labelledby="v-pills-3d-tab">
+                                <div class="accordion-collapse collapse collapse-fade" id="v-pills-3c" data-bs-parent="#group-3">
                                     <p class="lead">The following link will bring you to a visualisation tool on Github for search algorithms.</p>
                                     <p class="lead">Be sure to find the differences between the algorithms while trying them out!</p>
                                     <a class="btn btn-danger" href="https://qiao.github.io/PathFinding.js/visual/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Github</a>
@@ -149,13 +144,13 @@
                 <div class="card border-light text-center mt-4">
                     <div class="card-header"><h2 class="display-5">4. Automated Reasoning</h2></div>
                     <div class="card-body">
-                        <div class="row" >
-                            <div class="col-lg-4 showcase-text list-group-flush list-group divider-right" role="tablist" aria-orientation="vertical">
-                                <button class="list-group-item list-group-item-action" id="v-pills-4a-tab" data-bs-toggle="pill" data-bs-target="#v-pills-4a" type="button" role="tab" aria-controls="v-pills-4a" aria-selected="true">CPMpy Rewrite rules</button>
-                                <button class="list-group-item list-group-item-action" id="v-pills-4b-tab" data-bs-toggle="pill" data-bs-target="#v-pills-4b" type="button" role="tab" aria-controls="v-pills-4b" aria-selected="false">Prologbased Omzetting</button>
+                        <div class="row" id="group-4">
+                            <div class="col-lg-4 showcase-text accordion accordion-flush divider-right">
+                                <button class="accordion-button collapsed" id="v-pills-4a-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-4a" aria-controls="v-pills-4a">Sudoku</button>
+                                <button class="accordion-button collapsed" id="v-pills-4b-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-4b" aria-controls="v-pills-4b">Sudoku</button>
                             </div>
                             <div class="col-lg-8 showcase-text tab-content" >
-                                <div class="tab-pane fade show" id="v-pills-4a" role="tabpanel" aria-labelledby="v-pills-4a-tab">
+                                <div class="accordion-collapse collapse collapse-fade" id="v-pills-4a" data-bs-parent="#group-4">
                                     <p class="lead">The link will take you to a step-by-step guide to the following search algorithms:</p>
                                     <ul class="list-group list-group-flush">
                                         <li class="list-group-item lead">Breadth First Search</li>
@@ -164,7 +159,7 @@
                                     </ul>
                                     <a class="btn btn-danger" href="https://www.redblobgames.com/pathfinding/a-star/introduction.html" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">RedBlobGames</a>
                                 </div>
-                                <div class="tab-pane fade" id="v-pills-4b" role="tabpanel" aria-labelledby="v-pills-4b-tab">
+                                <div class="accordion-collapse collapse collapse-fade" id="v-pills-4b" data-bs-parent="#group-4">
                                     <p class="lead">You can try out the search algorithms on the following link:</p>
                                     <a class="btn btn-danger" href="https://qiao.github.io/PathFinding.js/visual/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Github</a>
                                 </div>
@@ -325,8 +320,8 @@
         </footer>
 
         <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/vendor/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
-        <script src="assets/js/scripts.js"></script>
+        <script src="assets/js/site/scripts.js"></script>
     </body>
 </html>
