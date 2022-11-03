@@ -50,6 +50,7 @@
                             <div class="col-lg-4 showcase-text accordion accordion-flush divider-right">
                                 <button class="accordion-button collapsed" id="v-pills-1a-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-1a" aria-controls="v-pills-1a">Introduction to search algorithms</button>
                                 <button class="accordion-button collapsed" id="v-pills-1b-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-1b" aria-controls="v-pills-1b">Pathfinding functions visualized</button>
+                                <button class="accordion-button collapsed" id="v-pills-1c-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-1c" aria-controls="v-pills-1c">N-Puzzle</button>
                             </div>
                             <div class="col-lg-8 showcase-text tab-content" >
                                 <div class="accordion-collapse collapse collapse-fade" id="v-pills-1a" data-bs-parent="#group-1">
@@ -59,12 +60,19 @@
                                         <li class="list-group-item lead">Dijkstra’s Algorithm</li>
                                         <li class="list-group-item lead">A*</li>
                                     </ul>
-                                    <a class="btn btn-danger" href="https://www.redblobgames.com/pathfinding/a-star/introduction.html" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">RedBlobGames</a>
+                                    <a class="btn btn-primary" href="https://www.redblobgames.com/pathfinding/a-star/introduction.html" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">RedBlobGames</a>
                                 </div>
                                 <div class="accordion-collapse collapse collapse-fade" id="v-pills-1b" data-bs-parent="#group-1">
                                     <p class="lead">The following link will bring you to a visualisation tool on Github for search algorithms.</p>
-                                    <p class="lead">Be sure to find the differences between the algorithms while trying them out!</p>
-                                    <a class="btn btn-danger" href="https://qiao.github.io/PathFinding.js/visual/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Github</a>
+                                    <p class="lead">Be sure to pay attention to the differences while trying them out.</p>
+                                    <a class="btn btn-primary" href="https://qiao.github.io/PathFinding.js/visual/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Github</a>
+                                </div>
+                                <div class="accordion-collapse collapse collapse-fade" id="v-pills-1c" data-bs-parent="#group-1">
+                                    <p class="lead">N-Puzzle is a web app for learning about graph-based search algorithms.</p>
+                                    <p class="lead">It tries to go from an initial 3x3 state to a desired 3x3 state by moving one tile into an empty spot. The search tree is visualized and you will be able to tell what happens one step at a time.</p>
+                                    <img src="/assets/media/N-puzzle states.png" class="img-fluid" alt="Responsive image">
+                                    <p class="lead" style="margin-top: 2rem;">Try it out and find more information using the following link:</p>
+                                    <a class="btn btn-primary" href="https://tristanpenman.com/demos/n-puzzle/" target="_blank" rel="noopener noreferrer">N-puzzle</a>
                                 </div>
                             </div>
                         </div>
@@ -73,31 +81,29 @@
 
                 <!-- 2. Minimax -->
                 <div class="card border-light text-center mt-4">
-                    <div class="card-header"><h2 class="display-5">2. Minimax</h2></div>
+                    <div class="card-header"><h2 class="display-5">2. Advanced Search and Games</h2></div>
                     <div class="card-body">
                         <div class="row" id="group-2">
                             <div class="col-lg-4 showcase-text accordion accordion-flush divider-right">
                                 <button class="accordion-button collapsed" id="v-pills-2a-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-2a" aria-controls="v-pills-2a">Minimax & Alpha-beta pruning demo</button>
-                                <button class="accordion-button collapsed" id="v-pills-2b-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-2b" aria-controls="v-pills-2b">Minimax Chess demo (work in progress)</button>
+                                <button class="accordion-button collapsed" id="v-pills-2b-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-2b" aria-controls="v-pills-2b">Mini Chess minimax demo (work in progress)</button>
                                 <button class="accordion-button collapsed" id="v-pills-2c-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-2c" aria-controls="v-pills-2c">Minimax Tic-Tac-Toe demo</button>
                             </div>
                             <div class="col-lg-8 showcase-text tab-content" >
                                 <div class="accordion-collapse collapse collapse-fade" id="v-pills-2a" data-bs-parent="#group-2">
-                                    <p class="lead">The link will take you to a step-by-step guide to the following search algorithms:</p>
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item lead">Breadth First Search</li>
-                                        <li class="list-group-item lead">Dijkstra’s Algorithm</li>
-                                        <li class="list-group-item lead">A*</li>
-                                    </ul>
-                                    <a class="btn btn-danger" href="https://www.redblobgames.com/pathfinding/a-star/introduction.html" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">RedBlobGames</a>
+                                    <p class="lead">To make you help understand the minimax algorithm you can create your own tree diagram. </p>
+                                    <p class="lead">The simulator shows step-by-step what happens when the algorithm traverses the tree. </p>
+                                    <p class="lead">Furthermore, you can also test out the algorithm with and without alpha-beta pruning.</p>
+                                    <a class="btn btn-primary" href="https://raphsilva.github.io/utilities/minimax_simulator/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Minimax simulator</a>
                                 </div>
                                 <div class="accordion-collapse collapse collapse-fade" id="v-pills-2b" data-bs-parent="#group-2">
-                                    <p class="lead">You can try out the search algorithms on the following link:</p>
-                                    <a class="btn btn-danger" href="https://qiao.github.io/PathFinding.js/visual/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Github</a>
+                                    <p class="lead">Work in progress</p>
+                                    <!--<p class="lead">Chess AI using the minimax algorithm, try to beat it if you can!</p>-->
                                 </div>
                                 <div class="accordion-collapse collapse collapse-fade" id="v-pills-2c" data-bs-parent="#group-2">
-                                    <p class="lead">You can try out the search algorithms on the following link:</p>
-                                    <a class="btn btn-danger" href="https://qiao.github.io/PathFinding.js/visual/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Github</a>
+                                    <p class="lead">The following link will take you to a github page where you can compete against a tic-tac toe minimax AI.</p>
+                                    <p class="lead">The app shows the tree diagram, so you can see why the AI chose to do a certain action.</p>
+                                    <a class="btn btn-primary" href="https://github.com/saisunku/games" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Github</a>
                                 </div>
                             </div>
                         </div>
@@ -110,30 +116,35 @@
                     <div class="card-body">
                         <div class="row" id="group-3">
                             <div class="col-lg-4 showcase-text accordion accordion-flush divider-right">
-                                <button class="accordion-button collapsed" id="v-pills-3a-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-3a" aria-controls="v-pills-3a">Sudoku</button>
-                                <button class="accordion-button collapsed" id="v-pills-3b-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-3b" aria-controls="v-pills-3b">Map Coloring</button>
-                                <button class="accordion-button collapsed" id="v-pills-3c-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-3c" aria-controls="v-pills-3c">N-Queens Problem</button>
+                                <button class="accordion-button collapsed" id="v-pills-3a-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-3a" aria-controls="v-pills-3a">Javascript constraints</button>
+                                <button class="accordion-button collapsed" id="v-pills-3b-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-3b" aria-controls="v-pills-3b">Constraint-Satisfaction Notebook</button>
                                 <!-- Work in Progress: <button class="list-group-item list-group-item-action" id="v-pills-3d-tab" data-bs-toggle="pill" data-bs-target="#v-pills-3d" type="button" role="tab" aria-controls="v-pills-3d" aria-selected="false">Pancake Problem</button> -->
                             </div>
                             <div class="col-lg-8 showcase-text tab-content" >
                                 <div class="accordion-collapse collapse collapse-fade" id="v-pills-3a" data-bs-parent="#group-3">
-                                    <p class="lead">The link will take you to a step-by-step guide to the following search algorithms:</p>
+                                    <p class="lead">The following site brings you to a Javascript implementation of a constraint satisfaction problem solver.</p>
+                                    <p class="lead">Problems tackled:</p>
                                     <ul class="list-group list-group-flush">
-                                        <li class="list-group-item lead">Breadth First Search</li>
-                                        <li class="list-group-item lead">Dijkstra’s Algorithm</li>
-                                        <li class="list-group-item lead">A*</li>
+                                        <li class="list-group-item lead">Map Coloring</li>
+                                        <li class="list-group-item lead">N-Queens</li>
+                                        <li class="list-group-item lead">Sudoku</li>
                                     </ul>
-                                    <a class="btn btn-danger" href="https://www.redblobgames.com/pathfinding/a-star/introduction.html" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">RedBlobGames</a>
+                                    <p class="lead" style="margin-top: 2rem;">The code is open-source, so you can test it out yourself!</p>
+                                    <a class="btn btn-primary" href="http://prajitr.github.io/jusCSP/" target="_blank" rel="noopener noreferrer">Github</a>
                                 </div>
                                 <div class="accordion-collapse collapse collapse-fade" id="v-pills-3b" data-bs-parent="#group-3">
-                                    <p class="lead">The following link will bring you to a visualisation tool on Github for search algorithms.</p>
-                                    <p class="lead">Be sure to find the differences between the algorithms while trying them out!</p>
-                                    <a class="btn btn-danger" href="https://qiao.github.io/PathFinding.js/visual/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Github</a>
-                                </div>
-                                <div class="accordion-collapse collapse collapse-fade" id="v-pills-3c" data-bs-parent="#group-3">
-                                    <p class="lead">The following link will bring you to a visualisation tool on Github for search algorithms.</p>
-                                    <p class="lead">Be sure to find the differences between the algorithms while trying them out!</p>
-                                    <a class="btn btn-danger" href="https://qiao.github.io/PathFinding.js/visual/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Github</a>
+                                    <p class="lead">The following link will give a step-by-step guide to solving constraint satisfaction problems.</p>
+                                    <p class="lead">Topics covered:</p>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item lead">Constraint Propagation</li>
+                                        <li class="list-group-item lead">AC-1</li>
+                                        <li class="list-group-item lead">AC-3</li>
+                                        <li class="list-group-item lead">Generic Search</li>
+                                        <li class="list-group-item lead">Backtracking & Forward checking</li>
+                                        <li class="list-group-item lead">Complexity</li>
+                                    </ul>
+                                    <a class="btn btn-primary" href="https://github.com/ToniRV/Constraint-Satisfaction-Notebook/blob/master/CSPs.ipynb" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Jupyter Notebook</a>
+                                    <p class="lead">Source: MIT</p>
                                 </div>
                             </div>
                         </div>
@@ -146,22 +157,25 @@
                     <div class="card-body">
                         <div class="row" id="group-4">
                             <div class="col-lg-4 showcase-text accordion accordion-flush divider-right">
-                                <button class="accordion-button collapsed" id="v-pills-4a-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-4a" aria-controls="v-pills-4a">Sudoku</button>
-                                <button class="accordion-button collapsed" id="v-pills-4b-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-4b" aria-controls="v-pills-4b">Sudoku</button>
+                                <button class="accordion-button collapsed" id="v-pills-4a-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-4a" aria-controls="v-pills-4a">CPMpy</button>
+                                <button class="accordion-button collapsed" id="v-pills-4b-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-4b" aria-controls="v-pills-4b">Z3 SAT solver</button>
+                                <!-- Work in Progress: <button class="accordion-button collapsed" id="v-pills-4b-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-4b" aria-controls="v-pills-4b">Prologbased SAT solver</button> -->
                             </div>
                             <div class="col-lg-8 showcase-text tab-content" >
                                 <div class="accordion-collapse collapse collapse-fade" id="v-pills-4a" data-bs-parent="#group-4">
-                                    <p class="lead">The link will take you to a step-by-step guide to the following search algorithms:</p>
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item lead">Breadth First Search</li>
-                                        <li class="list-group-item lead">Dijkstra’s Algorithm</li>
-                                        <li class="list-group-item lead">A*</li>
-                                    </ul>
-                                    <a class="btn btn-danger" href="https://www.redblobgames.com/pathfinding/a-star/introduction.html" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">RedBlobGames</a>
+                                    <p class="lead">CPMpy is a Constraint Programming and Modeling library in Python</p>
+                                    <p class="lead">There are lots of examples to be found on the github.</p>
+                                    <p class="lead" style="margin-top: 2rem;">You can check out example code right here (this will start a notebook, so it will take some time to load):</p>
+                                    <a class="btn btn-primary" href="https://mybinder.org/v2/gh/CPMpy/cpmpy/HEAD?labpath=examples%2Fquickstart_sudoku.ipynb" target="_blank" rel="noopener noreferrer">Jupyter Lab</a>
+                                    <p class="lead" style="margin-top: 2rem;">The github page:</p>
+                                    <a class="btn btn-primary" href="https://www.redblobgames.com/pathfinding/a-star/introduction.html" target="_blank" rel="noopener noreferrer">Github</a>
                                 </div>
                                 <div class="accordion-collapse collapse collapse-fade" id="v-pills-4b" data-bs-parent="#group-4">
-                                    <p class="lead">You can try out the search algorithms on the following link:</p>
-                                    <a class="btn btn-danger" href="https://qiao.github.io/PathFinding.js/visual/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Github</a>
+                                    <p class="lead">Microsoft has created it's own state of the art theorem prover.</p>
+                                    <p class="lead">It is able to check satisfiability of logical formulas over one or more theories.</p>
+                                    <p class="lead" style="margin-top: 2rem;">You can play with it or just follow along in the following notebook:</p>
+                                    <a class="btn btn-primary" href="https://colab.research.google.com/github/philzook58/z3_tutorial/blob/master/Z3%20Tutorial.ipynb" target="_blank" rel="noopener noreferrer">Jupyter Notebook</a>
+                                    <p class="lead">Source: <a href="https://github.com/philzook58/z3_tutorial">Github</a></p>
                                 </div>
                             </div>
                         </div>
