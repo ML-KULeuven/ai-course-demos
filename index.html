@@ -51,6 +51,8 @@
                                 <button class="accordion-button collapsed" id="v-pills-1a-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-1a" aria-controls="v-pills-1a">Introduction to search algorithms</button>
                                 <button class="accordion-button collapsed" id="v-pills-1b-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-1b" aria-controls="v-pills-1b">Pathfinding functions visualized</button>
                                 <button class="accordion-button collapsed" id="v-pills-1c-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-1c" aria-controls="v-pills-1c">N-Puzzle</button>
+                                <button class="accordion-button collapsed" id="v-pills-1d-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-1d" aria-controls="v-pills-1d">Solving Problems By Searching</button>
+                                <button class="accordion-button collapsed" id="v-pills-1e-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-1e" aria-controls="v-pills-1e">Beyond classical search</button>
                             </div>
                             <div class="col-lg-8 showcase-text tab-content" >
                                 <div class="accordion-collapse collapse collapse-fade" id="v-pills-1a" data-bs-parent="#group-1">
@@ -75,6 +77,32 @@
                                     <p class="lead" style="margin-top: 2rem;">Try it out and find more information using the following link:</p>
                                     <a class="btn btn-primary" href="https://tristanpenman.com/demos/n-puzzle/" target="_blank" rel="noopener noreferrer">N-puzzle</a>
                                 </div>
+                                <div class="accordion-collapse collapse collapse-fade" id="v-pills-1d" data-bs-parent="#group-1">
+                                    <p class="lead">The following page has javascript implementations and visualisations for classic search.</p>
+                                    <p class="lead" style="margin-top: 2rem;">Loads of algorithms and concepts are covered, but some of the more interesting ones that aren't covered in the other demo's are:</p>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item lead">Search Agent</li>
+                                        <li class="list-group-item lead">Step Costs</li>
+                                        <li class="list-group-item lead">Uniform Cost Search</li>
+                                        <li class="list-group-item lead">Depth Limited Search</li>
+                                        <li class="list-group-item lead">Iterative Deepening Depth-First Search</li>
+                                        <li class="list-group-item lead">Bi-directional BFS</li>
+                                    </ul>
+                                    <a class="btn btn-primary" href="https://aimacode.github.io/aima-javascript/3-Solving-Problems-By-Searching/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Github</a>
+                                    <p class="lead" style="margin-top: 2rem;">Source: Artificial Intelligence: A Modern Approach<br>by Stuart Russel and Peter Norvig</p>
+                                </div>
+                                <div class="accordion-collapse collapse collapse-fade" id="v-pills-1e" data-bs-parent="#group-1">
+                                    <p class="lead">The following page has javascript implementations and visualisations for interesting usecases and problems beyond classical search. </p>
+                                    <p class="lead" style="margin-top: 2rem;">Some of the interesting problems and topics covered:</p>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item lead">Optimization Problem</li>
+                                        <li class="list-group-item lead">Hill Climbing Search</li>
+                                        <li class="list-group-item lead">Genetic Algorithm</li>
+                                        <li class="list-group-item lead">Vacuum World</li>
+                                    </ul>
+                                    <a class="btn btn-primary" href="https://aimacode.github.io/aima-javascript/4-Beyond-Classical-Search/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Github</a>
+                                    <p class="lead" style="margin-top: 2rem;">Source: Artificial Intelligence: A Modern Approach<br>by Stuart Russel and Peter Norvig</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -88,7 +116,7 @@
                             <div class="col-lg-4 showcase-text accordion accordion-flush divider-right">
                                 <button class="accordion-button collapsed" id="v-pills-2a-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-2a" aria-controls="v-pills-2a">Minimax & Alpha-beta pruning demo</button>
                                 <button class="accordion-button collapsed" id="v-pills-2b-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-2b" aria-controls="v-pills-2b">Mini Chess minimax demo (work in progress)</button>
-                                <button class="accordion-button collapsed" id="v-pills-2c-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-2c" aria-controls="v-pills-2c">Minimax Tic-Tac-Toe demo</button>
+                                <button class="accordion-button collapsed" id="v-pills-2c-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-2c" aria-controls="v-pills-2c">Adversarial Search</button>
                             </div>
                             <div class="col-lg-8 showcase-text tab-content" >
                                 <div class="accordion-collapse collapse collapse-fade" id="v-pills-2a" data-bs-parent="#group-2">
@@ -102,9 +130,17 @@
                                     <!--<p class="lead">Chess AI using the minimax algorithm, try to beat it if you can!</p>-->
                                 </div>
                                 <div class="accordion-collapse collapse collapse-fade" id="v-pills-2c" data-bs-parent="#group-2">
-                                    <p class="lead">The following link will take you to a github page where you can compete against a tic-tac toe minimax AI.</p>
-                                    <p class="lead">The app shows the tree diagram, so you can see why the AI chose to do a certain action.</p>
-                                    <a class="btn btn-primary" href="https://github.com/saisunku/games" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Github</a>
+                                    <p class="lead">The following page has a javascript implementation and visualisation for a tic-tac-toe AI that uses search algorithms.</p>
+                                    <p class="lead">Provided by the book:<br></p>
+                                    <p class="lead" style="margin-top: 2rem;">The following algorithms are covered:</p>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item lead">Minimax</li>
+                                        <li class="list-group-item lead">Iterative Deepening</li>
+                                        <li class="list-group-item lead">Minimax with alpha-beta pruning</li>
+                                        <li class="list-group-item lead">Minimax with reversed alpha-beta pruning</li>
+                                    </ul>
+                                    <a class="btn btn-primary" href="https://aimacode.github.io/aima-javascript/5-Adversarial-Search/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Github</a>
+                                    <p class="lead" style="margin-top: 2rem;">Source: Artificial Intelligence: A Modern Approach<br>by Stuart Russel and Peter Norvig</p>
                                 </div>
                             </div>
                         </div>
@@ -118,8 +154,8 @@
                         <div class="row" id="group-3">
                             <div class="col-lg-4 showcase-text accordion accordion-flush divider-right">
                                 <button class="accordion-button collapsed" id="v-pills-3a-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-3a" aria-controls="v-pills-3a">Javascript constraints</button>
-                                <button class="accordion-button collapsed" id="v-pills-3b-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-3b" aria-controls="v-pills-3b">Constraint-Satisfaction Notebook</button>
-                                <!-- Work in Progress: <button class="list-group-item list-group-item-action" id="v-pills-3d-tab" data-bs-toggle="pill" data-bs-target="#v-pills-3d" type="button" role="tab" aria-controls="v-pills-3d" aria-selected="false">Pancake Problem</button> -->
+                                <button class="accordion-button collapsed" id="v-pills-3b-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-3b" aria-controls="v-pills-3b">Constraint Satisfaction Notebook</button>
+                                <button class="accordion-button collapsed" id="v-pills-3b-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-3c" aria-controls="v-pills-3c">Constraint Satisfaction Problems</button>
                             </div>
                             <div class="col-lg-8 showcase-text tab-content" >
                                 <div class="accordion-collapse collapse collapse-fade" id="v-pills-3a" data-bs-parent="#group-3">
@@ -146,6 +182,16 @@
                                     </ul>
                                     <a class="btn btn-primary" href="https://github.com/ToniRV/Constraint-Satisfaction-Notebook/blob/master/CSPs.ipynb" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Jupyter Notebook</a>
                                     <p class="lead">Source: MIT</p>
+                                </div>
+                                <div class="accordion-collapse collapse collapse-fade" id="v-pills-3c" data-bs-parent="#group-3">
+                                    <p class="lead">The following page has javascript implementations and visualisations for constraint satisfaction problems.</p>
+                                    <p class="lead" style="margin-top: 2rem;">The following demo's are provided:</p>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item lead">Map Coloring</li>
+                                        <li class="list-group-item lead">Sudoku</li>
+                                    </ul>
+                                    <a class="btn btn-primary" href="https://aimacode.github.io/aima-javascript/6-Constraint-Satisfaction-Problems/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Github</a>
+                                    <p class="lead" style="margin-top: 2rem;">Source: Artificial Intelligence: A Modern Approach<br>by Stuart Russel and Peter Norvig</p>
                                 </div>
                             </div>
                         </div>
