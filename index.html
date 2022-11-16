@@ -160,7 +160,7 @@
                             <div class="col-lg-4 showcase-text accordion accordion-flush divider-right">
                                 <button class="accordion-button collapsed" id="v-pills-4a-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-4a" aria-controls="v-pills-4a">CPMpy</button>
                                 <button class="accordion-button collapsed" id="v-pills-4b-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-4b" aria-controls="v-pills-4b">Z3 SAT solver</button>
-                                <!-- Work in Progress: <button class="accordion-button collapsed" id="v-pills-4b-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-4b" aria-controls="v-pills-4b">Prologbased SAT solver</button> -->
+                                <!-- Maybe: <button class="accordion-button collapsed" id="v-pills-4b-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-4b" aria-controls="v-pills-4b">Prologbased SAT solver</button> -->
                             </div>
                             <div class="col-lg-8 showcase-text tab-content" >
                                 <div class="accordion-collapse collapse collapse-fade" id="v-pills-4a" data-bs-parent="#group-4">
@@ -176,7 +176,34 @@
                                     <p class="lead">It is able to check satisfiability of logical formulas over one or more theories.</p>
                                     <p class="lead" style="margin-top: 2rem;">You can play with it or just follow along in the following notebook:</p>
                                     <a class="btn btn-primary" href="https://colab.research.google.com/github/philzook58/z3_tutorial/blob/master/Z3%20Tutorial.ipynb" target="_blank" rel="noopener noreferrer">Jupyter Notebook</a>
-                                    <p class="lead">Source: <a href="https://github.com/philzook58/z3_tutorial">Github</a></p>
+                                    <p class="lead">Source: <a href="https://github.com/philzook58/z3_tutorial" target="_blank" rel="noopener noreferrer">Github</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Probability Theory -->
+                <div class="card border-light text-center mt-4">
+                    <div class="card-header"><h2 class="display-5">5. Probability Theory</h2></div>
+                    <div class="card-body">
+                        <div class="row" id="group-5">
+                            <div class="col-lg-4 showcase-text accordion accordion-flush divider-right">
+                                <button class="accordion-button collapsed" id="v-pills-5a-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-5a" aria-controls="v-pills-5a">Introduction to Probability</button>
+                                <button class="accordion-button collapsed" id="v-pills-5b-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-5b" aria-controls="v-pills-5b">Understanding Bayes' Theorem</button>
+                            </div>
+                            <div class="col-lg-8 showcase-text tab-content" >
+                                <div class="accordion-collapse collapse collapse-fade" id="v-pills-5a" data-bs-parent="#group-5">
+                                    <p class="lead">The following page hosts a lot of information related to probability. Topics from independence to Baye's theorem are covered. </p>
+                                    <p class="lead">Way more information is provided than you need for this course, but it's still an interesting read. </p>
+                                    <p class="lead">The best part, video's and examples are given to gain a better understanding.</p>
+                                    <p class="lead" style="margin-top: 2rem;">The following link will bring you to part 9: Baye's theorem.</p>
+                                    <a class="btn btn-primary" href="https://dlsun.github.io/probability/bayes.html" target="_blank" rel="noopener noreferrer">Github</a>
+                                </div>
+                                <div class="accordion-collapse collapse collapse-fade" id="v-pills-5b" data-bs-parent="#group-5">
+                                    <p class="lead">If you still have problems understanding Baye's theorem, the following notebook might help you.</p>
+                                    <p class="lead">The page is a short step-by-step overview of the theorem.</p>
+                                    <a class="btn btn-primary" href="https://antigenic-cartography.org/terry/understanding-bayes-theorem.html" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Jupyter Notebook</a>
                                 </div>
                             </div>
                         </div>
@@ -184,34 +211,6 @@
                 </div>
 
                 <!--
-                <div class="card border-light text-center mt-4">
-                    <div class="card-header"><h2 class="display-5">5. Probability Theory</h2></div>
-                    <div class="card-body">
-                        <div class="row" >
-                            <div class="col-lg-4 showcase-text list-group-flush list-group divider-right" role="tablist" aria-orientation="vertical">
-                                <button class="list-group-item list-group-item-action" id="v-pills-5a-tab" data-bs-toggle="pill" data-bs-target="#v-pills-5a" type="button" role="tab" aria-controls="v-pills-5a" aria-selected="true">???</button>
-                                <button class="list-group-item list-group-item-action" id="v-pills-5b-tab" data-bs-toggle="pill" data-bs-target="#v-pills-5b" type="button" role="tab" aria-controls="v-pills-5b" aria-selected="false">???</button>
-                            </div>
-                            <div class="col-lg-8 showcase-text tab-content" >
-                                <div class="tab-pane fade show" id="v-pills-5a" role="tabpanel" aria-labelledby="v-pills-5a-tab">
-                                    <p class="lead">The link will take you to a step-by-step guide to the following search algorithms:</p>
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item lead">Breadth First Search</li>
-                                        <li class="list-group-item lead">Dijkstra’s Algorithm</li>
-                                        <li class="list-group-item lead">A*</li>
-                                    </ul>
-                                    <a class="btn btn-danger" href="https://www.redblobgames.com/pathfinding/a-star/introduction.html" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">RedBlobGames</a>
-                                </div>
-                                <div class="tab-pane fade" id="v-pills-5b" role="tabpanel" aria-labelledby="v-pills-5b-tab">
-                                    <p class="lead">The following link will bring you to a visualisation tool on Github for search algorithms.</p>
-                                    <p class="lead">Be sure to find the differences between the algorithms while trying them out!</p>
-                                    <a class="btn btn-danger" href="https://qiao.github.io/PathFinding.js/visual/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Github</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
                 <div class="card border-light text-center mt-4">
                     <div class="card-header"><h2 class="display-5">6. Bayesian Networks</h2></div>
                     <div class="card-body">
