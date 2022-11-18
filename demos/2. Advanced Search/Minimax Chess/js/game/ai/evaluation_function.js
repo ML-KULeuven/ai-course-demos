@@ -1,4 +1,4 @@
-import { COLOUR, PAWN_EVAL_WHITE, PAWN_EVAL_BLACK, ROOK_EVAL_WHITE, ROOK_EVAL_BLACK, QUEEN_EVAL, KING_EVAL_WHITE, KING_EVAL_BLACK} from "../constants.js";
+import { COLOUR, PAWN_EVAL_WHITE, PAWN_EVAL_BLACK, ROOK_EVAL_WHITE, ROOK_EVAL_BLACK, QUEEN_EVAL, KING_EVAL_WHITE, KING_EVAL_BLACK, KNIGHT_EVAL, BISHOP_EVAL} from "../constants.js";
 
 export default class EvaluationFunction {
 
@@ -24,6 +24,10 @@ export default class EvaluationFunction {
         } else {
             if (piece.type === 'pawn') {
                 absoluteValue = 10 + ( piece.isWhite() ? PAWN_EVAL_WHITE[y][x] : PAWN_EVAL_BLACK[y][x] );
+            } else if (piece.type === 'knight') {
+                absoluteValue = 40 + KNIGHT_EVAL[y][x];
+            } else if (piece.type === 'bishop') {
+                absoluteValue = 45 + BISHOP_EVAL[y][x];
             } else if (piece.type === 'rook') {
                 absoluteValue = 50 + ( piece.isWhite() ? ROOK_EVAL_WHITE[y][x] : ROOK_EVAL_BLACK[y][x]);
             } else if (piece.type === 'queen') {

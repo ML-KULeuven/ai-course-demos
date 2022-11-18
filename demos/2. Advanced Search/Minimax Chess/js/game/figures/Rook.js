@@ -1,4 +1,3 @@
-import { COLOUR } from '../constants.js';
 import Piece from './Piece.js';
 export default class Rook extends Piece {
     constructor(x, y, colour, sprite) {

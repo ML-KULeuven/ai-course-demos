@@ -1,20 +1,19 @@
 import Piece from './Piece.js';
-export default class Queen extends Piece {
+export default class Bishop extends Piece {
     constructor(x, y, colour, sprite) {
         super(x, y, colour, sprite);
-        this.type = 'queen';
+        this.type = 'bishop';
     }
+
 
     findMoves(tiles) {
         let moves = [];
+
         moves.push(...this.findAllMoves(1, -1, tiles));
         moves.push(...this.findAllMoves(-1, -1, tiles));
         moves.push(...this.findAllMoves(1, 1, tiles));
         moves.push(...this.findAllMoves(-1, 1, tiles));
-        moves.push(...this.findAllMoves(1, 0, tiles));
-        moves.push(...this.findAllMoves(0, -1, tiles));
-        moves.push(...this.findAllMoves(-1, 0, tiles));
-        moves.push(...this.findAllMoves(0, 1, tiles));
+
         return moves;
     }
 

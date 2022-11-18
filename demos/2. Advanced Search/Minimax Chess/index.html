@@ -25,23 +25,15 @@
   <div class="card">
     <div class="card-body">
       <div class="row">
-
-        <!-- Minimax tree -->
-        <div class="col-4">
-          <h1>Minimax Tree</h1>
-          <!-- Minimax tree is rendered here via javascript -->
-          <div id="tree"></div>
-        </div>
-
         <!-- Chess board -->
-        <div class="col-4">
+        <div class="col-6">
           <h1>Chessboard</h1>
           <!-- Chess board is rendered here via javascript -->
           <div id="chess_board" style="display: flex;margin: 0;justify-content: center;align-items: center"></div>
         </div>
         
         <!-- User menu -->
-        <div class="col-4">
+        <div class="col-6">
           <div class="btn-group">
             <button id="undoButton" type="button" class="btn btn-outline-secondary">Undo</button>
             <button id="redoButton" type="button" class="btn btn-outline-secondary">Redo</button>
@@ -53,20 +45,28 @@
             <li class="btn"></li>
 
             <!-- Score -->
-            <li class="list-group-item font-weight-bold bg-light">Score:</li>
-            <li class="list-group-item" id="score"></li>
-            <li class="btn"></li>
-
-            <!-- Best move -->
-            <li class="list-group-item font-weight-bold bg-light">Best move:</li>
-            <li class="list-group-item" id="move">No move</li>
+            <li id="score" class="list-group-item font-weight-bold bg-light">Score: 0</li>
+            <li class="list-group-item">
+              <div class="progress">
+                <div id="good" class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                <div id="evil" class="progress-bar bg-danger progress-bar-striped progress-bar-animated" role="progressbar" style="width: 50%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </li>
             <li class="btn"></li>
 
             <!-- Search depth -->
             <li class="list-group-item font-weight-bold bg-light">Search depth:</li>
-            <li class="list-group-item" id="depth">5</li>
+            <li class="list-group-item" id="depth">2</li>
             <li class="btn"></li>
           </ul>
+        </div>
+      </div>
+      <div class="row" style="margin-top: 2rem;">
+        <!-- Minimax tree -->
+        <div class="col-12">
+          <h1>Minimax tree for the decision that the AI made</h1>
+          <!-- Minimax tree is rendered here via javascript -->
+          <div id="tree" class="svg-container"></div>
         </div>
       </div>
     </div>

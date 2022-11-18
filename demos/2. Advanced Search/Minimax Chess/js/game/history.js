@@ -11,22 +11,20 @@ export default class History {
     }
 
     addBoardState(board) {
+        this.currentBoardState++;
         let newBoard = _.cloneDeep(board);
         this.pruneHistory();
         this.boardStates.push(newBoard);
-        this.currentBoardState++;
     }
 
     getCurrentBoardState() {
-        return this.boardStates[this.currentBoardState];
+        return _.cloneDeep(this.boardStates[this.currentBoardState]);
     }
 
     undo() {
         if (this.currentBoardState > 0) {
             this.currentBoardState--;
         }
-        print(this.boardStates);
-        print(this.currentBoardState);
         return this.getCurrentBoardState();
     }
 
@@ -34,19 +32,14 @@ export default class History {
         if (this.currentBoardState+1 < this.boardStates.length) {
             this.currentBoardState++;
         }
-        print(this.boardStates);
-        print(this.currentBoardState);
         return this.getCurrentBoardState();
     }
 
     pruneHistory() {
-        let historyLength = this.boardStates.length;
-        for (let i = this.currentBoardState+1; i < historyLength; i++) {
-            print('before: ' + this.boardStates.length);
-            print(this.boardStates)
+        let temp = _.cloneDeep(this);
+        let historyLength = temp.boardStates.length;
+        for (let i = this.currentBoardState; i < historyLength; i++) {
             this.boardStates.pop();
-            print('after: ' + this.boardStates.length);
-            print(this.boardStates)
         }
     }
 }

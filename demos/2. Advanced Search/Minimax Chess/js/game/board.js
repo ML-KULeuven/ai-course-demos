@@ -3,6 +3,8 @@ import Pawn from './figures/Pawn.js';
 import Rook from './figures/Rook.js';
 import King from './figures/King.js';
 import Queen from './figures/Queen.js';
+import Knight from './figures/Knight.js';
+import Bishop from './figures/Bishop.js';
 import CheckFinder from './checkFinder.js';
 import History from './history.js';
 import Minimax from './ai/minimax.js';
@@ -17,27 +19,66 @@ export default class Board {
         this.turn = COLOUR.WHITE;
         this.isInCheck = false;
         this.history = new History(this.tiles);
-        this.tree = new MinimaxTree();
     }
 
     createTiles() {
         let tiles = this.createEmptyBoard();
 
+        function getRandPos() {
+            return [Math.floor(Math.random() * 4), Math.floor(Math.random() * 2)];
+        }
+        function isAdjacent(pos1, pos2) {
+
+            if (pos1[0] == pos2[0] || pos1[0] == pos2[0]-1 || pos1[0] == pos2[0]+1)
+            if (pos1[1] == pos2[1] || pos1[1] == pos2[1]-1 || pos1[1] == pos2[1]+1)
+              return true;
+            return false;
+        }
+        
+        // Place Pieces
         for (let i = 0; i < 4; i++) { 
-            tiles[i][1] = new Pawn(i, 1, COLOUR.BLACK, '♟');
-            tiles[i][2] = new Pawn(i, 2, COLOUR.WHITE, '♙');
+            for (let j = 0; j < 4; j++) {
+                let randomNum = Math.floor(Math.random() * 20);
+                if (randomNum < 5) {
+                    if (j < 2) {
+                        tiles[i][j] = new Pawn(i, j, COLOUR.BLACK, '♟');
+                    } else {
+                        tiles[i][j] = new Pawn(i, j, COLOUR.WHITE, '♙');
+                    }
+                } else if (randomNum < 7) {
+                    if (j < 2) {
+                        tiles[i][j] = new Knight(i, j, COLOUR.BLACK, '♞');
+                    } else {
+                        tiles[i][j] = new Knight(i, j, COLOUR.WHITE, '♘');
+                    }
+                } else if (randomNum < 9) {
+                    if (j < 2) {
+                        tiles[i][j] = new Bishop(i, j, COLOUR.BLACK, '♝');
+                    } else {
+                        tiles[i][j] = new Bishop(i, j, COLOUR.WHITE, '♗');
+                    }
+                } else if (randomNum < 11) {
+                    if (j < 2) {
+                        tiles[i][j] = new Rook(i, j, COLOUR.BLACK, '♜');
+                    } else {
+                        tiles[i][j] = new Rook(i, j, COLOUR.WHITE, '♖');
+                    }
+                } else if (randomNum < 12) {
+                    if (j < 2) {
+                        tiles[i][j] = new Queen(i, j, COLOUR.BLACK, '♛');
+                    } else {
+                        tiles[i][j] = new Queen(i, j, COLOUR.WHITE, '♕');
+                    }
+                }
+            }
         }
 
-        tiles[0][0] = new Rook(0, 0, COLOUR.BLACK, '♜');
-        tiles[3][0] = new Rook(3, 0, COLOUR.BLACK, '♜');
-        tiles[0][3] = new Rook(0, 3, COLOUR.WHITE, '♖');
-        tiles[3][3] = new Rook(3, 3, COLOUR.WHITE, '♖');
-
-        tiles[2][0] = new King(2, 0, COLOUR.BLACK, '♚');
-        tiles[2][3] = new King(2, 3, COLOUR.WHITE, '♔');
-
-        tiles[1][0] = new Queen(1, 0, COLOUR.BLACK, '♛');
-        tiles[1][3] = new Queen(1, 3, COLOUR.WHITE, '♕');
+        // Place Kings
+        let wk, bk;
+        do { wk = getRandPos(); bk = getRandPos(); wk[1]+=2;}
+        while (isAdjacent(wk, bk));
+        tiles[wk[0]][wk[1]] = new King(wk[0], wk[1], COLOUR.WHITE, '♔');
+        tiles[bk[0]][bk[1]] = new King(bk[0], bk[1], COLOUR.BLACK, '♚');
 
         return tiles;
     }
@@ -66,17 +107,19 @@ export default class Board {
 
                 if ((i + j) % 2 != 0) {
                     push();
-                    fill('tan');
+                    strokeWeight(0);
+                    fill('rgb(181,189,206)');
                     rect(x, y, this.sizeOfSquare, this.sizeOfSquare);
                     pop();
                 } else {
                     push();
-                    fill('beige');
+                    strokeWeight(0);
+                    fill('rgb(233,236,240)');
                     rect(x, y, this.sizeOfSquare, this.sizeOfSquare);
                     pop();
                 }
                 if (currentTile)  {
-                    currentTile.draw(x, y);
+                    currentTile.draw(x, y+5);
                 }
             }
         }
@@ -88,8 +131,8 @@ export default class Board {
             const tile = this.tiles[this.selected.x][this.selected.y];
             if (tile) {
                 push();
+                strokeWeight(0);
                 fill(0,255,0,127);
-
                 for (const move of this.legalMoves) {
                     rect(this.getPos(move.x), this.getPos(move.y), this.sizeOfSquare, this.sizeOfSquare);
                 }
@@ -138,36 +181,36 @@ export default class Board {
             let moves = CheckFinder.findMovesForCheckedPlayer(this.tiles, this.turn);
             if (moves.length === 0) {
                 if (this.turn === COLOUR.WHITE) {
-                    alert("Black won!");
+                    alert("You lost!\nSkynet will take over");
                 } else {
-                    alert("White won!");
+                    alert("Congratulations!\nYou beat the minimax AI.");
                 }
             }
         }
     }
 
     enemyMove() {
-        let {bestMoveFound, treeData} = Minimax.minimaxRoot(5, this.tiles, true);
+        let tempTiles = _.cloneDeep(this.tiles);
+        let {bestMoveFound, treeData} = Minimax.minimaxRoot(2, tempTiles, true);
 
-        //Build minimax tree
-        this.tree.buildRoot(treeData);
+        //Build new minimax tree
+        let tree = new MinimaxTree();
+        tree.update(treeData);
 
         if (bestMoveFound === undefined) {
-            alert("White won!");
+            return;
         } else {
             this.move(bestMoveFound.old, bestMoveFound.new);
         }
     }
 
     undoAction() {
-        this.history.undo();
-        this.tiles = this.history.getCurrentBoardState();
+        this.tiles = this.history.undo();;
         this.selected = undefined;
     }
 
     redoAction() {
-        this.history.redo();
-        this.tiles = this.history.getCurrentBoardState();
+        this.tiles = this.history.redo();
         this.selected = undefined;
     }
 

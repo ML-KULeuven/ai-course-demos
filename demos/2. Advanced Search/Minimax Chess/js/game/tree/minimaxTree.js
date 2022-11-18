@@ -3,178 +3,190 @@ import "https://d3js.org/d3.v7.min.js";
 export default class MinimaxTree {
 
     constructor() {
-
         // Set the dimensions and margins of the diagram
-        let margin = {top: 40, right: 120, bottom: 20, left: 120};
-        let width = 960 - margin.right - margin.left;
-        let height = 500 - margin.top - margin.bottom;
-
-        // append the svg object to the body of the page
-        // appends a 'group' element to 'svg'
-        // moves the 'group' element to the top left margin
-        this.svg = d3.select("#tree").append("svg")
-                    .attr("width", width + margin.right + margin.left)
-                    .attr("height", height + margin.top + margin.bottom)
-                    .append("g")
-                    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-        this.i = 0;
-        this.duration = 750;
+        let margin = {top: 40, right: 20, bottom: 40, left: 20};
+        this.width = 1000 - margin.right - margin.left;
+        this.height = 1000 - margin.top - margin.bottom;
         this.root;
 
-        // declares a tree layout and assigns the size
-        this.treemap = d3.tree().size([height, width]);
+        // Purge the svg
+        this.svg = d3.select("#tree").html("");
+
+        // Create the svg
+        this.svg = d3.select("#tree").append("svg")
+            .attr("preserveAspectRatio", "xMidYMin")
+            .attr("viewBox", `0 0 ${this.width} ${this.height}`)
+            .classed("svg-content", true);
+
+        // Create the visualization within the svg
+        this.g = this.svg.append("g")
+	        .attr("transform", "translate(" + this.width/2 + "," + margin.top + ")");
+
+        // Zoom and drag functionality on svg
+        d3.zoom().translateTo(this.svg, 0, this.height/2-margin.top); 
+        this.svg.call(d3.zoom()
+            .scaleExtent([0.1, 8])
+            .on('zoom', (event) => {
+                this.g.attr('transform', event.transform);
+            }));
+
+        // declares a tree layout and assigns the size       
+        let nodeWidth = 120;
+        let nodeHeight = 120;
+        let horizontalSeparationBetweenNodes = 0;
+        let verticalSeparationBetweenNodes = 526;
+        this.treeLayout = d3.tree()
+            .nodeSize([nodeWidth + horizontalSeparationBetweenNodes, nodeHeight + verticalSeparationBetweenNodes])
+            .separation(function(a, b) {
+                return a.parent == b.parent ? 1 : 1.1;
+            });
     }
 
-    buildRoot(treeData) {
-         // Assigns parent, children, height, depth
-         this.root = d3.hierarchy(treeData, function(d) { return d.children; });
-         this.root.x0 = height / 2;
-         this.root.y0 = 0;
-         this.root.descendants().forEach((d, i) => {
-             d.id = i;
-             d._children = d.children;
-             if (d.depth && d.data.name.length !== 7) d.children = null;
-         });
-         
-         this.update(this.root);
-    }
+    update(treeData) {
+        // create a hierarchy from the root
+        this.root = d3.hierarchy(treeData);
+        this.treeLayout(this.root);
 
-    update(source) {
-
-        print(source);
-
-        // Assigns the x and y position for the nodes
-        var treeData = this.treemap(this.root);
-        
         // Compute the new tree layout.
-        var nodes = treeData.descendants(),
-            links = treeData.descendants().slice(1);
-      
+        let nodes = this.root.descendants();
+        let links = this.root.links();
+
         // Normalize for fixed-depth.
-        nodes.forEach(function(d){ d.y = d.depth * 180});
-      
-        // ****************** Nodes section ***************************
-      
-        // Update the nodes...
-        var node = this.svg.selectAll('g.node')
+        nodes.forEach(function(d) { d.y = d.depth * 180; });
+
+        // Declare the nodes…
+        let node = this.g.selectAll("g.node")
             .data(nodes, function(d) {return d.id || (d.id = ++this.i); });
-      
-        // Enter any new modes at the parent's previous position.
-        var nodeEnter = node.enter().append('g')
-            .attr('class', 'node')
+
+        // Enter the nodes.
+        let nodeEnter = node.enter().append("g")
+            .attr("class", "node")
             .attr("transform", function(d) {
-              return "translate(" + source.x0 + "," + source.y0 + ")";
-          })
-          .on('click', (event, d) => {
-            d.children = d.children ? null : d._children;
-            this.update(d);
-          });
-      
-        // Add Circle for the nodes
-        nodeEnter.append('circle')
-            .attr('class', 'node')
-            .attr('r', 1e-6)
-            //.on("mouseover", function(d) {d3.select(this).transition().delay(0).style("stroke", "pink").style("stroke-width", 5);})
-            .style("fill", function(d) {
-                return d._children ? "lightsteelblue" : "#fff";
+                return "translate(" + d.x + "," + d.y + ")"; 
             });
-      
-        // Add labels for the nodes
-        nodeEnter.append('text')
-            .attr("dy", ".35em")
-            .attr("x", function(d) {
-                return d.children || d._children ? -13 : 13;
+    
+        // Node
+        nodeEnter.append("rect")
+            .attr("class", "body-box")
+            .attr("width", 100)
+            .attr("height", 100)
+            .style("stroke", function(d) {
+                if (d.data.depth%2) 
+                    return "green";
+                else
+                    if (d.data.best)
+                        return "gold";
+                    else
+                        return "red";
             })
-            .attr("text-anchor", function(d) {
-                return d.children || d._children ? "end" : "start";
-            })
-            .text(function(d) { return d.data.name; });
-      
-        // UPDATE
-        var nodeUpdate = nodeEnter.merge(node);
-      
-        // Transition to the proper position for the node
-        nodeUpdate.transition()
-          .duration(this.duration)
-          .attr("transform", function(d) { 
-              return "translate(" + d.x + "," + d.y + ")";
-           });
-      
-        // Update the node attributes and style
-        nodeUpdate.select('circle.node')
-          .attr('r', 10)
-          .style("fill", function(d) {
-              return d._children ? "lightsteelblue" : "#fff";
-          })
-          .attr('cursor', 'pointer');
-      
-      
-        // Remove any exiting nodes
-        var nodeExit = node.exit().transition()
-            .duration(this.duration)
-            .attr("transform", function(d) {
-                return "translate(" + source.x + "," + source.y + ")";
-            })
-            .remove();
-      
-        // On exit reduce the node circles size to 0
-        nodeExit.select('circle')
-          .attr('r', 1e-6);
-      
-        // On exit reduce the opacity of text labels
-        nodeExit.select('text')
-          .style('fill-opacity', 1e-6);
-      
-        // ****************** links section ***************************
-      
-        // Update the links...
-        var link = this.svg.selectAll('path.link')
-            .data(links, function(d) { return d.id; });
-      
-        // Enter any new links at the parent's previous position.
-        var linkEnter = link.enter().insert('path', "g")
-            .attr("class", "link")
-            .attr('d', function(d){
-              var o = {x: source.x0, y: source.y0}
-              return diagonal(o, o)
+            .style("stroke-width", function(d) {
+                if (d.data.best)
+                    return "4px";
+                else
+                    return "1px";
             });
 
-        // Add labels to links
-        // Add 
+        // Chessboard
+        let margin = 10;
+        let fieldSize = 20;
+        let boardDimension = 4;
+        let boardSize = 20 + fieldSize * boardDimension;
+
+        // Initiate chessboard values
+        let chess_svg = nodeEnter.append("svg")
+            .attr("width", boardSize + "px")
+            .attr("height", boardSize + "px")
+            .selectAll(".fields")
+            .data(
+                function(d) {
+                    let board = [];
+                    for(let i = 0; i < boardDimension; i++) {
+                        for(let j=0; j< boardDimension; j++) {
+                            board.push({
+                                x: i % boardDimension,
+                                y: j % boardDimension,
+                                piece: d.data.board[i][j]
+                            });
+                        }
+                    }
+                    return board;
+                }
+            )
+            .enter()
+            .append("g");
+
+        chess_svg.append("rect")
+            .style("class", "chess-board")
+            .attr("x", function (d) {
+                return margin + d.x * fieldSize;
+            })
+            .attr("y", function (d) {
+                return margin + d.y * fieldSize;
+            })
+            .attr("width", fieldSize + "px")
+            .attr("height", fieldSize + "px")
+            .style("fill", function (d) {
+                if ( ((d.x%2 == 0) && (d.y%2 == 0)) ||
+                    ((d.x%2 == 1) && (d.y%2 == 1))) 
+                    return "rgb(233,236,240)";
+                else
+                    return "rgb(181,189,206)";
+            });
         
-      
-        // UPDATE
-        var linkUpdate = linkEnter.merge(link);
-      
-        // Transition back to the parent element position
-        linkUpdate.transition()
-            .duration(this.duration)
-            .attr('d', function(d){ return diagonal(d, d.parent) });
-      
-        // Remove any exiting links
-        var linkExit = link.exit().transition()
-            .duration(this.duration)
-            .attr('d', function(d) {
-              var o = {x: source.x, y: source.y}
-              return diagonal(o, o)
+        chess_svg.append("text")
+            .attr("x", function (d) {
+                return d.x*fieldSize;
             })
-            .remove();
-      
-        // Store the old positions for transition.
-        nodes.forEach(function(d){
-          d.x0 = d.x;
-          d.y0 = d.y;
-        });
+            .attr("y", function (d) {
+                return d.y*fieldSize;
+            })
+            .style("font-size", "20")
+            .style("font-family", "arial")
+            .attr("text-anchor", "middle")
+            .attr("dy", "27px")
+            .attr("dx", "20px")
+            .text(function (d) {
+                if (d.piece != undefined) {
+                    return d.piece.sprite;
+                } 
+            });
+        
+        // Declare the links.
+        let link = this.g.selectAll(".link")
+            .data(links, function(d) { 
+                return d; 
+            });
 
-        // Creates a curved (diagonal) path from parent to the child nodes
-        function diagonal(s, d) {
-            const path =    `M ${s.x} ${s.y}
-                            C ${(s.x + d.x) / 2} ${s.y},
-                            ${(s.x + d.x) / 2} ${d.y},
-                            ${d.x} ${d.y}`
+        // Enter the links.
+        link.enter().insert("path", "g")
+            .attr("class", "link")
+            .attr("d", d3.linkVertical()
+                .x(function(d) { return d.x+50; })
+                .y(function(d) { return d.y; })
+            );
 
-            return path
-        }
+        // Title box.
+        nodeEnter.append("rect")
+            .attr("class", "title-box")
+            .attr("width", 46)
+            .attr("height", 23)
+            .attr("transform", function(d) { 
+                return "translate(" + -13 +"," + -15 + ")";
+            });
+
+        // Title box text.
+        nodeEnter.append("text")
+            .attr("class", "title-box-text")
+            .attr("text-anchor", "middle")
+            .attr("transform", function(d) { 
+                return "translate(" + 10 +"," + 1.5 + ")";
+            })
+            .text(function(d) { return d.data.minimax; });
+
+        // Exit everything.
+        node.exit().remove();
+        nodeEnter.exit().remove();
+        link.exit().remove();
+        chess_svg.exit().remove();
     }
 }
