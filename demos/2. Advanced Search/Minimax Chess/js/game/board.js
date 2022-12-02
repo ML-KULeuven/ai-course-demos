@@ -19,6 +19,7 @@ export default class Board {
         this.turn = COLOUR.WHITE;
         this.isInCheck = false;
         this.history = new History(this.tiles);
+        this.depth = 2;
     }
 
     createTiles() {
@@ -146,7 +147,8 @@ export default class Board {
         return index * this.sizeOfSquare + offset;
     }
 
-    userClick(clientX, clientY) {
+    userClick(clientX, clientY, depth) {
+        this.depth = depth;
         const x = Math.floor(clientX / 100);
         const y = Math.floor(clientY / 100);
         this.select(x, y);
@@ -191,7 +193,7 @@ export default class Board {
 
     enemyMove() {
         let tempTiles = _.cloneDeep(this.tiles);
-        let {bestMoveFound, treeData} = Minimax.minimaxRoot(2, tempTiles, true);
+        let {bestMoveFound, treeData} = Minimax.minimaxRoot(this.depth, tempTiles, true);
 
         //Build new minimax tree
         let tree = new MinimaxTree();
@@ -215,7 +217,11 @@ export default class Board {
     }
 
     getScore() {
-        return Evaluation.evaluateBoard(this.tiles);
+        return Evaluation.evaluateBoard(this.tiles, false);
+    }
+
+    getAbsoluteScore() {
+        return -Evaluation.evaluateBoard(this.tiles, true)-1800;
     }
 
     isOffBoard(x, y) {

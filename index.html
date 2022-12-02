@@ -12,6 +12,14 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" type="text/css" />
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Chess Demo -->
+        <script src="assets/js/vendor/p5.js"></script>
+        <script src="assets/js/vendor/p5.dom.min.js"></script>
+        <script src="assets/js/vendor/lodash.js"></script>
+        <!-- Template jquery File -->
+        <script src="https://cdn.jsdelivr.net/npm/socket.io-client@2/dist/socket.io.js"></script>
+        <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+        <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="assets/css/styles.css" rel="stylesheet" />
     </head>
@@ -114,20 +122,65 @@
                     <div class="card-body">
                         <div class="row" id="group-2">
                             <div class="col-lg-4 showcase-text accordion accordion-flush divider-right">
-                                <button class="accordion-button collapsed" id="v-pills-2a-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-2a" aria-controls="v-pills-2a">Minimax & Alpha-beta pruning demo</button>
-                                <button class="accordion-button collapsed" id="v-pills-2b-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-2b" aria-controls="v-pills-2b">Mini Chess minimax demo (work in progress)</button>
+                                <button class="accordion-button collapsed" id="v-pills-2a-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-2a" aria-controls="v-pills-2a">Mini Chess minimax demo</button>
+                                <button class="accordion-button collapsed" id="v-pills-2b-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-2b" aria-controls="v-pills-2b">Minimax & Alpha-beta pruning demo</button>
                                 <button class="accordion-button collapsed" id="v-pills-2c-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-2c" aria-controls="v-pills-2c">Adversarial Search</button>
                             </div>
                             <div class="col-lg-8 showcase-text tab-content" >
                                 <div class="accordion-collapse collapse collapse-fade" id="v-pills-2a" data-bs-parent="#group-2">
+                                    <p class="lead">Try and beat the chess AI if you can!</p>
+                                    <p class="lead">The computer uses the minimax algorithm to find the best course of action.</p>
+                                    <p class="lead">Dynamically tell how well you are doing and change the search depth to increase the difficulty. You can view the search tree below the chess board to tell why the computer decided its move.</p>                                    
+                                    <p class="lead">The demo generates random board states, so you can refresh the board state a couple of times to get what you want.</p>
+                                    <!-- Setting and information menu -->
+                                    <div>                                        
+                                        <ul class="list-group">                            
+                                            <!-- Score -->
+                                            <li id="score" class="list-group-item font-weight-bold bg-light">Score: 0</li>
+                                            <li class="list-group-item">
+                                                <div class="progress">
+                                                <div id="good" class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                                <div id="evil" class="progress-bar bg-danger progress-bar-striped progress-bar-animated" role="progressbar" style="width: 50%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </li>
+                                            <li class="btn"></li>
+                                        </ul>
+                                        <!-- Chess Buttons -->
+                                        <div class="btn-group" style="margin-bottom: 2rem;">
+                                            <button id="undoButton" type="button" class="btn btn-outline-secondary">Undo</button>
+                                            <button id="redoButton" type="button" class="btn btn-outline-secondary">Redo</button>
+                                            <button id="newGameButton" type="button" class="btn btn-outline-secondary">New game</button>
+                                            <div class="btn-group">
+                                                <button class="btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                  Search depth: <span id="show-depth"></span>
+                                                </button>
+                                                <ul class="dropdown-menu dropdown1">
+                                                    <button class="dropdown-item" type="button">1</button>
+                                                    <button class="dropdown-item" type="button" id="default-depth">2</button>
+                                                    <button class="dropdown-item" type="button">3</button>
+                                                    <li><hr class="dropdown-divider"></li>
+                                                    <button class="dropdown-item" type="button">4</button>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Chess game -->
+                                    <div>
+                                        <!-- Chess board is rendered here via javascript -->
+                                        <div id="chess_board" style="display: flex;margin: 0;justify-content: center;align-items: center"></div>
+                                    </div>
+
+                                    <!-- Minimax tree -->
+                                    <div>
+                                        <!-- Minimax tree is rendered here via javascript -->
+                                        <div id="tree" class="svg-container"></div>
+                                    </div>
+                                </div>
+                                <div class="accordion-collapse collapse collapse-fade" id="v-pills-2b" data-bs-parent="#group-2">
                                     <p class="lead">To make you help understand the minimax algorithm you can create your own tree diagram. </p>
                                     <p class="lead">The simulator shows step-by-step what happens when the algorithm traverses the tree. </p>
                                     <p class="lead">Furthermore, you can also test out the algorithm with and without alpha-beta pruning.</p>
                                     <a class="btn btn-primary" href="https://raphsilva.github.io/utilities/minimax_simulator/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Minimax simulator</a>
-                                </div>
-                                <div class="accordion-collapse collapse collapse-fade" id="v-pills-2b" data-bs-parent="#group-2">
-                                    <p class="lead">Work in progress</p>
-                                    <!--<p class="lead">Chess AI using the minimax algorithm, try to beat it if you can!</p>-->
                                 </div>
                                 <div class="accordion-collapse collapse collapse-fade" id="v-pills-2c" data-bs-parent="#group-2">
                                     <p class="lead">The following page has a javascript implementation and visualisation for a tic-tac-toe AI that uses search algorithms.</p>
@@ -256,117 +309,148 @@
                     </div>
                 </div>
 
-                <!--
+                <!-- 6. Bayesian Networks -->
                 <div class="card border-light text-center mt-4">
                     <div class="card-header"><h2 class="display-5">6. Bayesian Networks</h2></div>
                     <div class="card-body">
-                        <div class="row" >
-                            <div class="col-lg-4 showcase-text list-group-flush list-group divider-right" role="tablist" aria-orientation="vertical">
-                                <button class="list-group-item list-group-item-action" id="v-pills-6a-tab" data-bs-toggle="pill" data-bs-target="#v-pills-6a" type="button" role="tab" aria-controls="v-pills-6a" aria-selected="true">Van Poole</button>
-                                <button class="list-group-item list-group-item-action" id="v-pills-6b-tab" data-bs-toggle="pill" data-bs-target="#v-pills-6b" type="button" role="tab" aria-controls="v-pills-6b" aria-selected="false">???</button>
+                        <div class="row" id="group-6">
+                            <div class="col-lg-4 showcase-text accordion accordion-flush divider-right">
+                                <button class="accordion-button collapsed" id="v-pills-6a-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-6a" aria-controls="v-pills-6a">Bayes Server</button>
+                                <button class="accordion-button collapsed" id="v-pills-6b-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-6b" aria-controls="v-pills-6b">Pgmpy notebook</button>
+                                <button class="accordion-button collapsed" id="v-pills-6c-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-6c" aria-controls="v-pills-6c">Hidden Markov Model</button>
                             </div>
                             <div class="col-lg-8 showcase-text tab-content" >
-                                <div class="tab-pane fade show" id="v-pills-6a" role="tabpanel" aria-labelledby="v-pills-6a-tab">
-                                    <p class="lead">The link will take you to a step-by-step guide to the following search algorithms:</p>
+                                <div class="accordion-collapse collapse collapse-fade" id="v-pills-6a" data-bs-parent="#group-6">
+                                    <p class="lead">
+                                        The following link will take you to the bayes server website. 
+                                        The company hosting the website creates software that is used professionally to create and visualise Bayesian networks.
+                                    </p>    
+                                    <p class="lead">The software itself is not that useful for this course, but they do provide networks for the following well known probability problems: </p>
                                     <ul class="list-group list-group-flush">
-                                        <li class="list-group-item lead">Breadth First Search</li>
-                                        <li class="list-group-item lead">Dijkstra’s Algorithm</li>
-                                        <li class="list-group-item lead">A*</li>
+                                        <li class="list-group-item lead">Simpson's Paradox</li>
+                                        <li class="list-group-item lead">Monty Hall Problem</li>
+                                        <li class="list-group-item lead">Prosecutor Fallacy</li>
                                     </ul>
-                                    <a class="btn btn-danger" href="https://www.redblobgames.com/pathfinding/a-star/introduction.html" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">RedBlobGames</a>
+                                    <a class="btn btn-primary" href="https://www.bayesserver.com/examples/networks/simpsons-paradox" target="_blank" rel="noopener noreferrer">Bayes Server</a>
                                 </div>
-                                <div class="tab-pane fade" id="v-pills-6b" role="tabpanel" aria-labelledby="v-pills-6b-tab">
-                                    <p class="lead">You can try out the search algorithms on the following link:</p>
-                                    <a class="btn btn-danger" href="https://qiao.github.io/PathFinding.js/visual/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Github</a>
+                                <div class="accordion-collapse collapse collapse-fade" id="v-pills-6b" data-bs-parent="#group-6">
+                                    <p class="lead">Pgmpy is a powerful python library for inference and simulations in Bayesian Networks. They have lots of examples on their github page on how to use it.</p>
+                                    <p class="lead">The following notebook for example show you how to solve the Monthy Hall problem using pgmpy, but they lots of other examples and tutorials.</p>
+                                    <a class="btn btn-primary" href="https://github.com/pgmpy/pgmpy/blob/dev/examples/Monty%20Hall%20Problem.ipynb" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Jupyter Notebook</a>
+                                </div>
+                                <div class="accordion-collapse collapse collapse-fade" id="v-pills-6c" data-bs-parent="#group-6">
+                                    <p class="lead">A Hidden Markov Model is a statistical approach to describing the evolution of observable events that depend on internal factors, which are not directly observable.</p>
+                                    <p class="lead">The following notebook introduces what a Hidden Markov Model is, when you might want to use it, and how to implement it in python.</p>
+                                    <a class="btn btn-primary" href="https://colab.research.google.com/drive/1IUe9lfoIiQsL49atSOgxnCmMR_zJazKI" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Jupyter Notebook</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- 7. Solvers -->
                 <div class="card border-light text-center mt-4">
                     <div class="card-header"><h2 class="display-5">7. Solvers</h2></div>
                     <div class="card-body">
-                        <div class="row" >
-                            <div class="col-lg-4 showcase-text list-group-flush list-group divider-right" role="tablist" aria-orientation="vertical">
-                                <button class="list-group-item list-group-item-action" id="v-pills-7a-tab" data-bs-toggle="pill" data-bs-target="#v-pills-7a" type="button" role="tab" aria-controls="v-pills-7a" aria-selected="true">???</button>
-                                <button class="list-group-item list-group-item-action" id="v-pills-7b-tab" data-bs-toggle="pill" data-bs-target="#v-pills-7b" type="button" role="tab" aria-controls="v-pills-7b" aria-selected="false">???</button>
+                        <div class="row" id="group-7">
+                            <div class="col-lg-4 showcase-text accordion accordion-flush divider-right">
+                                <button class="accordion-button collapsed" id="v-pills-7a-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-7a" aria-controls="v-pills-7a">DPLL SAT Solver</button>
+                                <button class="accordion-button collapsed" id="v-pills-7b-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-7b" aria-controls="v-pills-7b">Z3 Sat solver notebook</button>
+                                <button class="accordion-button collapsed" id="v-pills-7c-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-7c" aria-controls="v-pills-7c">Zebra puzzle</button>
                             </div>
                             <div class="col-lg-8 showcase-text tab-content" >
-                                <div class="tab-pane fade show" id="v-pills-7a" role="tabpanel" aria-labelledby="v-pills-7a-tab">
-                                    <p class="lead">The link will take you to a step-by-step guide to the following search algorithms:</p>
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item lead">Breadth First Search</li>
-                                        <li class="list-group-item lead">Dijkstra’s Algorithm</li>
-                                        <li class="list-group-item lead">A*</li>
-                                    </ul>
-                                    <a class="btn btn-danger" href="https://www.redblobgames.com/pathfinding/a-star/introduction.html" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">RedBlobGames</a>
+                                <div class="accordion-collapse collapse collapse-fade" id="v-pills-7a" data-bs-parent="#group-7">
+                                    <p class="lead">The following link will take you to an online implementation of a simple SAT solver.</p>
+                                    <p class="lead">Variables are given by positive or negative numbers. The variables on each line are disjunctions and will form a conjunctive normal form with the other lines. The interpreter will go line per line to find out if the given CNF is satisfiable or not.</p>
+                                    <a class="btn btn-primary" href="https://www.inf.ufpr.br/dpasqualin/d3-dpll/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Website</a>
                                 </div>
-                                <div class="tab-pane fade" id="v-pills-7b" role="tabpanel" aria-labelledby="v-pills-7b-tab">
-                                    <p class="lead">The following link will bring you to a visualisation tool on Github for search algorithms.</p>
-                                    <p class="lead">Be sure to find the differences between the algorithms while trying them out!</p>
-                                    <a class="btn btn-danger" href="https://qiao.github.io/PathFinding.js/visual/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Github</a>
+                                <div class="accordion-collapse collapse collapse-fade" id="v-pills-7b" data-bs-parent="#group-7">
+                                    <p class="lead">Z3 is a state of the art SAT solver built by Microsoft.</p>
+                                    <p class="lead">The given notebook will give you a bit of a recap about theorem solvers and is a step-by-step tutorial on how one would use Z3 to prove theorems.</p>
+                                    <a class="btn btn-primary" href="https://colab.research.google.com/github/philzook58/z3_tutorial/blob/master/Z3%20Tutorial.ipynb#scrollTo=reHFJwiXvMO-" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Jupyter Notebook</a>
+                                </div>
+                                <div class="accordion-collapse collapse collapse-fade" id="v-pills-7c" data-bs-parent="#group-7">
+                                    <p class="lead">Lastly we have a fun demonstration on how to solve logic grid puzzles like for examples Zebra Puzzles, also known as Einstein's Riddles.</p>
+                                    <p class="lead">This specific puzzle was taken from the book "Puzzle Baron’s logic puzzles" concerns people's state of origin, current city of domicile, and age.</p>
+                                    <a class="btn btn-primary" href="https://bartbog.github.io/zebra/origin/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Jupyter Notebook</a>
+                                    <p class="lead">Created by Dr. Bart Bogaerts.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- 8. Markov Decision Processes -->
                 <div class="card border-light text-center mt-4">
                     <div class="card-header"><h2 class="display-5">8. Markov Decision Processes</h2></div>
                     <div class="card-body">
-                        <div class="row" >
-                            <div class="col-lg-4 showcase-text list-group-flush list-group divider-right" role="tablist" aria-orientation="vertical">
-                                <button class="list-group-item list-group-item-action" id="v-pills-8a-tab" data-bs-toggle="pill" data-bs-target="#v-pills-8a" type="button" role="tab" aria-controls="v-pills-8a" aria-selected="true">GridWorld</button>
-                                <button class="list-group-item list-group-item-action" id="v-pills-8b-tab" data-bs-toggle="pill" data-bs-target="#v-pills-8b" type="button" role="tab" aria-controls="v-pills-8b" aria-selected="false">???</button>
+                        <div class="row" id="group-8">
+                            <div class="col-lg-4 showcase-text accordion accordion-flush divider-right">
+                                <button class="accordion-button collapsed" id="v-pills-8a-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-8a" aria-controls="v-pills-8a">Value Iteration Algorithm</button>
+                                <button class="accordion-button collapsed" id="v-pills-8b-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-8b" aria-controls="v-pills-8b">Gambler's Problem</button>
                             </div>
                             <div class="col-lg-8 showcase-text tab-content" >
-                                <div class="tab-pane fade show" id="v-pills-8a" role="tabpanel" aria-labelledby="v-pills-8a-tab">
-                                    <p class="lead">The link will take you to a step-by-step guide to the following search algorithms:</p>
+                                <div class="accordion-collapse collapse collapse-fade" id="v-pills-8a" data-bs-parent="#group-8">
+                                    <p class="lead">This medium article tackles Markov Decision Processes using the grid world example from the book Artificial Intelligence A Modern Approach by Stuart Russell and Peter Norvig.</p>
+                                    <p class="lead">The following concepts are talked about:</p>
                                     <ul class="list-group list-group-flush">
-                                        <li class="list-group-item lead">Breadth First Search</li>
-                                        <li class="list-group-item lead">Dijkstra’s Algorithm</li>
-                                        <li class="list-group-item lead">A*</li>
+                                        <li class="list-group-item lead">Value Iteration</li>
+                                        <li class="list-group-item lead">Convergence of Value Iteration</li>
+                                        <li class="list-group-item lead">Policy Iteration</li>
+                                        <li class="list-group-item lead">Implementation in Python</li>
                                     </ul>
-                                    <a class="btn btn-danger" href="https://www.redblobgames.com/pathfinding/a-star/introduction.html" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">RedBlobGames</a>
+                                    <p class="lead">This can serve as a good way to refresh your understanding of the Value Iteration Algorithm in Markov Decision Processes.</p>
+                                    <a class="btn btn-primary" href="https://medium.com/@ngao7/markov-decision-process-value-iteration-2d161d50a6ff" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Medium</a>
                                 </div>
-                                <div class="tab-pane fade" id="v-pills-8b" role="tabpanel" aria-labelledby="v-pills-8b-tab">
-                                    <p class="lead">You can try out the search algorithms on the following link:</p>
-                                    <a class="btn btn-danger" href="https://qiao.github.io/PathFinding.js/visual/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Github</a>
+                                <div class="accordion-collapse collapse collapse-fade" id="v-pills-8b" data-bs-parent="#group-8">
+                                    <p class="lead">An overview and solution to the gambler's problem given in the book Reinforcement Learning: An Introduction by Richard S. Sutton and Andrew G. Barto</p>
+                                    <p class="lead">An example on how value and policy iteration can be used to solve intersting problems like these.</p>
+                                    <a class="btn btn-primary" href="https://medium.com/@jaems33/gamblers-problem-b4e91040e58a" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Medium</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- 9. Machine Learning -->
                 <div class="card border-light text-center mt-4">
                     <div class="card-header"><h2 class="display-5">9. Machine Learning</h2></div>
                     <div class="card-body">
-                        <div class="row" >
-                            <div class="col-lg-4 showcase-text list-group-flush list-group divider-right" role="tablist" aria-orientation="vertical">
-                                <button class="list-group-item list-group-item-action" id="v-pills-9a-tab" data-bs-toggle="pill" data-bs-target="#v-pills-9a" type="button" role="tab" aria-controls="v-pills-9a" aria-selected="true">Neural Networks</button>
-                                <button class="list-group-item list-group-item-action" id="v-pills-9b-tab" data-bs-toggle="pill" data-bs-target="#v-pills-9b" type="button" role="tab" aria-controls="v-pills-9b" aria-selected="false">KNN Demo</button>
+                        <div class="row" id="group-9">
+                            <div class="col-lg-4 showcase-text accordion accordion-flush divider-right">
+                                <button class="accordion-button collapsed" id="v-pills-9a-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-9a" aria-controls="v-pills-9a">K-Nearest Neighbours</button>
+                                <button class="accordion-button collapsed" id="v-pills-9b-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-9b" aria-controls="v-pills-9b">Distance metrics in KNN</button>
+                                <button class="accordion-button collapsed" id="v-pills-9a-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-9a" aria-controls="v-pills-9c">Classification</button>
+                                <button class="accordion-button collapsed" id="v-pills-9b-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-9b" aria-controls="v-pills-9d">Anomaly detection​</button>
+                                <button class="accordion-button collapsed" id="v-pills-9b-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-9b" aria-controls="v-pills-9e">Neural Networks</button>
                             </div>
                             <div class="col-lg-8 showcase-text tab-content" >
-                                <div class="tab-pane fade show" id="v-pills-9a" role="tabpanel" aria-labelledby="v-pills-9a-tab">
-                                    <p class="lead">The link will take you to a step-by-step guide to the following search algorithms:</p>
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item lead">Breadth First Search</li>
-                                        <li class="list-group-item lead">Dijkstra’s Algorithm</li>
-                                        <li class="list-group-item lead">A*</li>
-                                    </ul>
-                                    <a class="btn btn-danger" href="https://www.redblobgames.com/pathfinding/a-star/introduction.html" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">RedBlobGames</a>
+                                <div class="accordion-collapse collapse collapse-fade" id="v-pills-9a" data-bs-parent="#group-9">
+                                    <p class="lead">The first article explains how to compute the k-Nearest Neighbors algorithm.</p>
+                                    <p class="lead">The second link will take you to a site where you will be able to play with a k-Nearest Neighbors demo.</p>
+                                    <a class="btn btn-primary" href="https://towardsdatascience.com/machine-learning-basics-with-the-k-nearest-neighbors-algorithm-6a6e71d01761" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">towardsdatascience</a>
+                                    <a class="btn btn-primary" href="https://lecture-demo.ira.uka.de/knn-demo/"target="_blank" rel="noopener noreferrer">Demo</a>
                                 </div>
-                                <div class="tab-pane fade" id="v-pills-9b" role="tabpanel" aria-labelledby="v-pills-9b-tab">
-                                    <p class="lead">You can try out the search algorithms on the following link:</p>
-                                    <a class="btn btn-danger" href="https://qiao.github.io/PathFinding.js/visual/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Github</a>
+                                <div class="accordion-collapse collapse collapse-fade" id="v-pills-9b" data-bs-parent="#group-9">
+                                    <p class="lead">K-neirest neighbors can be computed using different kinds of distance metrics.</p>
+                                    <p class="lead">The following metrics are explained:</p>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item lead">Manhattan distance</li>
+                                        <li class="list-group-item lead">Euclidean distance</li>
+                                        <li class="list-group-item lead">Minkowski distance</li>
+                                    </ul>
+                                    <a class="btn btn-primary" href="https://medium.com/@luigi.fiori.lf0303/distance-metrics-and-k-nearest-neighbor-knn-1b840969c0f4" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Medium</a>
+                                </div>
+                                <div class="accordion-collapse collapse collapse-fade" id="v-pills-9c" data-bs-parent="#group-9">
+                                </div>
+                                <div class="accordion-collapse collapse collapse-fade" id="v-pills-9d" data-bs-parent="#group-9">
+                                </div>
+                                <div class="accordion-collapse collapse collapse-fade" id="v-pills-9e" data-bs-parent="#group-9">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            -->
-
             </div>
         </section>
 
@@ -383,5 +467,7 @@
         <script src="assets/js/vendor/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="assets/js/site/scripts.js"></script>
+        <!-- Demo's JS Files -->
+        <script src="demos/2. Advanced Search/Minimax Chess/js/game/sketch.js" type="module"></script>
     </body>
 </html>

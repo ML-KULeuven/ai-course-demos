@@ -18,7 +18,8 @@ function draw(){
 function mouseClicked() {
   const x = mouseX;
   const y = mouseY;
-  board.userClick(x, y);
+  let depth = $('#show-depth').text();
+  board.userClick(x, y, depth);
   laserBar();
 }
 
@@ -30,12 +31,18 @@ function redo() {
   board.redoAction();
 }
 
+function newGame() {
+  setup();
+  $('#tree').css("padding-bottom","0%");
+}
+
 function score() {
   return board.getScore();
 }
 
 function laserBar() {
   let percentage = 50;
+
   if ((score())>100){
     percentage = 100;
   } else if (score()<-100){
@@ -59,3 +66,4 @@ window.mouseClicked = mouseClicked;
 //Start or Stop the animation
 document.getElementById("undoButton").addEventListener("click", undo);
 document.getElementById("redoButton").addEventListener("click", redo);
+document.getElementById("newGameButton").addEventListener("click", newGame);

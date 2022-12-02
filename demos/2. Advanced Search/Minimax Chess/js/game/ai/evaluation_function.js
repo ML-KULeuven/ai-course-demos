@@ -6,17 +6,17 @@ export default class EvaluationFunction {
     * Evaluates the board at this point in time, 
     * using the material weights and piece square tables.
     */
-    static evaluateBoard(tiles) {
+    static evaluateBoard(tiles, absolute) {
         var totalEvaluation = 0;
         for (var i = 0; i < 4; i++) {
             for (var j = 0; j < 4; j++) {
-                totalEvaluation = totalEvaluation + this.getPieceValue(tiles[i][j], i ,j);
+                totalEvaluation = totalEvaluation + this.getPieceValue(tiles[i][j], i ,j, absolute);
             }
         }
         return totalEvaluation;
     }
 
-    static getPieceValue(piece, x, y) {
+    static getPieceValue(piece, x, y, absolute) {
         let absoluteValue;
 
         if (piece === undefined) {
@@ -37,6 +37,6 @@ export default class EvaluationFunction {
             }
         }
 
-        return piece.colour === COLOUR.WHITE ? absoluteValue : -absoluteValue;
+        return (piece.colour === COLOUR.WHITE && !absolute) ? absoluteValue : -absoluteValue;
     }
 }

@@ -5,3 +5,8 @@
 */
 // This file is intentionally blank
 // Use this file to add JavaScript to your project
+
+$('#show-depth').text($('#default-depth').text());
+$('.dropdown1 button').click(function(){
+    $('#show-depth').text($(this).text());
+});

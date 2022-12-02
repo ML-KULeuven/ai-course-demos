@@ -43,6 +43,8 @@ export default class MinimaxTree {
     }
 
     update(treeData) {
+        $('#tree').css("padding-bottom","75%");
+
         // create a hierarchy from the root
         this.root = d3.hierarchy(treeData);
         this.treeLayout(this.root);

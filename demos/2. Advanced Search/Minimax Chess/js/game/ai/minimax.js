@@ -36,7 +36,6 @@ export default class Minimax {
             if(element.depth == 0) {
                 if(element.minimax == -bestMove){
                     element.best = true;
-                    console.log(element);
                 }
             }
         });
