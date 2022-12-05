@@ -367,29 +367,31 @@
                                     </div>
                                     <div class="col-lg-8 showcase-text tab-content" >
                                         <div class="accordion-collapse collapse collapse-fade" id="v-pills-6a" data-bs-parent="#group-6">
-                                            <img src="assets/media/bayes-server.png" class="rounded mx-auto d-block img-showcase" alt="Bayes-server-logo">
+<!--                                            <img src="assets/media/bayes-server.png" class="rounded mx-auto d-block img-showcase" alt="Bayes-server-logo">-->
+                                            <img src="assets/media/simpsonsparadox.png" class="img-fluid">
                                             <p class="lead">
-                                                The following link will take you to the bayes server website. 
-                                                The company hosting the website creates software that is used professionally to create and visualise Bayesian networks.
+                                                Bayes Sever is software that is used professionally to create and visualise Bayesian networks.
                                             </p>    
-                                            <p class="lead">The software itself is not that useful for this course, but they do provide networks for the following well known probability problems: </p>
+                                            <p class="lead">The software itself is not that useful for this course, but they do provide networks for the following well-known probability problems: </p>
                                             <ul class="list-group list-group-flush">
-                                                <li class="list-group-item lead">Simpson's Paradox</li>
-                                                <li class="list-group-item lead">Monty Hall Problem</li>
-                                                <li class="list-group-item lead">Prosecutor Fallacy</li>
+                                                <li class="list-group-item lead not-covered">Simpson's Paradox</li>
+                                                <li class="list-group-item lead not-covered">Monty Hall Problem</li>
+                                                <li class="list-group-item lead not-covered">Prosecutor Fallacy</li>
                                             </ul>
                                             <a class="btn btn-primary" href="https://www.bayesserver.com/examples/networks/simpsons-paradox"  style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Bayes Server</a>
                                         </div>
                                         <div class="accordion-collapse collapse collapse-fade" id="v-pills-6b" data-bs-parent="#group-6">
-                                            <img src="assets/media/collab.svg" class="rounded mx-auto d-block img-showcase" alt="Collab-logo">
-                                            <p class="lead">Pgmpy is a powerful python library for inference and simulations in Bayesian Networks. They have lots of examples on their github page on how to use it.</p>
-                                            <p class="lead">The following notebook for example show you how to solve the Monthy Hall problem using pgmpy, but they lots of other examples and tutorials.</p>
+                                            <img src="assets/media/pgmpy.png" class="img-fluid">
+                                            <p class="lead">pgmpy is a powerful python library for inference and simulations in Bayesian Networks. They have lots of examples on their
+                                                <a href="https://github.com/pgmpy/pgmpy" target="_blank" rel="noopener noreferrer">Github</a> page on how to use it.</p>
+                                            <p class="lead">This notebook for example show you how to solve the Monthy Hall problem using pgmpy:</p>
                                             <a class="btn btn-primary" href="https://github.com/pgmpy/pgmpy/blob/dev/examples/Monty%20Hall%20Problem.ipynb" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Jupyter Notebook</a>
                                         </div>
                                         <div class="accordion-collapse collapse collapse-fade" id="v-pills-6c" data-bs-parent="#group-6">
-                                            <img src="assets/media/collab.svg" class="rounded mx-auto d-block img-showcase" alt="Collab-logo">
+<!--                                            <img src="assets/media/collab.svg" class="rounded mx-auto d-block img-showcase" alt="Collab-logo">-->
+                                            <img src="assets/media/hmm.png" class="img-fluid">
                                             <p class="lead">A Hidden Markov Model is a statistical approach to describing the evolution of observable events that depend on internal factors, which are not directly observable.</p>
-                                            <p class="lead">The following notebook introduces what a Hidden Markov Model is, when you might want to use it, and how to implement it in python.</p>
+                                            <p class="lead">This notebook introduces what a Hidden Markov Model is, when you might want to use it, and how to implement it in python.</p>
                                             <a class="btn btn-primary" href="https://colab.research.google.com/drive/1IUe9lfoIiQsL49atSOgxnCmMR_zJazKI" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Jupyter Notebook</a>
                                         </div>
                                     </div>
@@ -409,9 +411,12 @@
                                     </div>
                                     <div class="col-lg-8 showcase-text tab-content" >
                                         <div class="accordion-collapse collapse collapse-fade" id="v-pills-7a" data-bs-parent="#group-7">
-                                            <img src="assets/media/tree.jpg" class="rounded mx-auto d-block img-showcase" alt="Tree-logo">
-                                            <p class="lead">The following link will take you to an online implementation of a simple SAT solver.</p>
-                                            <p class="lead">Variables are given by positive or negative numbers. The variables on each line are disjunctions and will form a conjunctive normal form with the other lines. The interpreter will go line per line to find out if the given CNF is satisfiable or not.</p>
+                                            <img src="assets/media/dpll-input.png" class="img-fluid">
+                                            <img src="assets/media/dpll-trace.png" class="img-fluid">
+                                            <p class="lead">This simple solver solves SAT problems and displays the search tree.
+                                                Variables are encoded as numbers (and the negation sign as "not").
+                                                The variables on each line are disjunctions that form a conjunctive normal form with the other lines.
+                                                The interpreter goes line per line to find out if the given CNF is satisfiable or not.</p>
                                             <a class="btn btn-primary" href="https://www.inf.ufpr.br/dpasqualin/d3-dpll/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Demo</a>
                                         </div>
                                         <div class="accordion-collapse collapse collapse-fade" id="v-pills-7b" data-bs-parent="#group-7">
@@ -421,8 +426,8 @@
                                             <a class="btn btn-primary" href="https://colab.research.google.com/github/philzook58/z3_tutorial/blob/master/Z3%20Tutorial.ipynb#scrollTo=reHFJwiXvMO-" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Jupyter Notebook</a>
                                         </div>
                                         <div class="accordion-collapse collapse collapse-fade" id="v-pills-7c" data-bs-parent="#group-7">
-                                            <img src="assets/media/zebra.png" class="rounded mx-auto d-block img-showcase" alt="Zebra-logo">
-                                            <p class="lead">Lastly we have a fun demonstration on how to solve logic grid puzzles like for examples Zebra Puzzles, also known as Einstein's Riddles.</p>
+                                            <img src="assets/media/zebra-puzzle.png" alt="Zebra puzzle" class="img-fluid">
+                                            <p class="lead">This demonstration solves the "Zebra puzzle"/"Einstein Riddle" logic grid puzzles.</p>
                                             <p class="lead">This specific puzzle was taken from the book "Puzzle Baron’s logic puzzles" concerns people's state of origin, current city of domicile, and age.</p>
                                             <a class="btn btn-primary" href="https://bartbog.github.io/zebra/origin/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Github</a>
                                             <p class="lead">Created by Dr. Bart Bogaerts.</p>
@@ -443,22 +448,23 @@
                                     </div>
                                     <div class="col-lg-8 showcase-text tab-content" >
                                         <div class="accordion-collapse collapse collapse-fade" id="v-pills-8a" data-bs-parent="#group-8">
-                                            <img src="assets/media/medium.svg" class="rounded mx-auto d-block img-showcase" alt="Medium-logo">
-                                            <p class="lead">This medium article tackles Markov Decision Processes using the grid world example from the book Artificial Intelligence A Modern Approach by Stuart Russell and Peter Norvig.</p>
-                                            <p class="lead">The following concepts are talked about:</p>
+<!--                                            <img src="assets/media/medium.svg" class="rounded mx-auto d-block img-showcase" alt="Medium-logo">-->
+                                            <img src="assets/media/mdp.webp" alt="MDP grid" class="img-fluid">
+                                            <p class="lead">This Medium article tackles Markov Decision Processes using the grid world example from the book <em>Artificial Intelligence: A Modern Approach</em> by Stuart Russell and Peter Norvig, and covers the following topics:</p>
                                             <ul class="list-group list-group-flush">
                                                 <li class="list-group-item lead">Value Iteration</li>
                                                 <li class="list-group-item lead">Convergence of Value Iteration</li>
                                                 <li class="list-group-item lead">Policy Iteration</li>
-                                                <li class="list-group-item lead">Implementation in Python</li>
+                                                <li class="list-group-item lead not-covered">Implementation in Python</li>
                                             </ul>
                                             <p class="lead" style="margin-top: 2rem;">This can serve as a good way to refresh your understanding of the Value Iteration Algorithm in Markov Decision Processes.</p>
-                                            <a class="btn btn-primary" href="https://medium.com/@ngao7/markov-decision-process-value-iteration-2d161d50a6ff" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Medium</a>
+                                            <a class="btn btn-primary" href="https://medium.com/@ngao7/markov-decision-process-value-iteration-2d161d50a6ff" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Read Medium article</a>
                                         </div>
                                         <div class="accordion-collapse collapse collapse-fade" id="v-pills-8b" data-bs-parent="#group-8">
+                                            <img src="assets/media/gridworld.png" alt="Gridworld policy iteration" class="img-fluid">
                                             <p class="lead">An overview and solution to the gambler's problem given in the book Reinforcement Learning: An Introduction by Richard S. Sutton and Andrew G. Barto</p>
-                                            <p class="lead">An example on how value and policy iteration can be used to solve intersting problems like these.</p>
-                                            <a class="btn btn-primary" href="https://cs.stanford.edu/people/karpathy/reinforcejs/gridworld_dp.html" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Stanford</a>
+                                            <p class="lead">An example on how value and policy iteration can be used to solve gridworld problems.</p>
+                                            <a class="btn btn-primary" href="https://cs.stanford.edu/people/karpathy/reinforcejs/gridworld_dp.html" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Open demo</a>
                                         </div>
                                     </div>
                                 </div>
@@ -479,41 +485,49 @@
                                     </div>
                                     <div class="col-lg-8 showcase-text tab-content" >
                                         <div class="accordion-collapse collapse collapse-fade" id="v-pills-9a" data-bs-parent="#group-9">
-                                            <img src="assets/media/tds.jpg" class="rounded mx-auto d-block img-showcase" alt="Tds-logo">
+                                            <img src="assets/media/knn.png" alt="K-nearest neighbours" class="img-fluid">
+<!--                                            <img src="assets/media/tds.jpg" class="rounded mx-auto d-block img-showcase" alt="Tds-logo">-->
                                             <p class="lead">The first article explains how to compute the k-Nearest Neighbors algorithm.</p>
                                             <p class="lead">The second link will take you to a site where you will be able to play with a k-Nearest Neighbors demo.</p>
-                                            <a class="btn btn-primary" href="https://towardsdatascience.com/machine-learning-basics-with-the-k-nearest-neighbors-algorithm-6a6e71d01761" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Towardsdatascience</a>
+                                            <a class="btn btn-primary" href="https://towardsdatascience.com/machine-learning-basics-with-the-k-nearest-neighbors-algorithm-6a6e71d01761" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Read article</a>
                                             <p class="lead"></p>
                                             <a class="btn btn-primary" href="https://lecture-demo.ira.uka.de/knn-demo/"target="_blank" rel="noopener noreferrer">UKA</a>
                                             <a class="btn btn-primary" href="https://vision.stanford.edu/teaching/cs231n-demos/knn/"target="_blank" rel="noopener noreferrer">Stanford</a>
                                             <a class="btn btn-primary" href="https://codepen.io/gangtao/pen/PPoqMW"target="_blank" rel="noopener noreferrer">Codepen</a>
                                         </div>
                                         <div class="accordion-collapse collapse collapse-fade" id="v-pills-9b" data-bs-parent="#group-9">
-                                            <p class="lead">K-neirest neighbors can be computed using different kinds of distance metrics.</p>
+                                            <img src="assets/media/knn-article.webp" alt="K-nearest neighbours" class="img-fluid">
+                                            <p class="lead">K-nearest neighbors can be computed using different kinds of distance metrics.</p>
                                             <p class="lead">The following metrics are explained:</p>
                                             <ul class="list-group list-group-flush">
                                                 <li class="list-group-item lead">Manhattan distance</li>
                                                 <li class="list-group-item lead">Euclidean distance</li>
-                                                <li class="list-group-item lead">Minkowski distance</li>
+                                                <li class="list-group-item lead not-covered">Minkowski distance</li>
                                             </ul>
-                                            <a class="btn btn-primary" href="https://medium.com/@luigi.fiori.lf0303/distance-metrics-and-k-nearest-neighbor-knn-1b840969c0f4" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Medium</a>
+                                            <a class="btn btn-primary" href="https://medium.com/@luigi.fiori.lf0303/distance-metrics-and-k-nearest-neighbor-knn-1b840969c0f4" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">
+                                                Read article
+                                            </a>
                                         </div>
                                         <div class="accordion-collapse collapse collapse-fade" id="v-pills-9c" data-bs-parent="#group-9">
-                                            <p class="lead">Classification is an essential part to understanding what machine learning is capable of. The article provided serves as a brief introduction.</p>
-                                            <p class="lead">The demo is a model created at the university of Leiden. You can upload a picture of something and see if the model can recognise the subject.</p>
-                                            <a class="btn btn-primary" href="https://medium.com/swlh/a-brief-introduction-to-classification-619d38f4880f" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Medium</a>
+                                            <img src="assets/media/classification.webp" alt="Classification with two classes A and B" class="img-fluid">
+                                            <p class="lead">Classification is one of the main task within machine learning. The article provided serves as a brief introduction.</p>
+                                            <p class="lead">The demo is a model created at the university of Leiden. You can upload a picture of something and see if the model can recognise what is depicted on the picture.</p>
+                                            <a class="btn btn-primary" href="https://medium.com/swlh/a-brief-introduction-to-classification-619d38f4880f" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Read article</a>
                                             <p class="lead"></p>
                                             <a class="btn btn-primary" href="http://destiny.liacs.nl/" target="_blank" rel="noopener noreferrer">Demo</a>
                                         </div>
                                         <div class="accordion-collapse collapse collapse-fade" id="v-pills-9d" data-bs-parent="#group-9">
-                                            <p class="lead">Anomaly detection is a very useful usecase of machine learning.</p>
-                                            <p class="lead">The article provided serves as a brief introduction to the topic at hand.</p>
-                                            <a class="btn btn-primary" href="https://www.geeksforgeeks.org/machine-learning-for-anomaly-detection/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Medium</a>
+                                            <img src="assets/media/knn-anomaly.png" alt="K-nearest neighbours" class="img-fluid">
+                                            <p class="lead">Anomaly detection is a typical use case for machine learning.</p>
+                                            <p class="lead">This article provides a brief introduction to the topic at hand.</p>
+                                            <a class="btn btn-primary" href="https://www.geeksforgeeks.org/machine-learning-for-anomaly-detection/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Read article</a>
                                         </div>
                                         <div class="accordion-collapse collapse collapse-fade" id="v-pills-9e" data-bs-parent="#group-9">
-                                            <a class="btn btn-primary" href="https://lecture-demo.ira.uka.de/neural-network-demo/"target="_blank" rel="noopener noreferrer">UKA</a>
-                                            <a class="btn btn-primary" href="https://playground.tensorflow.org/"target="_blank" rel="noopener noreferrer">Tensorflow</a>
-                                            <a class="btn btn-primary" href="https://teachablemachine.withgoogle.com/"target="_blank" rel="noopener noreferrer">Teachable Machine</a>
+                                            <img src="assets/media/tensorflow-playground.png" alt="K-nearest neighbours" class="img-fluid">
+                                            <p class="lead">Below are several useful demos for learning to understand neural networks.</p>
+                                            <a class="btn btn-primary" href="https://playground.tensorflow.org/" target="_blank" rel="noopener noreferrer">Tensorflow playground</a>
+                                            <a class="btn btn-primary" href="https://lecture-demo.ira.uka.de/neural-network-demo/" target="_blank" rel="noopener noreferrer">UKA</a>
+                                            <a class="btn btn-primary" href="https://teachablemachine.withgoogle.com/" target="_blank" rel="noopener noreferrer">Teachable Machine</a>
                                         </div>
                                     </div>
                                 </div>
@@ -576,6 +590,7 @@
                         </article>
                     </div>  
                 </aside>
+
             </div>
         </div>
 
