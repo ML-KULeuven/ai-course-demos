@@ -10,3 +10,11 @@ $('#show-depth').text($('#default-depth').text());
 $('.dropdown1 button').click(function(){
     $('#show-depth').text($(this).text());
 });
+
+jQuery(document).ready(function($) {
+    $(".clickable-row").click(function() {
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $($(this).data("href")).offset().top
+        }, 0);
+    });
+});

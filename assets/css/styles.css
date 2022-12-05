@@ -612,6 +612,13 @@ progress {
   height: auto;
 }
 
+.img-showcase {
+  height: 100px;
+  width: 100px;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
 .figure {
   display: inline-block;
 }
@@ -11303,6 +11310,8 @@ header.masthead {
   background-color: #343a40;
   background: url("../media/bg-masthead.jpg") no-repeat center center;
   background-size: cover;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 header.masthead:before {
   content: "";

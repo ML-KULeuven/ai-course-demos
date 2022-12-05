@@ -37,7 +37,7 @@
         <header class="masthead">
             <div class="container position-relative">
                 <div class="row justify-content-center">
-                    <div class="col-xl-6">
+                    <div class="col-xl-10">
                         <div class="text-center text-white">
                             <h1 class="mb-5"><em>Artificiële Intelligentie</em> Demos</h1>
                             <p>
@@ -57,426 +57,521 @@
                     </div>
                 </div>
             </div>
-        </header>
-        <!-- Demo Showcases-->
-
-        <section class="showcase container">
-            <div class="container-fluid p-0">
-
-                <!-- 1. Search -->
-                <div class="card border-light text-center mt-4">
-                    <div class="card-header"><h2 class="display-5">1. Search</h2></div>
-                    <div class="card-body">
-                        <div class="row" id="group-1">
-                            <div class="col-lg-4 showcase-text accordion accordion-flush divider-right">
-                                <button class="accordion-button collapsed" id="v-pills-1a-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-1a" aria-controls="v-pills-1a">Introduction to the A* algorithm</button>
-                                <button class="accordion-button collapsed" id="v-pills-1b-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-1b" aria-controls="v-pills-1b">Pathfinding Functions Visualized</button>
-                                <button class="accordion-button collapsed" id="v-pills-1c-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-1c" aria-controls="v-pills-1c">N-Puzzle</button>
-                                <button class="accordion-button collapsed" id="v-pills-1d-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-1d" aria-controls="v-pills-1d">Solving Problems by Searching</button>
-                                <button class="accordion-button collapsed" id="v-pills-1e-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-1e" aria-controls="v-pills-1e">Beyond Classical Search</button>
-                            </div>
-                            <div class="col-lg-8 showcase-text tab-content" >
-                                <div class="accordion-collapse collapse collapse-fade" id="v-pills-1a" data-bs-parent="#group-1">
-                                    <img src="assets/media/redblob.png" alt="Red Blob Games" width="100%">
-                                    <p class="lead">RedBlobGames has a great introduction to search algorithms with interactive demos. The demo covers the following topics </p>
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item lead">Breadth First Search</li>
-                                        <li class="list-group-item lead not-covered">Dijkstra’s Algorithm</li>
-                                        <li class="list-group-item lead">A*</li>
-                                    </ul>
-                                    <a class="btn btn-primary" href="https://www.redblobgames.com/pathfinding/a-star/introduction.html" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">RedBlobGames</a>
-                                </div>
-                                <div class="accordion-collapse collapse collapse-fade" id="v-pills-1b" data-bs-parent="#group-1">
-                                    <p class="lead">The following link will bring you to a visualisation tool on Github for search algorithms.</p>
-                                    <p class="lead">Be sure to pay attention to the differences while trying them out.</p>
-                                    <a class="btn btn-primary" href="https://qiao.github.io/PathFinding.js/visual/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Github</a>
-                                </div>
-                                <div class="accordion-collapse collapse collapse-fade" id="v-pills-1c" data-bs-parent="#group-1">
-                                    <p class="lead">N-Puzzle is a web app for learning about graph-based search algorithms.</p>
-                                    <p class="lead">It tries to go from an initial 3x3 state to a desired 3x3 state by moving one tile into an empty spot. The search tree is visualized and you will be able to tell what happens one step at a time.</p>
-                                    <p class="lead">For example:</p>
-                                    <img src="assets/media/N-puzzle states.png" class="img-fluid" alt="Responsive image">
-                                    <p class="lead" style="margin-top: 2rem;">Try it out and find more information using the following link:</p>
-                                    <a class="btn btn-primary" href="https://tristanpenman.com/demos/n-puzzle/" target="_blank" rel="noopener noreferrer">N-puzzle</a>
-                                </div>
-                                <div class="accordion-collapse collapse collapse-fade" id="v-pills-1d" data-bs-parent="#group-1">
-                                    <p class="lead">The following page has javascript implementations and visualisations for classic search.</p>
-                                    <p class="lead" style="margin-top: 2rem;">Loads of algorithms and concepts are covered, but some of the more interesting ones that aren't covered in the other demo's are:</p>
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item lead">Search Agent</li>
-                                        <li class="list-group-item lead">Step Costs</li>
-                                        <li class="list-group-item lead">Uniform Cost Search</li>
-                                        <li class="list-group-item lead">Depth Limited Search</li>
-                                        <li class="list-group-item lead">Iterative Deepening Depth-First Search</li>
-                                        <li class="list-group-item lead">Bi-directional BFS</li>
-                                    </ul>
-                                    <a class="btn btn-primary" href="https://aimacode.github.io/aima-javascript/3-Solving-Problems-By-Searching/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Github</a>
-                                    <p class="lead" style="margin-top: 2rem;">Source: Artificial Intelligence: A Modern Approach<br>by Stuart Russel and Peter Norvig</p>
-                                </div>
-                                <div class="accordion-collapse collapse collapse-fade" id="v-pills-1e" data-bs-parent="#group-1">
-                                    <p class="lead">The following page has javascript implementations and visualisations for interesting usecases and problems beyond classical search. </p>
-                                    <p class="lead" style="margin-top: 2rem;">Some of the interesting problems and topics covered:</p>
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item lead">Optimization Problem</li>
-                                        <li class="list-group-item lead">Hill Climbing Search</li>
-                                        <li class="list-group-item lead">Genetic Algorithm</li>
-                                        <li class="list-group-item lead">Vacuum World</li>
-                                    </ul>
-                                    <a class="btn btn-primary" href="https://aimacode.github.io/aima-javascript/4-Beyond-Classical-Search/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Github</a>
-                                    <p class="lead" style="margin-top: 2rem;">Source: Artificial Intelligence: A Modern Approach<br>by Stuart Russel and Peter Norvig</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 2. Minimax -->
-                <div class="card border-light text-center mt-4">
-                    <div class="card-header"><h2 class="display-5">2. Advanced Search and Games</h2></div>
-                    <div class="card-body">
-                        <div class="row" id="group-2">
-                            <div class="col-lg-4 showcase-text accordion accordion-flush divider-right">
-                                <button class="accordion-button collapsed" id="v-pills-2a-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-2a" aria-controls="v-pills-2a">Mini Chess minimax Demo</button>
-                                <button class="accordion-button collapsed" id="v-pills-2b-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-2b" aria-controls="v-pills-2b">Minimax & Alpha-beta pruning Demo</button>
-                                <button class="accordion-button collapsed" id="v-pills-2c-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-2c" aria-controls="v-pills-2c">Adversarial Search</button>
-                            </div>
-                            <div class="col-lg-8 showcase-text tab-content" >
-                                <div class="accordion-collapse collapse collapse-fade" id="v-pills-2a" data-bs-parent="#group-2">
-                                    <p class="lead">Try and beat the chess AI if you can!</p>
-                                    <p class="lead">The computer uses the minimax algorithm to find the best course of action.</p>
-                                    <p class="lead">Dynamically tell how well you are doing and change the search depth to increase the difficulty. You can view the search tree below the chess board to tell why the computer decided its move.</p>
-                                    <p class="lead">The demo generates random board states, so you can refresh the board state a couple of times to get what you want.</p>
-                                    <!-- Setting and information menu -->
-                                    <div>
-                                        <ul class="list-group">
-                                            <!-- Score -->
-                                            <li id="score" class="list-group-item font-weight-bold bg-light">Score: 0</li>
-                                            <li class="list-group-item">
-                                                <div class="progress">
-                                                <div id="good" class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                                <div id="evil" class="progress-bar bg-danger progress-bar-striped progress-bar-animated" role="progressbar" style="width: 50%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                                                </div>
-                                            </li>
-                                            <li class="btn"></li>
-                                        </ul>
-                                        <!-- Chess Buttons -->
-                                        <div class="btn-group" style="margin-bottom: 2rem;">
-                                            <button id="undoButton" type="button" class="btn btn-outline-secondary">Undo</button>
-                                            <button id="redoButton" type="button" class="btn btn-outline-secondary">Redo</button>
-                                            <button id="newGameButton" type="button" class="btn btn-outline-secondary">New game</button>
-                                            <div class="btn-group">
-                                                <button class="btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                  Search depth: <span id="show-depth"></span>
-                                                </button>
-                                                <ul class="dropdown-menu dropdown1">
-                                                    <button class="dropdown-item" type="button">1</button>
-                                                    <button class="dropdown-item" type="button" id="default-depth">2</button>
-                                                    <button class="dropdown-item" type="button">3</button>
-                                                    <li><hr class="dropdown-divider"></li>
-                                                    <button class="dropdown-item" type="button">4</button>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Chess game -->
-                                    <div>
-                                        <!-- Chess board is rendered here via javascript -->
-                                        <div id="chess_board" style="display: flex;margin: 0;justify-content: center;align-items: center"></div>
-                                    </div>
-
-                                    <!-- Minimax tree -->
-                                    <div>
-                                        <!-- Minimax tree is rendered here via javascript -->
-                                        <div id="tree" class="svg-container"></div>
-                                    </div>
-                                </div>
-                                <div class="accordion-collapse collapse collapse-fade" id="v-pills-2b" data-bs-parent="#group-2">
-                                    <p class="lead">To make you help understand the minimax algorithm you can create your own tree diagram. </p>
-                                    <p class="lead">The simulator shows step-by-step what happens when the algorithm traverses the tree. </p>
-                                    <p class="lead">Furthermore, you can also test out the algorithm with and without alpha-beta pruning.</p>
-                                    <a class="btn btn-primary" href="https://raphsilva.github.io/utilities/minimax_simulator/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Minimax simulator</a>
-                                </div>
-                                <div class="accordion-collapse collapse collapse-fade" id="v-pills-2c" data-bs-parent="#group-2">
-                                    <p class="lead">The following page has a javascript implementation and visualisation for a tic-tac-toe AI that uses search algorithms.</p>
-                                    <p class="lead">Provided by the book:<br></p>
-                                    <p class="lead" style="margin-top: 2rem;">The following algorithms are covered:</p>
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item lead">Minimax</li>
-                                        <li class="list-group-item lead">Iterative Deepening</li>
-                                        <li class="list-group-item lead">Minimax with alpha-beta pruning</li>
-                                        <li class="list-group-item lead">Minimax with reversed alpha-beta pruning</li>
-                                    </ul>
-                                    <a class="btn btn-primary" href="https://aimacode.github.io/aima-javascript/5-Adversarial-Search/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Github</a>
-                                    <p class="lead" style="margin-top: 2rem;">Source: Artificial Intelligence: A Modern Approach<br>by Stuart Russel and Peter Norvig</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 3. CSP -->
-                <div class="card border-light text-center mt-4">
-                    <div class="card-header"><h2 class="display-5">3. CSP</h2></div>
-                    <div class="card-body">
-                        <div class="row" id="group-3">
-                            <div class="col-lg-4 showcase-text accordion accordion-flush divider-right">
-                                <button class="accordion-button collapsed" id="v-pills-3a-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-3a" aria-controls="v-pills-3a">Javascript Constraints</button>
-                                <button class="accordion-button collapsed" id="v-pills-3b-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-3b" aria-controls="v-pills-3b">Constraint Satisfaction Notebook</button>
-                                <button class="accordion-button collapsed" id="v-pills-3b-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-3c" aria-controls="v-pills-3c">Constraint Satisfaction Problems</button>
-                            </div>
-                            <div class="col-lg-8 showcase-text tab-content" >
-                                <div class="accordion-collapse collapse collapse-fade" id="v-pills-3a" data-bs-parent="#group-3">
-                                    <p class="lead">The following site brings you to a Javascript implementation of a constraint satisfaction problem solver.</p>
-                                    <p class="lead">Problems tackled:</p>
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item lead">Map Coloring</li>
-                                        <li class="list-group-item lead">N-Queens</li>
-                                        <li class="list-group-item lead">Sudoku</li>
-                                    </ul>
-                                    <p class="lead" style="margin-top: 2rem;">The code is open-source, so you can test it out yourself!</p>
-                                    <a class="btn btn-primary" href="http://prajitr.github.io/jusCSP/" target="_blank" rel="noopener noreferrer">Github</a>
-                                </div>
-                                <div class="accordion-collapse collapse collapse-fade" id="v-pills-3b" data-bs-parent="#group-3">
-                                    <p class="lead">The following link will give a step-by-step guide to solving constraint satisfaction problems.</p>
-                                    <p class="lead">Topics covered:</p>
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item lead">Constraint Propagation</li>
-                                        <li class="list-group-item lead">AC-1</li>
-                                        <li class="list-group-item lead">AC-3</li>
-                                        <li class="list-group-item lead">Generic Search</li>
-                                        <li class="list-group-item lead">Backtracking & Forward checking</li>
-                                        <li class="list-group-item lead">Complexity</li>
-                                    </ul>
-                                    <a class="btn btn-primary" href="https://github.com/ToniRV/Constraint-Satisfaction-Notebook/blob/master/CSPs.ipynb" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Jupyter Notebook</a>
-                                    <p class="lead">Source: MIT</p>
-                                </div>
-                                <div class="accordion-collapse collapse collapse-fade" id="v-pills-3c" data-bs-parent="#group-3">
-                                    <p class="lead">The following page has javascript implementations and visualisations for constraint satisfaction problems.</p>
-                                    <p class="lead" style="margin-top: 2rem;">The following demo's are provided:</p>
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item lead">Map Coloring</li>
-                                        <li class="list-group-item lead">Sudoku</li>
-                                    </ul>
-                                    <a class="btn btn-primary" href="https://aimacode.github.io/aima-javascript/6-Constraint-Satisfaction-Problems/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Github</a>
-                                    <p class="lead" style="margin-top: 2rem;">Source: Artificial Intelligence: A Modern Approach<br>by Stuart Russel and Peter Norvig</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 4. Automated Reasoning -->
-                <div class="card border-light text-center mt-4">
-                    <div class="card-header"><h2 class="display-5">4. Automated Reasoning</h2></div>
-                    <div class="card-body">
-                        <div class="row" id="group-4">
-                            <div class="col-lg-4 showcase-text accordion accordion-flush divider-right">
-                                <button class="accordion-button collapsed" id="v-pills-4a-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-4a" aria-controls="v-pills-4a">CPMpy</button>
-                                <button class="accordion-button collapsed" id="v-pills-4b-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-4b" aria-controls="v-pills-4b">Z3 SAT Solver</button>
-                            </div>
-                            <div class="col-lg-8 showcase-text tab-content" >
-                                <div class="accordion-collapse collapse collapse-fade" id="v-pills-4a" data-bs-parent="#group-4">
-                                    <p class="lead">CPMpy is a Constraint Programming and Modeling library in Python</p>
-                                    <p class="lead">There are lots of examples to be found on the github.</p>
-                                    <p class="lead" style="margin-top: 2rem;">You can check out example code right here (this will start a notebook, so it will take some time to load):</p>
-                                    <a class="btn btn-primary" href="https://mybinder.org/v2/gh/CPMpy/cpmpy/HEAD?labpath=examples%2Fquickstart_sudoku.ipynb" target="_blank" rel="noopener noreferrer">Jupyter Lab</a>
-                                    <p class="lead" style="margin-top: 2rem;">The github page:</p>
-                                    <a class="btn btn-primary" href="https://www.redblobgames.com/pathfinding/a-star/introduction.html" target="_blank" rel="noopener noreferrer">Github</a>
-                                </div>
-                                <div class="accordion-collapse collapse collapse-fade" id="v-pills-4b" data-bs-parent="#group-4">
-                                    <p class="lead">Microsoft has created it's own state of the art theorem prover.</p>
-                                    <p class="lead">It is able to check satisfiability of logical formulas over one or more theories.</p>
-                                    <p class="lead" style="margin-top: 2rem;">You can play with it or just follow along in the following notebook:</p>
-                                    <a class="btn btn-primary" href="https://colab.research.google.com/github/philzook58/z3_tutorial/blob/master/Z3%20Tutorial.ipynb" target="_blank" rel="noopener noreferrer">Jupyter Notebook</a>
-                                    <p class="lead">Source: <a href="https://github.com/philzook58/z3_tutorial" target="_blank" rel="noopener noreferrer">Github</a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 5. Probability Theory -->
-                <div class="card border-light text-center mt-4">
-                    <div class="card-header"><h2 class="display-5">5. Probability Theory</h2></div>
-                    <div class="card-body">
-                        <div class="row" id="group-5">
-                            <div class="col-lg-4 showcase-text accordion accordion-flush divider-right">
-                                <button class="accordion-button collapsed" id="v-pills-5a-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-5a" aria-controls="v-pills-5a">Introduction to Probability</button>
-                                <button class="accordion-button collapsed" id="v-pills-5b-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-5b" aria-controls="v-pills-5b">Understanding Bayes' Theorem</button>
-                            </div>
-                            <div class="col-lg-8 showcase-text tab-content" >
-                                <div class="accordion-collapse collapse collapse-fade" id="v-pills-5a" data-bs-parent="#group-5">
-                                    <p class="lead">The following page hosts a lot of information related to probability. Topics from independence to Baye's theorem are covered. </p>
-                                    <p class="lead">Way more information is provided than you need for this course, but it's still an interesting read. </p>
-                                    <p class="lead">The best part, video's and examples are given to gain a better understanding.</p>
-                                    <p class="lead" style="margin-top: 2rem;">The following link will bring you to part 9: Baye's theorem.</p>
-                                    <a class="btn btn-primary" href="https://dlsun.github.io/probability/bayes.html" target="_blank" rel="noopener noreferrer">Github</a>
-                                </div>
-                                <div class="accordion-collapse collapse collapse-fade" id="v-pills-5b" data-bs-parent="#group-5">
-                                    <p class="lead">If you still have problems understanding Baye's theorem, the following notebook might help you.</p>
-                                    <p class="lead">The page is a short step-by-step overview of the theorem.</p>
-                                    <a class="btn btn-primary" href="https://antigenic-cartography.org/terry/understanding-bayes-theorem.html" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Jupyter Notebook</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 6. Bayesian Networks -->
-                <div class="card border-light text-center mt-4">
-                    <div class="card-header"><h2 class="display-5">6. Bayesian Networks</h2></div>
-                    <div class="card-body">
-                        <div class="row" id="group-6">
-                            <div class="col-lg-4 showcase-text accordion accordion-flush divider-right">
-                                <button class="accordion-button collapsed" id="v-pills-6a-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-6a" aria-controls="v-pills-6a">Bayes Server</button>
-                                <button class="accordion-button collapsed" id="v-pills-6b-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-6b" aria-controls="v-pills-6b">Pgmpy Notebook</button>
-                                <button class="accordion-button collapsed" id="v-pills-6c-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-6c" aria-controls="v-pills-6c">Hidden Markov Model</button>
-                            </div>
-                            <div class="col-lg-8 showcase-text tab-content" >
-                                <div class="accordion-collapse collapse collapse-fade" id="v-pills-6a" data-bs-parent="#group-6">
-                                    <p class="lead">
-                                        The following link will take you to the bayes server website.
-                                        The company hosting the website creates software that is used professionally to create and visualise Bayesian networks.
-                                    </p>
-                                    <p class="lead">The software itself is not that useful for this course, but they do provide networks for the following well known probability problems: </p>
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item lead">Simpson's Paradox</li>
-                                        <li class="list-group-item lead">Monty Hall Problem</li>
-                                        <li class="list-group-item lead">Prosecutor Fallacy</li>
-                                    </ul>
-                                    <a class="btn btn-primary" href="https://www.bayesserver.com/examples/networks/simpsons-paradox"  style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Bayes Server</a>
-                                </div>
-                                <div class="accordion-collapse collapse collapse-fade" id="v-pills-6b" data-bs-parent="#group-6">
-                                    <p class="lead">Pgmpy is a powerful python library for inference and simulations in Bayesian Networks. They have lots of examples on their github page on how to use it.</p>
-                                    <p class="lead">The following notebook for example show you how to solve the Monthy Hall problem using pgmpy, but they lots of other examples and tutorials.</p>
-                                    <a class="btn btn-primary" href="https://github.com/pgmpy/pgmpy/blob/dev/examples/Monty%20Hall%20Problem.ipynb" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Jupyter Notebook</a>
-                                </div>
-                                <div class="accordion-collapse collapse collapse-fade" id="v-pills-6c" data-bs-parent="#group-6">
-                                    <p class="lead">A Hidden Markov Model is a statistical approach to describing the evolution of observable events that depend on internal factors, which are not directly observable.</p>
-                                    <p class="lead">The following notebook introduces what a Hidden Markov Model is, when you might want to use it, and how to implement it in python.</p>
-                                    <a class="btn btn-primary" href="https://colab.research.google.com/drive/1IUe9lfoIiQsL49atSOgxnCmMR_zJazKI" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Jupyter Notebook</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 7. Solvers -->
-                <div class="card border-light text-center mt-4">
-                    <div class="card-header"><h2 class="display-5">7. Solvers</h2></div>
-                    <div class="card-body">
-                        <div class="row" id="group-7">
-                            <div class="col-lg-4 showcase-text accordion accordion-flush divider-right">
-                                <button class="accordion-button collapsed" id="v-pills-7a-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-7a" aria-controls="v-pills-7a">DPLL SAT Solver</button>
-                                <button class="accordion-button collapsed" id="v-pills-7b-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-7b" aria-controls="v-pills-7b">Z3 Sat Solver Notebook</button>
-                                <button class="accordion-button collapsed" id="v-pills-7c-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-7c" aria-controls="v-pills-7c">Zebra Puzzle</button>
-                            </div>
-                            <div class="col-lg-8 showcase-text tab-content" >
-                                <div class="accordion-collapse collapse collapse-fade" id="v-pills-7a" data-bs-parent="#group-7">
-                                    <p class="lead">The following link will take you to an online implementation of a simple SAT solver.</p>
-                                    <p class="lead">Variables are given by positive or negative numbers. The variables on each line are disjunctions and will form a conjunctive normal form with the other lines. The interpreter will go line per line to find out if the given CNF is satisfiable or not.</p>
-                                    <a class="btn btn-primary" href="https://www.inf.ufpr.br/dpasqualin/d3-dpll/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Demo</a>
-                                </div>
-                                <div class="accordion-collapse collapse collapse-fade" id="v-pills-7b" data-bs-parent="#group-7">
-                                    <p class="lead">Z3 is a state of the art SAT solver built by Microsoft.</p>
-                                    <p class="lead">The given notebook will give you a bit of a recap about theorem solvers and is a step-by-step tutorial on how one would use Z3 to prove theorems.</p>
-                                    <a class="btn btn-primary" href="https://colab.research.google.com/github/philzook58/z3_tutorial/blob/master/Z3%20Tutorial.ipynb#scrollTo=reHFJwiXvMO-" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Jupyter Notebook</a>
-                                </div>
-                                <div class="accordion-collapse collapse collapse-fade" id="v-pills-7c" data-bs-parent="#group-7">
-                                    <p class="lead">Lastly we have a fun demonstration on how to solve logic grid puzzles like for examples Zebra Puzzles, also known as Einstein's Riddles.</p>
-                                    <p class="lead">This specific puzzle was taken from the book "Puzzle Baron’s logic puzzles" concerns people's state of origin, current city of domicile, and age.</p>
-                                    <a class="btn btn-primary" href="https://bartbog.github.io/zebra/origin/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Jupyter Notebook</a>
-                                    <p class="lead">Created by Dr. Bart Bogaerts.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 8. Markov Decision Processes -->
-                <div class="card border-light text-center mt-4">
-                    <div class="card-header"><h2 class="display-5">8. Markov Decision Processes</h2></div>
-                    <div class="card-body">
-                        <div class="row" id="group-8">
-                            <div class="col-lg-4 showcase-text accordion accordion-flush divider-right">
-                                <button class="accordion-button collapsed" id="v-pills-8a-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-8a" aria-controls="v-pills-8a">Value Iteration Algorithm</button>
-                                <button class="accordion-button collapsed" id="v-pills-8b-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-8b" aria-controls="v-pills-8b">Gambler's Problem</button>
-                            </div>
-                            <div class="col-lg-8 showcase-text tab-content" >
-                                <div class="accordion-collapse collapse collapse-fade" id="v-pills-8a" data-bs-parent="#group-8">
-                                    <p class="lead">This medium article tackles Markov Decision Processes using the grid world example from the book Artificial Intelligence A Modern Approach by Stuart Russell and Peter Norvig.</p>
-                                    <p class="lead">The following concepts are talked about:</p>
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item lead">Value Iteration</li>
-                                        <li class="list-group-item lead">Convergence of Value Iteration</li>
-                                        <li class="list-group-item lead">Policy Iteration</li>
-                                        <li class="list-group-item lead">Implementation in Python</li>
-                                    </ul>
-                                    <p class="lead" style="margin-top: 2rem;">This can serve as a good way to refresh your understanding of the Value Iteration Algorithm in Markov Decision Processes.</p>
-                                    <a class="btn btn-primary" href="https://medium.com/@ngao7/markov-decision-process-value-iteration-2d161d50a6ff" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Medium</a>
-                                </div>
-                                <div class="accordion-collapse collapse collapse-fade" id="v-pills-8b" data-bs-parent="#group-8">
-                                    <p class="lead">An overview and solution to the gambler's problem given in the book Reinforcement Learning: An Introduction by Richard S. Sutton and Andrew G. Barto</p>
-                                    <p class="lead">An example on how value and policy iteration can be used to solve intersting problems like these.</p>
-                                    <a class="btn btn-primary" href="https://medium.com/@jaems33/gamblers-problem-b4e91040e58a" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Medium</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 9. Machine Learning -->
-                <div class="card border-light text-center mt-4">
-                    <div class="card-header"><h2 class="display-5">9. Machine Learning</h2></div>
-                    <div class="card-body">
-                        <div class="row" id="group-9">
-                            <div class="col-lg-4 showcase-text accordion accordion-flush divider-right">
-                                <button class="accordion-button collapsed" id="v-pills-9a-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-9a" aria-controls="v-pills-9a">K-Nearest Neighbours</button>
-                                <button class="accordion-button collapsed" id="v-pills-9b-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-9b" aria-controls="v-pills-9b">Distance Metrics</button>
-                                <button class="accordion-button collapsed" id="v-pills-9c-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-9c" aria-controls="v-pills-9c">Classification</button>
-                                <button class="accordion-button collapsed" id="v-pills-9d-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-9d" aria-controls="v-pills-9d">Anomaly Detection​</button>
-                                <button class="accordion-button collapsed" id="v-pills-9e-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-9e" aria-controls="v-pills-9e">Neural Networks</button>
-                            </div>
-                            <div class="col-lg-8 showcase-text tab-content" >
-                                <div class="accordion-collapse collapse collapse-fade" id="v-pills-9a" data-bs-parent="#group-9">
-                                    <p class="lead">The first article explains how to compute the k-Nearest Neighbors algorithm.</p>
-                                    <p class="lead">The second link will take you to a site where you will be able to play with a k-Nearest Neighbors demo.</p>
-                                    <a class="btn btn-primary" href="https://towardsdatascience.com/machine-learning-basics-with-the-k-nearest-neighbors-algorithm-6a6e71d01761" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Towardsdatascience</a>
-                                    <p class="lead"></p>
-                                    <a class="btn btn-primary" href="https://lecture-demo.ira.uka.de/knn-demo/"target="_blank" rel="noopener noreferrer">Demo</a>
-                                </div>
-                                <div class="accordion-collapse collapse collapse-fade" id="v-pills-9b" data-bs-parent="#group-9">
-                                    <p class="lead">K-neirest neighbors can be computed using different kinds of distance metrics.</p>
-                                    <p class="lead">The following metrics are explained:</p>
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item lead">Manhattan distance</li>
-                                        <li class="list-group-item lead">Euclidean distance</li>
-                                        <li class="list-group-item lead">Minkowski distance</li>
-                                    </ul>
-                                    <a class="btn btn-primary" href="https://medium.com/@luigi.fiori.lf0303/distance-metrics-and-k-nearest-neighbor-knn-1b840969c0f4" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Medium</a>
-                                </div>
-                                <div class="accordion-collapse collapse collapse-fade" id="v-pills-9c" data-bs-parent="#group-9">
-                                    <p class="lead">Classification is an essential part to understanding what machine learning is capable of. The article provided serves as a brief introduction.</p>
-                                    <p class="lead">The demo is a model created at the university of Leiden. You can upload a picture of something and see if the model can recognise the subject.</p>
-                                    <a class="btn btn-primary" href="https://medium.com/swlh/a-brief-introduction-to-classification-619d38f4880f" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Medium</a>
-                                    <p class="lead"></p>
-                                    <a class="btn btn-primary" href="http://destiny.liacs.nl/" target="_blank" rel="noopener noreferrer">Demo</a>
-                                </div>
-                                <div class="accordion-collapse collapse collapse-fade" id="v-pills-9d" data-bs-parent="#group-9">
-                                    <p class="lead">Anomaly detection is a very useful usecase of machine learning.</p>
-                                    <p class="lead">The article provided serves as a brief introduction to the topic at hand.</p>
-                                    <a class="btn btn-primary" href="https://www.geeksforgeeks.org/machine-learning-for-anomaly-detection/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Medium</a>
-                                </div>
-                                <div class="accordion-collapse collapse collapse-fade" id="v-pills-9e" data-bs-parent="#group-9">
-                                    <a class="btn btn-primary" href="https://lecture-demo.ira.uka.de/neural-network-demo/?preset=Binary%20Classifier%20for%20circular%20data"target="_blank" rel="noopener noreferrer">Demo</a>
-                                </div>
-                            </div>
-                        </div>
+            <div class="container position-relative">
+                <div class="row justify-content-center">
+                    <div class="col-xl-10">
+                        <p class="text-center text-white d-none d-xl-block">This page supports the learning material and is therefore not required knowledge for the exams</p>
                     </div>
                 </div>
             </div>
-        </section>
+        </header>
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Empty Space -->
+                <div class="col-md-2"></div>
 
+                <!-- Demo Showcases-->        
+                <section class="col-md-8">
+                    <div class="container-fluid p-0">
+                        <!-- 1. Search -->
+                        <div id="section-1" class="card text-center mt-4">
+                            <div class="card-header"><h2 class="display-5">1. Search</h2></div>
+                            <div class="card-body">
+                                <div class="row" id="group-1">
+                                    <div class="col-lg-4 showcase-text accordion accordion-flush divider-right">
+                                        <button class="accordion-button collapsed" id="v-pills-1a-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-1a" aria-controls="v-pills-1a">Introduction to Search Algorithms</button>
+                                        <button class="accordion-button collapsed" id="v-pills-1b-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-1b" aria-controls="v-pills-1b">Pathfinding Functions Visualized</button>
+                                        <button class="accordion-button collapsed" id="v-pills-1c-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-1c" aria-controls="v-pills-1c">N-Puzzle</button>
+                                        <button class="accordion-button collapsed" id="v-pills-1d-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-1d" aria-controls="v-pills-1d">Solving Problems by Searching</button>
+                                        <button class="accordion-button collapsed" id="v-pills-1e-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-1e" aria-controls="v-pills-1e">Beyond Classical Search</button>
+                                    </div>
+                                    <div class="col-lg-8 showcase-text tab-content" >
+
+                                        <div class="accordion-collapse collapse collapse-fade" id="v-pills-1a" data-bs-parent="#group-1">
+                                            <img src="assets/media/redblob.png" alt="Red Blob Games" width="100%">
+                                            <p class="lead">RedBlobGames has a great introduction to search algorithms with interactive demos. The demo covers the following topics </p>
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item lead">Breadth First Search</li>
+                                                <li class="list-group-item lead not-covered">Dijkstra’s Algorithm</li>
+                                                <li class="list-group-item lead">A*</li>
+                                            </ul>
+                                            <a class="btn btn-primary" href="https://www.redblobgames.com/pathfinding/a-star/introduction.html" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">RedBlobGames</a>
+                                        </div>
+                                        <div class="accordion-collapse collapse collapse-fade" id="v-pills-1b" data-bs-parent="#group-1">
+                                            <img src="assets/media/github.png" class="rounded mx-auto d-block img-showcase" alt="Github-logo">
+                                            <p class="lead">The following link will bring you to a visualisation tool on Github for search algorithms.</p>
+                                            <p class="lead">Be sure to pay attention to the differences while trying them out.</p>
+                                            <a class="btn btn-primary" href="https://qiao.github.io/PathFinding.js/visual/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Github</a>
+                                        </div>
+                                        <div class="accordion-collapse collapse collapse-fade" id="v-pills-1c" data-bs-parent="#group-1">
+                                            <img src="assets/media/n-puzzle.png" class="rounded mx-auto d-block img-showcase" alt="N-puzzle-logo">
+                                            <p class="lead">N-Puzzle is a web app for learning about graph-based search algorithms.</p>
+                                            <p class="lead">It tries to go from an initial 3x3 state to a desired 3x3 state by moving one tile into an empty spot. The search tree is visualized and you will be able to tell what happens one step at a time.</p>
+                                            <p class="lead">For example:</p>
+                                            <img src="assets/media/n-puzzle states.png" class="img-fluid" alt="Responsive image">
+                                            <p class="lead" style="margin-top: 2rem;">Try it out by clicking on the following link:</p>
+                                            <a class="btn btn-primary" href="https://tristanpenman.com/demos/n-puzzle/" target="_blank" rel="noopener noreferrer">N-puzzle</a>
+                                        </div>
+                                        <div class="accordion-collapse collapse collapse-fade" id="v-pills-1d" data-bs-parent="#group-1">
+                                            <img src="assets/media/github.png" class="rounded mx-auto d-block img-showcase" alt="Github-logo">
+                                            <p class="lead">The following page has javascript implementations and visualisations for classic search.</p>
+                                            <p class="lead" style="margin-top: 2rem;">Loads of algorithms and concepts are covered, but some of the more interesting ones that aren't covered in the other demo's are:</p>
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item lead">Search Agent</li>
+                                                <li class="list-group-item lead">Step Costs</li>
+                                                <li class="list-group-item lead">Uniform Cost Search</li>
+                                                <li class="list-group-item lead">Depth Limited Search</li>
+                                                <li class="list-group-item lead">Iterative Deepening Depth-First Search</li>
+                                                <li class="list-group-item lead">Bi-directional BFS</li>
+                                            </ul>
+                                            <a class="btn btn-primary" href="https://aimacode.github.io/aima-javascript/3-Solving-Problems-By-Searching/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Github</a>
+                                            <p class="lead" style="margin-top: 2rem;">Source: Artificial Intelligence: A Modern Approach<br>by Stuart Russel and Peter Norvig</p>
+                                        </div>
+                                        <div class="accordion-collapse collapse collapse-fade" id="v-pills-1e" data-bs-parent="#group-1">
+                                            <img src="assets/media/github.png" class="rounded mx-auto d-block img-showcase" alt="Github-logo">
+                                            <p class="lead">The following page has javascript implementations and visualisations for interesting usecases and problems beyond classical search. </p>
+                                            <p class="lead" style="margin-top: 2rem;">Some of the interesting problems and topics covered:</p>
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item lead">Optimization Problem</li>
+                                                <li class="list-group-item lead">Hill Climbing Search</li>
+                                                <li class="list-group-item lead">Genetic Algorithm</li>
+                                                <li class="list-group-item lead">Vacuum World</li>
+                                            </ul>
+                                            <a class="btn btn-primary" href="https://aimacode.github.io/aima-javascript/4-Beyond-Classical-Search/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Github</a>
+                                            <p class="lead" style="margin-top: 2rem;">Source: Artificial Intelligence: A Modern Approach<br>by Stuart Russel and Peter Norvig</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- 2. Advanced Search and Games -->
+                        <div id="section-2" class="card text-center mt-4">
+                            <div class="card-header"><h2 class="display-5">2. Advanced Search and Games</h2></div>
+                            <div class="card-body">
+                                <div class="row" id="group-2">
+                                    <div class="col-lg-4 showcase-text accordion accordion-flush divider-right">
+                                        <button class="accordion-button collapsed" id="v-pills-2a-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-2a" aria-controls="v-pills-2a">Mini Chess minimax Demo</button>
+                                        <button class="accordion-button collapsed" id="v-pills-2b-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-2b" aria-controls="v-pills-2b">Minimax & Alpha-beta pruning Demo</button>
+                                        <button class="accordion-button collapsed" id="v-pills-2c-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-2c" aria-controls="v-pills-2c">Adversarial Search</button>
+                                    </div>
+                                    <div class="col-lg-8 showcase-text tab-content" >
+                                        <div class="accordion-collapse collapse collapse-fade" id="v-pills-2a" data-bs-parent="#group-2">
+                                            <img src="assets/media/chess.jpg" class="rounded mx-auto d-block img-showcase" alt="Chess-logo">
+                                            <p class="lead">Try and beat the chess AI if you can!</p>
+                                            <p class="lead">The computer uses the minimax algorithm to find the best course of action.</p>                                    
+                                            <p class="lead">Change the search depth to increase the difficulty and dynamically tell how well you are doing using the generated score.</p>
+                                            <p class="lead">You can find the search tree below the chess board that the AI used to find its best course of action.</p>
+                                            <p class="lead">The demo generates random board states, so you can refresh the board state a couple of times to find a desired state.</p>
+                                            <!-- Setting and information menu -->
+                                            <div>                                        
+                                                <ul class="list-group">                            
+                                                    <!-- Score -->
+                                                    <li id="score" class="list-group-item font-weight-bold bg-light">Score: 0</li>
+                                                    <li class="list-group-item">
+                                                        <div class="progress">
+                                                        <div id="good" class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        <div id="evil" class="progress-bar bg-danger progress-bar-striped progress-bar-animated" role="progressbar" style="width: 50%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="btn"></li>
+                                                </ul>
+                                                <!-- Chess Buttons -->
+                                                <div class="btn-group" style="margin-bottom: 2rem;">
+                                                    <button id="undoButton" type="button" class="btn btn-outline-secondary">Undo</button>
+                                                    <button id="redoButton" type="button" class="btn btn-outline-secondary">Redo</button>
+                                                    <button id="newGameButton" type="button" class="btn btn-outline-secondary">New game</button>
+                                                    <div class="btn-group">
+                                                        <button class="btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        Search depth: <span id="show-depth"></span>
+                                                        </button>
+                                                        <ul class="dropdown-menu dropdown1">
+                                                            <button class="dropdown-item" type="button">1</button>
+                                                            <button class="dropdown-item" type="button" id="default-depth">2</button>
+                                                            <button class="dropdown-item" type="button">3</button>
+                                                            <li><hr class="dropdown-divider"></li>
+                                                            <button class="dropdown-item" type="button">4</button>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Chess game -->
+                                            <div>
+                                                <!-- Chess board is rendered here via javascript -->
+                                                <div id="chess_board" style="display: flex;margin: 0;justify-content: center;align-items: center"></div>
+                                            </div>
+    
+                                            <!-- Minimax tree -->
+                                            <div>
+                                                <!-- Minimax tree is rendered here via javascript -->
+                                                <div id="tree" class="svg-container"></div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-collapse collapse collapse-fade" id="v-pills-2b" data-bs-parent="#group-2">
+                                            <img src="assets/media/tree.jpg" class="rounded mx-auto d-block img-showcase" alt="Tree-logo">
+                                            <p class="lead">To make you help understand the minimax algorithm you can create your own tree diagram.</p>
+                                            <p class="lead">The simulator shows step-by-step what happens when the algorithm traverses the tree.</p>
+                                            <p class="lead">Furthermore, you can also test out the algorithm with and without alpha-beta pruning.</p>
+                                            <a class="btn btn-primary" href="https://raphsilva.github.io/utilities/minimax_simulator/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Minimax simulator</a>
+                                        </div>
+                                        <div class="accordion-collapse collapse collapse-fade" id="v-pills-2c" data-bs-parent="#group-2">
+                                            <img src="assets/media/github.png" class="rounded mx-auto d-block img-showcase" alt="Github-logo">
+                                            <p class="lead" style="margin-top: 2rem;">The following page has a javascript implementation and visualisation for a tic-tac-toe AI that uses search algorithms.</p>
+                                            <p class="lead">Provided by the book:<br></p>
+                                            <p class="lead" style="margin-top: 2rem;">The following algorithms are covered:</p>
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item lead">Minimax</li>
+                                                <li class="list-group-item lead">Iterative Deepening</li>
+                                                <li class="list-group-item lead">Minimax with alpha-beta pruning</li>
+                                                <li class="list-group-item lead">Minimax with reversed alpha-beta pruning</li>
+                                            </ul>
+                                            <a class="btn btn-primary" href="https://aimacode.github.io/aima-javascript/5-Adversarial-Search/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Github</a>
+                                            <p class="lead" style="margin-top: 2rem;">Source: Artificial Intelligence: A Modern Approach<br>by Stuart Russel and Peter Norvig</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- 3. CSP -->
+                        <div id="section-3" class="card text-center mt-4">
+                            <div class="card-header"><h2 class="display-5">3. CSP</h2></div>
+                            <div class="card-body">
+                                <div class="row" id="group-3">
+                                    <div class="col-lg-4 showcase-text accordion accordion-flush divider-right">
+                                        <button class="accordion-button collapsed" id="v-pills-3a-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-3a" aria-controls="v-pills-3a">Javascript Constraints</button>
+                                        <button class="accordion-button collapsed" id="v-pills-3b-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-3b" aria-controls="v-pills-3b">Constraint Satisfaction Notebook</button>
+                                        <button class="accordion-button collapsed" id="v-pills-3b-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-3c" aria-controls="v-pills-3c">Constraint Satisfaction Problems</button>
+                                    </div>
+                                    <div class="col-lg-8 showcase-text tab-content" >
+                                        <div class="accordion-collapse collapse collapse-fade" id="v-pills-3a" data-bs-parent="#group-3">
+                                            <img src="assets/media/github.png" class="rounded mx-auto d-block img-showcase" alt="Github-logo">
+                                            <p class="lead">The following site brings you to a Javascript implementation of a constraint satisfaction problem solver.</p>
+                                            <p class="lead">Problems tackled:</p>
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item lead">Map Coloring</li>
+                                                <li class="list-group-item lead">N-Queens</li>
+                                                <li class="list-group-item lead">Sudoku</li>
+                                            </ul>
+                                            <p class="lead" style="margin-top: 2rem;">The code is open-source, so you can test it out yourself!</p>
+                                            <a class="btn btn-primary" href="http://prajitr.github.io/jusCSP/" target="_blank" rel="noopener noreferrer">Github</a>
+                                        </div>
+                                        <div class="accordion-collapse collapse collapse-fade" id="v-pills-3b" data-bs-parent="#group-3">
+                                            <img src="assets/media/collab.svg" class="rounded mx-auto d-block img-showcase" alt="Collab-logo">
+                                            <p class="lead">The following link will give a step-by-step guide to solving constraint satisfaction problems.</p>
+                                            <p class="lead">Topics covered:</p>
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item lead">Constraint Propagation</li>
+                                                <li class="list-group-item lead">AC-1</li>
+                                                <li class="list-group-item lead">AC-3</li>
+                                                <li class="list-group-item lead">Generic Search</li>
+                                                <li class="list-group-item lead">Backtracking & Forward checking</li>
+                                                <li class="list-group-item lead">Complexity</li>
+                                            </ul>
+                                            <a class="btn btn-primary" href="https://github.com/ToniRV/Constraint-Satisfaction-Notebook/blob/master/CSPs.ipynb" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Jupyter Notebook</a>
+                                            <p class="lead">Source: MIT</p>
+                                        </div>
+                                        <div class="accordion-collapse collapse collapse-fade" id="v-pills-3c" data-bs-parent="#group-3">
+                                            <img src="assets/media/github.png" class="rounded mx-auto d-block img-showcase" alt="Github-logo">
+                                            <p class="lead">The following page has javascript implementations and visualisations for constraint satisfaction problems.</p>
+                                            <p class="lead" style="margin-top: 2rem;">The following demo's are provided:</p>
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item lead">Map Coloring</li>
+                                                <li class="list-group-item lead">Sudoku</li>
+                                            </ul>
+                                            <a class="btn btn-primary" href="https://aimacode.github.io/aima-javascript/6-Constraint-Satisfaction-Problems/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Github</a>
+                                            <p class="lead" style="margin-top: 2rem;">Source: Artificial Intelligence: A Modern Approach<br>by Stuart Russel and Peter Norvig</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- 4. Automated Reasoning -->
+                        <div id="section-4" class="card text-center mt-4">
+                            <div class="card-header"><h2 class="display-5">4. Automated Reasoning</h2></div>
+                            <div class="card-body">
+                                <div class="row" id="group-4">
+                                    <div class="col-lg-4 showcase-text accordion accordion-flush divider-right">
+                                        <button class="accordion-button collapsed" id="v-pills-4a-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-4a" aria-controls="v-pills-4a">CPMpy</button>
+                                        <button class="accordion-button collapsed" id="v-pills-4b-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-4b" aria-controls="v-pills-4b">Z3 SAT Solver</button>
+                                    </div>
+                                    <div class="col-lg-8 showcase-text tab-content" >
+                                        <div class="accordion-collapse collapse collapse-fade" id="v-pills-4a" data-bs-parent="#group-4">
+                                            <img src="assets/media/jupyter.jpeg" class="rounded mx-auto d-block img-showcase" alt="Jupyter-logo">
+                                            <p class="lead">CPMpy is a Constraint Programming and Modeling library in Python</p>
+                                            <p class="lead">There are lots of examples to be found on the github.</p>
+                                            <p class="lead" style="margin-top: 2rem;">You can check out example code right here (this will start a notebook, so it will take some time to load):</p>
+                                            <a class="btn btn-primary" href="https://mybinder.org/v2/gh/CPMpy/cpmpy/HEAD?labpath=examples%2Fquickstart_sudoku.ipynb" target="_blank" rel="noopener noreferrer">Jupyter Lab</a>
+                                            <p class="lead">Source: <a href="https://github.com/CPMpy/cpmpy" target="_blank" rel="noopener noreferrer">Github</a></p>
+                                        </div>
+                                        <div class="accordion-collapse collapse collapse-fade" id="v-pills-4b" data-bs-parent="#group-4">
+                                            <img src="assets/media/collab.svg" class="rounded mx-auto d-block img-showcase" alt="Collab-logo">
+                                            <p class="lead">Microsoft has created it's own state of the art theorem prover.</p>
+                                            <p class="lead">It is able to check satisfiability of logical formulas over one or more theories.</p>
+                                            <p class="lead" style="margin-top: 2rem;">You can play with it or just follow along in the following notebook:</p>
+                                            <a class="btn btn-primary" href="https://colab.research.google.com/github/philzook58/z3_tutorial/blob/master/Z3%20Tutorial.ipynb" target="_blank" rel="noopener noreferrer">Jupyter Notebook</a>
+                                            <p class="lead">Source: <a href="https://github.com/philzook58/z3_tutorial" target="_blank" rel="noopener noreferrer">Github</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- 5. Probability Theory -->
+                        <div id="section-5" class="card text-center mt-4">
+                            <div class="card-header"><h2 class="display-5">5. Probability Theory</h2></div>
+                            <div class="card-body">
+                                <div class="row" id="group-5">
+                                    <div class="col-lg-4 showcase-text accordion accordion-flush divider-right">
+                                        <button class="accordion-button collapsed" id="v-pills-5a-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-5a" aria-controls="v-pills-5a">Introduction to Probability</button>
+                                        <button class="accordion-button collapsed" id="v-pills-5b-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-5b" aria-controls="v-pills-5b">Bite Size Bayes</button>
+                                    </div>
+                                    <div class="col-lg-8 showcase-text tab-content" >
+                                        <div class="accordion-collapse collapse collapse-fade" id="v-pills-5a" data-bs-parent="#group-5">
+                                            <img src="assets/media/github.png" class="rounded mx-auto d-block img-showcase" alt="Github-logo">
+                                            <p class="lead">The following page hosts a lot of information related to probability. Topics from independence to Baye's theorem are covered. </p>
+                                            <p class="lead">Way more information is provided than you need for this course, but it's still an interesting read. </p>
+                                            <p class="lead">The best part, video's and examples are given to gain a better understanding.</p>
+                                            <p class="lead" style="margin-top: 2rem;">The following link will bring you to part 9: Baye's theorem.</p>
+                                            <a class="btn btn-primary" href="https://dlsun.github.io/probability/bayes.html" target="_blank" rel="noopener noreferrer">Github</a>
+                                        </div>
+                                        <div class="accordion-collapse collapse collapse-fade" id="v-pills-5b" data-bs-parent="#group-5">
+                                            <img src="assets/media/collab.svg" class="rounded mx-auto d-block img-showcase" alt="Collab-logo">
+                                            <p class="lead">Bite Size Bayes is an introduction to Bayesian statistics using Python. It does not assume any prior knowledge of probability or Bayesian methods.</p>
+                                            <p class="lead">The first link will take you to a notebook on Collab that introduces Baye's theorem. </p>
+                                            <p class="lead">The Github page has a collection of other useful notebooks that tackle different problems related Bayesian statistics.</p>
+                                            <a class="btn btn-primary" href="https://colab.research.google.com/github/AllenDowney/BiteSizeBayes/blob/master/02_bayes.ipynb" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Jupyter Notebook</a>
+                                            <p class="lead">Source: <a href="https://allendowney.github.io/BiteSizeBayes/README.html" target="_blank" rel="noopener noreferrer">Github</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- 6. Bayesian Networks -->
+                        <div id="section-6" class="card text-center mt-4">
+                            <div class="card-header"><h2 class="display-5">6. Bayesian Networks</h2></div>
+                            <div class="card-body">
+                                <div class="row" id="group-6">
+                                    <div class="col-lg-4 showcase-text accordion accordion-flush divider-right">
+                                        <button class="accordion-button collapsed" id="v-pills-6a-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-6a" aria-controls="v-pills-6a">Bayes Server</button>
+                                        <button class="accordion-button collapsed" id="v-pills-6b-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-6b" aria-controls="v-pills-6b">Pgmpy Notebook</button>
+                                        <button class="accordion-button collapsed" id="v-pills-6c-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-6c" aria-controls="v-pills-6c">Hidden Markov Model</button>
+                                    </div>
+                                    <div class="col-lg-8 showcase-text tab-content" >
+                                        <div class="accordion-collapse collapse collapse-fade" id="v-pills-6a" data-bs-parent="#group-6">
+                                            <img src="assets/media/bayes-server.png" class="rounded mx-auto d-block img-showcase" alt="Bayes-server-logo">
+                                            <p class="lead">
+                                                The following link will take you to the bayes server website. 
+                                                The company hosting the website creates software that is used professionally to create and visualise Bayesian networks.
+                                            </p>    
+                                            <p class="lead">The software itself is not that useful for this course, but they do provide networks for the following well known probability problems: </p>
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item lead">Simpson's Paradox</li>
+                                                <li class="list-group-item lead">Monty Hall Problem</li>
+                                                <li class="list-group-item lead">Prosecutor Fallacy</li>
+                                            </ul>
+                                            <a class="btn btn-primary" href="https://www.bayesserver.com/examples/networks/simpsons-paradox"  style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Bayes Server</a>
+                                        </div>
+                                        <div class="accordion-collapse collapse collapse-fade" id="v-pills-6b" data-bs-parent="#group-6">
+                                            <img src="assets/media/collab.svg" class="rounded mx-auto d-block img-showcase" alt="Collab-logo">
+                                            <p class="lead">Pgmpy is a powerful python library for inference and simulations in Bayesian Networks. They have lots of examples on their github page on how to use it.</p>
+                                            <p class="lead">The following notebook for example show you how to solve the Monthy Hall problem using pgmpy, but they lots of other examples and tutorials.</p>
+                                            <a class="btn btn-primary" href="https://github.com/pgmpy/pgmpy/blob/dev/examples/Monty%20Hall%20Problem.ipynb" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Jupyter Notebook</a>
+                                        </div>
+                                        <div class="accordion-collapse collapse collapse-fade" id="v-pills-6c" data-bs-parent="#group-6">
+                                            <img src="assets/media/collab.svg" class="rounded mx-auto d-block img-showcase" alt="Collab-logo">
+                                            <p class="lead">A Hidden Markov Model is a statistical approach to describing the evolution of observable events that depend on internal factors, which are not directly observable.</p>
+                                            <p class="lead">The following notebook introduces what a Hidden Markov Model is, when you might want to use it, and how to implement it in python.</p>
+                                            <a class="btn btn-primary" href="https://colab.research.google.com/drive/1IUe9lfoIiQsL49atSOgxnCmMR_zJazKI" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Jupyter Notebook</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- 7. Solvers -->
+                        <div id="section-7" class="card text-center mt-4">
+                            <div class="card-header"><h2 class="display-5">7. Solvers</h2></div>
+                            <div class="card-body">
+                                <div class="row" id="group-7">
+                                    <div class="col-lg-4 showcase-text accordion accordion-flush divider-right">
+                                        <button class="accordion-button collapsed" id="v-pills-7a-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-7a" aria-controls="v-pills-7a">DPLL SAT Solver</button>
+                                        <button class="accordion-button collapsed" id="v-pills-7b-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-7b" aria-controls="v-pills-7b">Z3 Sat Solver Notebook</button>
+                                        <button class="accordion-button collapsed" id="v-pills-7c-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-7c" aria-controls="v-pills-7c">Zebra Puzzle</button>
+                                    </div>
+                                    <div class="col-lg-8 showcase-text tab-content" >
+                                        <div class="accordion-collapse collapse collapse-fade" id="v-pills-7a" data-bs-parent="#group-7">
+                                            <img src="assets/media/tree.jpg" class="rounded mx-auto d-block img-showcase" alt="Tree-logo">
+                                            <p class="lead">The following link will take you to an online implementation of a simple SAT solver.</p>
+                                            <p class="lead">Variables are given by positive or negative numbers. The variables on each line are disjunctions and will form a conjunctive normal form with the other lines. The interpreter will go line per line to find out if the given CNF is satisfiable or not.</p>
+                                            <a class="btn btn-primary" href="https://www.inf.ufpr.br/dpasqualin/d3-dpll/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Demo</a>
+                                        </div>
+                                        <div class="accordion-collapse collapse collapse-fade" id="v-pills-7b" data-bs-parent="#group-7">
+                                            <img src="assets/media/collab.svg" class="rounded mx-auto d-block img-showcase" alt="Collab-logo">
+                                            <p class="lead">Z3 is a state of the art SAT solver built by Microsoft.</p>
+                                            <p class="lead">The given notebook will give you a bit of a recap about theorem solvers and is a step-by-step tutorial on how one would use Z3 to prove theorems.</p>
+                                            <a class="btn btn-primary" href="https://colab.research.google.com/github/philzook58/z3_tutorial/blob/master/Z3%20Tutorial.ipynb#scrollTo=reHFJwiXvMO-" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Jupyter Notebook</a>
+                                        </div>
+                                        <div class="accordion-collapse collapse collapse-fade" id="v-pills-7c" data-bs-parent="#group-7">
+                                            <img src="assets/media/zebra.png" class="rounded mx-auto d-block img-showcase" alt="Zebra-logo">
+                                            <p class="lead">Lastly we have a fun demonstration on how to solve logic grid puzzles like for examples Zebra Puzzles, also known as Einstein's Riddles.</p>
+                                            <p class="lead">This specific puzzle was taken from the book "Puzzle Baron’s logic puzzles" concerns people's state of origin, current city of domicile, and age.</p>
+                                            <a class="btn btn-primary" href="https://bartbog.github.io/zebra/origin/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Github</a>
+                                            <p class="lead">Created by Dr. Bart Bogaerts.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- 8. Markov Decision Processes -->
+                        <div id="section-8" class="card text-center mt-4">
+                            <div class="card-header"><h2 class="display-5">8. Markov Decision Processes</h2></div>
+                            <div class="card-body">
+                                <div class="row" id="group-8">
+                                    <div class="col-lg-4 showcase-text accordion accordion-flush divider-right">
+                                        <button class="accordion-button collapsed" id="v-pills-8a-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-8a" aria-controls="v-pills-8a">Value Iteration Algorithm</button>
+                                        <button class="accordion-button collapsed" id="v-pills-8b-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-8b" aria-controls="v-pills-8b">GridWorld: Dynamic Programming</button>
+                                    </div>
+                                    <div class="col-lg-8 showcase-text tab-content" >
+                                        <div class="accordion-collapse collapse collapse-fade" id="v-pills-8a" data-bs-parent="#group-8">
+                                            <img src="assets/media/medium.svg" class="rounded mx-auto d-block img-showcase" alt="Medium-logo">
+                                            <p class="lead">This medium article tackles Markov Decision Processes using the grid world example from the book Artificial Intelligence A Modern Approach by Stuart Russell and Peter Norvig.</p>
+                                            <p class="lead">The following concepts are talked about:</p>
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item lead">Value Iteration</li>
+                                                <li class="list-group-item lead">Convergence of Value Iteration</li>
+                                                <li class="list-group-item lead">Policy Iteration</li>
+                                                <li class="list-group-item lead">Implementation in Python</li>
+                                            </ul>
+                                            <p class="lead" style="margin-top: 2rem;">This can serve as a good way to refresh your understanding of the Value Iteration Algorithm in Markov Decision Processes.</p>
+                                            <a class="btn btn-primary" href="https://medium.com/@ngao7/markov-decision-process-value-iteration-2d161d50a6ff" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Medium</a>
+                                        </div>
+                                        <div class="accordion-collapse collapse collapse-fade" id="v-pills-8b" data-bs-parent="#group-8">
+                                            <p class="lead">An overview and solution to the gambler's problem given in the book Reinforcement Learning: An Introduction by Richard S. Sutton and Andrew G. Barto</p>
+                                            <p class="lead">An example on how value and policy iteration can be used to solve intersting problems like these.</p>
+                                            <a class="btn btn-primary" href="https://cs.stanford.edu/people/karpathy/reinforcejs/gridworld_dp.html" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Stanford</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- 9. Machine Learning -->
+                        <div id="section-9" class="card text-center mt-4">
+                            <div class="card-header"><h2 class="display-5">9. Machine Learning</h2></div>
+                            <div class="card-body">
+                                <div class="row" id="group-9">
+                                    <div class="col-lg-4 showcase-text accordion accordion-flush divider-right">
+                                        <button class="accordion-button collapsed" id="v-pills-9a-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-9a" aria-controls="v-pills-9a">K-Nearest Neighbours</button>
+                                        <button class="accordion-button collapsed" id="v-pills-9b-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-9b" aria-controls="v-pills-9b">Distance Metrics</button>
+                                        <button class="accordion-button collapsed" id="v-pills-9c-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-9c" aria-controls="v-pills-9c">Classification</button>
+                                        <button class="accordion-button collapsed" id="v-pills-9d-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-9d" aria-controls="v-pills-9d">Anomaly Detection​</button>
+                                        <button class="accordion-button collapsed" id="v-pills-9e-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-9e" aria-controls="v-pills-9e">Neural Networks</button>
+                                    </div>
+                                    <div class="col-lg-8 showcase-text tab-content" >
+                                        <div class="accordion-collapse collapse collapse-fade" id="v-pills-9a" data-bs-parent="#group-9">
+                                            <img src="assets/media/tds.jpg" class="rounded mx-auto d-block img-showcase" alt="Tds-logo">
+                                            <p class="lead">The first article explains how to compute the k-Nearest Neighbors algorithm.</p>
+                                            <p class="lead">The second link will take you to a site where you will be able to play with a k-Nearest Neighbors demo.</p>
+                                            <a class="btn btn-primary" href="https://towardsdatascience.com/machine-learning-basics-with-the-k-nearest-neighbors-algorithm-6a6e71d01761" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Towardsdatascience</a>
+                                            <p class="lead"></p>
+                                            <a class="btn btn-primary" href="https://lecture-demo.ira.uka.de/knn-demo/"target="_blank" rel="noopener noreferrer">UKA</a>
+                                            <a class="btn btn-primary" href="https://vision.stanford.edu/teaching/cs231n-demos/knn/"target="_blank" rel="noopener noreferrer">Stanford</a>
+                                            <a class="btn btn-primary" href="https://codepen.io/gangtao/pen/PPoqMW"target="_blank" rel="noopener noreferrer">Codepen</a>
+                                        </div>
+                                        <div class="accordion-collapse collapse collapse-fade" id="v-pills-9b" data-bs-parent="#group-9">
+                                            <p class="lead">K-neirest neighbors can be computed using different kinds of distance metrics.</p>
+                                            <p class="lead">The following metrics are explained:</p>
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item lead">Manhattan distance</li>
+                                                <li class="list-group-item lead">Euclidean distance</li>
+                                                <li class="list-group-item lead">Minkowski distance</li>
+                                            </ul>
+                                            <a class="btn btn-primary" href="https://medium.com/@luigi.fiori.lf0303/distance-metrics-and-k-nearest-neighbor-knn-1b840969c0f4" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Medium</a>
+                                        </div>
+                                        <div class="accordion-collapse collapse collapse-fade" id="v-pills-9c" data-bs-parent="#group-9">
+                                            <p class="lead">Classification is an essential part to understanding what machine learning is capable of. The article provided serves as a brief introduction.</p>
+                                            <p class="lead">The demo is a model created at the university of Leiden. You can upload a picture of something and see if the model can recognise the subject.</p>
+                                            <a class="btn btn-primary" href="https://medium.com/swlh/a-brief-introduction-to-classification-619d38f4880f" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Medium</a>
+                                            <p class="lead"></p>
+                                            <a class="btn btn-primary" href="http://destiny.liacs.nl/" target="_blank" rel="noopener noreferrer">Demo</a>
+                                        </div>
+                                        <div class="accordion-collapse collapse collapse-fade" id="v-pills-9d" data-bs-parent="#group-9">
+                                            <p class="lead">Anomaly detection is a very useful usecase of machine learning.</p>
+                                            <p class="lead">The article provided serves as a brief introduction to the topic at hand.</p>
+                                            <a class="btn btn-primary" href="https://www.geeksforgeeks.org/machine-learning-for-anomaly-detection/" style="margin-top: 2rem;" target="_blank" rel="noopener noreferrer">Medium</a>
+                                        </div>
+                                        <div class="accordion-collapse collapse collapse-fade" id="v-pills-9e" data-bs-parent="#group-9">
+                                            <a class="btn btn-primary" href="https://lecture-demo.ira.uka.de/neural-network-demo/"target="_blank" rel="noopener noreferrer">UKA</a>
+                                            <a class="btn btn-primary" href="https://playground.tensorflow.org/"target="_blank" rel="noopener noreferrer">Tensorflow</a>
+                                            <a class="btn btn-primary" href="https://teachablemachine.withgoogle.com/"target="_blank" rel="noopener noreferrer">Teachable Machine</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- The sidebar -->
+                <aside class="col-md-2">
+                    <div class="card mt-4 sticky-top d-sm-none d-md-block">
+                        <article class="card-group-item">
+                            <header class="card-header text-center">
+                                <h6 class="title">Table of Contents</h6>
+                            </header>
+                            <div class="filter-content">
+                                <div class="card-body">
+                                    <table  class="table table-hover table-borderless table-responsive" style="margin-bottom: 0;">
+                                        <tbody>
+                                            <tr class="clickable-row" data-href='#section-1'>
+                                                <th scope="row">1</th>
+                                                <td>Search</td>
+                                            </tr>
+                                            <tr class="clickable-row" data-href='#section-2'>
+                                                <th scope="row">2</th>
+                                                <td>Advanced Search and Games</td>
+                                            </tr>
+                                            <tr class="clickable-row" data-href='#section-3'>
+                                                <th scope="row">3</th>
+                                                <td>CSP</td>
+                                            </tr>
+                                            <tr class="clickable-row" data-href='#section-4'>
+                                                <th scope="row">4</th>
+                                                <td>Automated Reasoning</td>
+                                            </tr>
+                                            <tr class="clickable-row" data-href='#section-5'>
+                                                <th scope="row">5</th>
+                                                <td>Probability Theory</td>
+                                            </tr>
+                                            <tr class="clickable-row" data-href='#section-6'>
+                                                <th scope="row">6</th>
+                                                <td>Bayesian Networks</td>
+                                            </tr>
+                                            <tr class="clickable-row" data-href='#section-7'>
+                                                <th scope="row">7</th>
+                                                <td>Solvers</td>
+                                            </tr>
+                                            <tr class="clickable-row" data-href='#section-8'>
+                                                <th scope="row">8</th>
+                                                <td>Markov Decision Processes</td>
+                                            </tr>
+                                            <tr class="clickable-row" data-href='#section-9'>
+                                                <th scope="row">9</th>
+                                                <td>Machine Learning</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>    
+                                </div>
+                            </div>
+                        </article>
+                    </div>  
+                </aside>
+            </div>
+        </div>
 
         <!-- Bootstrap core JS-->
         <script src="assets/js/vendor/bootstrap.bundle.min.js"></script>
