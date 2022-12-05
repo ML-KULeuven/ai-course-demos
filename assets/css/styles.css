@@ -11465,3 +11465,9 @@ canvas {
   stroke: #ccc;
   stroke-width: 2px;
 }
+
+.not-covered {
+  opacity: 0.75;
+  color: var(--bs-secondary);
+  font-style: italic;
+}
