@@ -11311,6 +11311,7 @@ header.masthead {
   background: url("../media/bg-masthead.jpg") no-repeat center center;
   background-size: cover;
   padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 header.masthead:before {
   content: "";
