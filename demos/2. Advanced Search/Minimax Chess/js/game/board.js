@@ -20,6 +20,7 @@ export default class Board {
         this.isInCheck = false;
         this.history = new History(this.tiles);
         this.depth = 2;
+        this.gameOver = false;
     }
 
     createTiles() {
@@ -181,12 +182,13 @@ export default class Board {
 
         if (this.isInCheck) {
             let moves = CheckFinder.findMovesForCheckedPlayer(this.tiles, this.turn);
-            if (moves.length === 0) {
+            if (moves.length === 0 && !this.gameOver) {
                 if (this.turn === COLOUR.WHITE) {
                     alert("You lost!\nSkynet will take over");
                 } else {
                     alert("Congratulations!\nYou beat the minimax AI.");
                 }
+                this.gameOver = true;
             }
         }
     }
@@ -199,11 +201,15 @@ export default class Board {
         let tree = new MinimaxTree();
         tree.update(treeData);
 
-        if (bestMoveFound === undefined) {
-            return;
-        } else {
-            this.move(bestMoveFound.old, bestMoveFound.new);
+        if (bestMoveFound === undefined && !this.gameOver) {
+            if (this.turn === COLOUR.WHITE) {
+                alert("You lost!\nSkynet will take over");
+            } else {
+                alert("Congratulations!\nYou beat the minimax AI.");
+            }
+            this.gameOver = true;
         }
+        this.move(bestMoveFound.old, bestMoveFound.new);
     }
 
     undoAction() {
@@ -222,6 +228,10 @@ export default class Board {
 
     getAbsoluteScore() {
         return -Evaluation.evaluateBoard(this.tiles, true)-1800;
+    }
+
+    getGameOver() {
+        return this.gameOver;
     }
 
     isOffBoard(x, y) {

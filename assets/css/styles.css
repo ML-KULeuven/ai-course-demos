@@ -615,6 +615,8 @@ progress {
 .img-showcase {
   height: 100px;
   width: 100px;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
 }
 
 .figure {
