@@ -11479,6 +11479,6 @@ canvas {
 
 .not-covered {
   opacity: 0.75;
-  color: var(--bs-secondary);
+  color: var(--bs-gray-400);
   font-style: italic;
 }
