@@ -613,10 +613,12 @@ progress {
 }
 
 .img-showcase {
-  height: 100px;
-  width: 100px;
-  margin-top: 1rem;
   margin-bottom: 2rem;
+}
+
+.img-logo {
+  height: 150px;
+  width: 150px;
 }
 
 .figure {
@@ -11321,15 +11323,15 @@ header.masthead:before {
   width: 100%;
   top: 0;
   left: 0;
-  opacity: 0.6;
+  opacity: 0.7;
 }
 header.masthead h1, header.masthead .h1 {
   font-size: 2rem;
 }
 @media (min-width: 768px) {
   header.masthead {
-    padding-top: 12rem;
-    padding-bottom: 12rem;
+    padding-top: 9rem;
+    padding-bottom: 9rem;
   }
   header.masthead h1, header.masthead .h1 {
     font-size: 3rem;
