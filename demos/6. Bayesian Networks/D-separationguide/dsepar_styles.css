@@ -1,0 +1,117 @@
+body 
+{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #52BDEC;
+}
+
+.container_header 
+{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+    background-color: #fdfafa;
+}
+
+.container 
+{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+}
+
+.header 
+{
+    padding: 60px;
+    text-align: center;
+    background-color: #1f91c2;
+    color: rgb(209, 192, 192);
+    font-size: 30px;
+  }
+
+article 
+{
+    background-color: #fdfafa;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin: 20px 0;
+}
+
+article h2 
+{
+    color: #333;
+}
+
+footer 
+{
+    background-color: #52BDEC;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+#homescreen 
+{
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 10px 10px rgb(105, 118, 122);
+}
+
+#d-separation 
+{
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 10px 10px rgb(105, 118, 122);
+}
+
+.blue-background 
+{
+    background-color: #abd8e6;
+    color: black; /* Set the text color to black so it's readable on the blue background */
+    padding: 10px; /* Add some padding so the text isn't right up against the edge of the box */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* This creates a 2-column grid */
+    gap: 20px; /* This adds some space between the grid items */
+     /* This sets the background color of the grid container to blue */
+    color: black; /* This sets the text color to white so it's readable on the blue background */
+    padding: 10px; /* This adds some padding around the grid items */
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* This will vertically center the text and image */
+    justify-content: center; /* This will horizontally center the text and image */
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    margin-left: 10px; /* This adds some space to the left of the image */
+}
+
+#blokpad
+{
+    width: 30%;
+    height: auto;
+    display: block;
+    box-shadow: 10px 10px rgb(105, 118, 122);
+}
+
+#example
+{
+    width: 70%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 10px 10px rgb(105, 118, 122);
+}
