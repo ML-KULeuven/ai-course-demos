@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- fix different link-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[AI] Conditional Indepence</title>
+    <link rel="stylesheet" href="dsepar_styles.css">
+</head>
+<body>
+    <header>
+        <div class="container_header">
+            <h1>Artificial Intelligence [HO6U1a]</h1>
+        </div>
+    </header>
+
+    <article>
+        <div class="container">
+            <h1>Bayesian Networks: Conditional Independence</h1>
+            <p>
+                During the lectures on Bayesian networks, you were already introduced to the concept of conditional (in)dependence.
+                To visualize this, we can use the program Bayes Server. 
+                Follow <a href="https://online.bayesserver.com/" target=”_blank”>this link</a> to navigate to the online application.
+                If you prefer an offline version, you can download it <a href="https://www.bayesserver.com" target="_blank">here</a>.
+            </p>
+                When you start up the Bayes Server, you see all kinds of predefined networks. 
+                Note that you can also create your own network. For now, however, it suffices to open an existing network.
+                Now we will first illustrate some examples of conditional independence with the <strong>Asia</strong> network.
+            </p>
+            <div class="container-image"> 
+                <img id="homescreen" src="images/bs_homescreen.png" alt="Bayes Server Home Screen">
+            </div>
+            <br />
+            <p>
+                As you can see, the network has eight different variables, each with their own probabilities as shown in the bar graphs.
+                At the top, you can click on analyze and then D-Separation &rarr; D-Separation Display. 
+            </p>
+            <div class="container-image"> 
+                <img id="d-separation" src="images/bs_d-separation.png" alt="Bayes Server D-Separation">
+            </div>
+            <br /> 
+            <p>
+                At that point a window appears where you can select the variable that will serve as the source node. 
+                The D-separation algorithm will try to find a path from this node to all the others.
+                Is there an unblocked path to a node? If so, it colors green. Otherwise, it colors red.
+                A green node and a red node are respectively conditionally dependent and conditionally independent of the selected source node.
+                Now we can play around a bit by clicking on the bar graphs in the nodes.
+                When clicked on, these nodes become evidence.  
+                This allows us to see which nodes become / no longer are reachable when an intermediate node becomes evidence.   
+            </p>
+
+            <div class="blue-background">
+                <p>Now think back to the lectures. There are a total of four scenarios in which a path is blocked: </p>
+                <div class="grid-container">
+                    
+                    <div class="grid-item">
+                        <p>When the intermediate node is <u>no</u> evidence and the pattern forms a <strong>collider</strong> (both A and B point to C). </p>
+                        <img id="blokpad" src="images/blokpad4.png" alt="Bayes Server D-Separation">
+                    </div>
+                   
+                    <div class="grid-item">
+                        <p>When the intermediate node is evidence and the pattern forms a <strong>fork</strong> (C points to A and B).</p>
+                        <img id="blokpad" src="images/blokpad1.png" alt="Bayes Server D-Separation">
+                    </div>
+                   
+                    <div class="grid-item">
+                        <p>When the intermediate node is evidence and the pattern forms a <strong>chain</strong> (A points to C and C points to B).</p>
+                        <img id="blokpad" src="images/blokpad2.png" alt="Bayes Server D-Separation">
+                    </div>
+                    
+                    <div class="grid-item">
+                        <p>When the intermediate node is evidence and the pattern forms a <strong>chain</strong> (B points to C and C points to A).</p>
+                        <img id="blokpad" src="images/blokpad3.png" alt="Bayes Server D-Separation">
+                    </div>
+
+                </div>
+            </div>
+            <br />
+            <p>
+                <strong>Practice for yourself:</strong> 
+                <br />
+                <ol>
+                    <li>
+                        Try reproducing the four scenarios in the opened Asia network. 
+                        Before you click the "D-Separation Display" button, try to imagine which nodes will turn green and which will turn red.
+                        Do your expectations match the results? 
+                    </li>
+                    <li>
+                        How does the result change if you select multiple nodes as source nodes? 
+                    </li>
+                </ol>
+            </p>
+            <br />
+            <p>
+                A possible example of a <strong>collider</strong> in the Asia network is the following: 
+                Choose <i>Has Lung Cancer</i> as source node.
+                Remember that in the case of a blocked path with a collider, the intermediate node should not be a evidence.
+                With <i>Tuberculosis Or Cancer</i> as an intermediate node, we see that the path to <i>Has Tuberculosis</i> is blocked.
+            </p>
+            <div class="container-image"> 
+                <img id="example" src="images/colliderexample.png">
+            </div>
+            <br />
+            <p>
+                A possible example of a <strong>fork</strong> in the Asia network is the following: 
+                Choose <i>Has Lung Cancer</i> as source node. 
+                Then choose <i>Smoker</i> as evidence by clicking on the bar graph.
+                Next, you see that the previously accessible node <i>Has Bronchitis</i> is now no longer accessible.
+            </p>
+            <div class="container-image"> 
+                <img id="example" src="images/examplefork.png">
+            </div>
+            <br />
+            <p>
+                A possible example of a <strong>chain</strong> in the Asia network is the following: 
+                Choose <i>Visit to Asia</i> as source node.
+                Then choose <i>Has Tuberculosis</i> as evidence by clicking on the bar graph.
+                Next, you see that the previously accessible node <i>Tuberculosis or Cancer</i> is now no longer accessible.
+            </p>
+            <div class="container-image"> 
+                <img id="example" src="images/examplechain.png">
+            </div>
+            <br />
+            <p>
+                Finally, we look at what happens when we select multiple nodes as source nodes: 
+                We choose <i>Visit to Asia</i> and <i>Smoker</i> as source nodes. 
+                Then pick <i>Has Tuberculosis</i> as evidence by clicking on the bar graph.
+                Now take a look at <i>Tuberculosis or Cancer</i>.
+                There is a blocked path from <i>Visit to Asia</i> to <i>Tuberculosis or Cancer</i> but because the path from <i>Smoker</i> to <i>Tuberculosis or Cancer</i > is not blocked, this node is still conditionally dependent.
+                So if there is an unblocked path from <u>one of the</u> source nodes to a node, then that node is considered conditionally dependent on the source nodes.
+            </p>
+            <div class="container-image"> 
+                <img id="example" src="images/examplemoresources.png">
+            </div>
+            <br />
+            <p>
+                Don't hesitate to experiment with other networks yourself.
+                Try to find examples of the four scenarios in other networks.
+                This way, your understanding of conditional independence can only increase.
+            </p>
+
+        </div>
+    </article>
+
+    <footer>
+        <div class="container">
+        </div>
+    </footer>
+</body>
+</html>
