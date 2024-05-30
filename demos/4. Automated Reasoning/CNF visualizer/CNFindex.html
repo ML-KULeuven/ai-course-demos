@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propositional Logic to CNF Converter</title>
+    <link rel="stylesheet" href="CNFstyles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Propositional Logic to CNF Converter</h1>
+        <label for="clauseSelect">Select a Clause:</label>
+        <select id="clauseSelect">
+            <option value="1">¬(A ∧ B) ∨ (D → C)</option>
+            <option value="2">(A ∨ ¬B ∨ C) ↔ (D → E)</option>
+            <option value="3">¬(A ↔ B) ∨ (D ∧ ¬E) ∧ (F ∧ E)</option>
+            <option value="4">(¬(A ∧ B) → ¬(C ∨ D)) → (E ∧ F)</option>
+            <!-- Add more options for other clauses if needed -->
+        </select>
+        <button id="nextStepButton" onclick="initialize()">Start Conversion</button>
+        <div id="explanation"></div>
+        <p><strong>Current Formula:</strong> <span id="currentFormula"></span></p>
+    </div>
+
+    <script src="CNFscript.js"></script>
+</body>
+</html>
